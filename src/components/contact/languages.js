@@ -1,0 +1,26 @@
+export const languages = {
+  en: {
+    language: "Language",
+    language_en: "English",
+    language_es: "Spanish",
+    write: "Write Me",
+    name: "Name",
+    lastname: "Lastname",
+    phone: "Phone",
+    email: "Mail",
+    message: "Message",
+    send: "SEND",
+  },
+  es: {
+    language: "Idioma",
+    language_en: "Inglés",
+    language_es: "Español",
+    write: "Escribime",
+    name: "Nombre",
+    lastname: "Apellido",
+    phone: "Teléfono",
+    email: "Mail",
+    message: "Mensaje",
+    send: "ENVIAR",
+  },
+};
