@@ -7,7 +7,7 @@ import { languages } from "./languages"
 //init(process.env.REACT_APP_USER_ID);
 
 
-export default function Contact({language}) {
+export default function Contact({language, theme}) {
   const validationSchema = Yup.object({
     name: Yup.string().required("Ingrese su nombre."),
     lastname: Yup.string().required("Ingrese su apellido."),
@@ -52,6 +52,7 @@ export default function Contact({language}) {
     >
       {({ values, errors, touched }) => (
         <ContactContainer id="contacto">
+          { theme === 'dark' ?  (
           <div className="background">
           <div className="contact_form">
             <div className="title">
@@ -59,7 +60,7 @@ export default function Contact({language}) {
             </div>
             <Form className="form_container">
               <div className="field name_field">
-                <label>{languages[language]?.name}</label>
+                <label className="label">{languages[language]?.name}</label>
                 <Field
                   className="input"
                   type="text"
@@ -71,7 +72,7 @@ export default function Contact({language}) {
                 </div>
               </div>
               <div className="field lastname_field">
-                <label>{languages[language]?.lastname}</label>
+                <label className="label">{languages[language]?.lastname}</label>
                 <Field
                   className="input"
                   type="text"
@@ -83,7 +84,7 @@ export default function Contact({language}) {
                 </div>
               </div>
               <div className="field phone_field">
-                <label>{languages[language]?.phone}</label>
+                <label className="label">{languages[language]?.phone}</label>
                 <Field
                   name="phone"
                   type="text"
@@ -95,7 +96,7 @@ export default function Contact({language}) {
                 </div>
               </div>
               <div className="field email_field">
-                <label>{languages[language]?.email}</label>
+                <label className="label">{languages[language]?.email}</label>
                 <Field
                   name="email"
                   type="email"
@@ -107,7 +108,7 @@ export default function Contact({language}) {
                 </div>
               </div>
               <div className="field message_field">
-                <label>{languages[language]?.message}</label>
+                <label className="label">{languages[language]?.message}</label>
                 <Field
                   component="textarea"
                   type="text"
@@ -126,7 +127,83 @@ export default function Contact({language}) {
               </button>
             </Form>
           </div>
-          </div>
+          </div>) : (
+            <div className="backgroundLight">
+            <div className="contact_form">
+              <div className="titleLight">
+                <h2 className="h2Light">{languages[language]?.write}</h2>
+              </div>
+              <Form className="form_containerLight">
+                <div className="field name_field">
+                  <label className="labelLight">{languages[language]?.name}</label>
+                  <Field
+                    className="input"
+                    type="text"
+                    name="name"
+                    placeholder={languages[language]?.name}
+                  />
+                  <div className="error">
+                    {touched.name && errors.name ? errors.name : null}
+                  </div>
+                </div>
+                <div className="field lastname_field">
+                  <label className="labelLight">{languages[language]?.lastname}</label>
+                  <Field
+                    className="input"
+                    type="text"
+                    name="lastname"
+                    placeholder={languages[language]?.lastname}
+                  />
+                  <div className="error">
+                    {touched.lastname && errors.lastname ? errors.lastname : null}
+                  </div>
+                </div>
+                <div className="field phone_field">
+                  <label className="labelLight">{languages[language]?.phone}</label>
+                  <Field
+                    name="phone"
+                    type="text"
+                    className="input"
+                    placeholder={languages[language]?.phone}
+                  />
+                  <div className="error">
+                    {touched.phone && errors.phone ? errors.phone : null}
+                  </div>
+                </div>
+                <div className="field email_field">
+                  <label className="labelLight">{languages[language]?.email}</label>
+                  <Field
+                    name="email"
+                    type="email"
+                    className="input"
+                    placeholder={languages[language]?.email}
+                  />
+                  <div className="error">
+                    {touched.email && errors.email ? errors.email : null}
+                  </div>
+                </div>
+                <div className="field message_field">
+                  <label className="labelLight">{languages[language]?.message}</label>
+                  <Field
+                    component="textarea"
+                    type="text"
+                    name="message"
+                    placeholder={languages[language]?.message}
+                    className="input textarea"
+                  />
+                  <div className="error">
+                    {touched.message && errors.message
+                      ? errors.message
+                      : null}
+                  </div>
+                </div>
+                <button className="submit_btn" type="submit">
+                {languages[language]?.send}
+                </button>
+              </Form>
+            </div>
+            </div>
+          )}
         </ContactContainer>
       )}
     </Formik>

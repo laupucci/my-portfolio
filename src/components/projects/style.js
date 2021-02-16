@@ -42,9 +42,24 @@ export const ProjectsContainer = styled.section`
     }
     .arrow {
       margin-top: -0.2rem;
-      width: 2rem;
-      height: 2rem;
+      width: 1.7rem;
+      height: 1.7rem;
       transition: 0.3s ease-in-out;
+      color: #e4e4e4;
     }
+  }
+
+  .backgroundLight {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titleLight {
+    color: #272727;
+    font-size: 250%;
   }
 `

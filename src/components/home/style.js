@@ -22,7 +22,7 @@ export const HomeContainer = styled.section`
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* margin-top: 4em; */
@@ -31,46 +31,45 @@ export const HomeContainer = styled.section`
   .hero_txt {
     color: #e4e4e4;
     background-color: rgba(107, 107, 107, 0.5);
-    width: 38vw;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 0 0 55px;
-
-    .title {
-      color: #e4e4e4;
-      font-size: 250%;
-
-    }
-    .subtitle {
-      font-family: "Nixie One";
-      font-size: 2.25rem;
-      color: #e4e4e4;
-    }
-  }
-
-  .descriptionTitle {
-   //padding-top: 4%;
-   color: #e4e4e4;
-  }
-
-  .description {
-   font-size: 120%;
-   padding: 0 4%;
-   color: #e4e4e4;
-  }
-
-  .logo_container {
-    background-color: rgba(249, 35, 9, 0.4);
-    width: 38vw;
-    height: 70vh;
+    width: 70vw;
+    height: 33vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0 55px 0 0;
+
+    .title {
+      color: #e4e4e4;
+      font-size: 250%;
+    }
+    .subtitle {
+      font-family: "Nixie One";
+      font-size: 200%;
+      color: #e4e4e4;
+    }
+  }
+
+  .descriptionTitle {
+    //padding-top: 4%;
+    color: #e4e4e4;
+  }
+
+  .description {
+    font-size: 120%;
+    padding: 0 4%;
+    color: #e4e4e4;
+  }
+
+  .logo_container {
+    background-color: rgba(249, 35, 9, 0.4);
+    width: 70vw;
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 55px;
   }
 
   .cta {
@@ -101,11 +100,78 @@ export const HomeContainer = styled.section`
     }
     .arrow {
       margin-top: -0.2rem;
-      width: 2rem;
-      height: 2rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      color: #e4e4e4;
       transition: 0.3s ease-in-out;
     }
+    .cta_txtLight {
+    font-size: 1rem;
+    font-family: "Sanchez";
+    color: #272727;
+    transition: 0.3s ease-in-out;
   }
+  .arrowLight {
+    margin-top: -0.2rem;
+    width: 2rem;
+    height: 2rem;
+    transition: 0.3s ease-in-out;
+    color: #272727;
+  }
+  }
+
+  .backgroundLigth {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero_txtLight {
+    color: #e4e4e4;
+    background-color: rgba(107, 107, 107, 0.8);
+    width: 70vw;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 55px 0 0;
+
+  .titleLigth {
+    color: #202020;
+    font-size: 250%;
+  }
+  .subtitleLigth {
+    font-family: "Nixie One";
+    font-size: 200%;
+    color: #272727;
+  }
+}
+
+.logo_containerLight {
+    background-color: rgba(249, 35, 9, 0.7);
+    width: 70vw;
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 55px;
+  }
+
+  .descriptionTitleLigth {
+    //padding-top: 4%;
+    color: #171717;
+  }
+
+  .descriptionLigth {
+    font-size: 120%;
+    padding: 0 4%;
+    color: #171717;
+  }
+  
   @media (max-width: 500px) {
     .container {
       display: flex;

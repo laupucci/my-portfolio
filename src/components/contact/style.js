@@ -21,10 +21,10 @@ export const ContactContainer = styled.section`
   }
 
   .contact_form {
-    margin-top: 5%;
+    margin-top: 3%;
     left: 50%;
     right: 50%;
-    height: 70vh;
+    height: 75vh;
     color: ${darkColor};
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ export const ContactContainer = styled.section`
       justify-content: flex-start;
     }
 
-    label {
+    .label {
       color:  rgba(200, 200, 200);
       font-family: "Sanchez";
       font-size: 1.1rem;
@@ -153,6 +153,60 @@ export const ContactContainer = styled.section`
       width: 94%
     }
   }
+  .backgroundLight {
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form_containerLight {
+      background-color: rgba(249, 35, 9, 0.4);
+      width: 50vw;
+      height: 80%;
+      padding: 1.5rem;
+      display: grid;
+     // align-items:center;
+      justify-items: center;
+      border-radius: 0 0 25px 0;
+      grid-template:
+        " _name   lastname" 2fr
+        " phone   email   " 2fr
+        "   msg   msg     " 4fr
+        "submit   submit  " 1fr/
+        1fr 1fr;
+      grid-gap: 1.2rem;
+    }
+  
+  .titleLight {
+      padding: 1rem 1.5rem;
+      width: 50vw;
+      background-color: rgba(249, 35, 9, 0.85);
+      border-radius: 25px 0 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .h2Light {
+        font-family: "Sanchez", sans-serif;
+        font-size: 120%;
+        color:  rgba(200, 200, 200);
+        width: 40%;
+        font-weight: normal;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .labelLight{
+        color:  rgba(39, 39, 39, 0.95);
+      font-family: "Sanchez";
+      font-size: 1.1rem;
+      padding-bottom: 0.5rem;
+
+      }
 
   @media (max-width: 500px) {
     .contact_form {

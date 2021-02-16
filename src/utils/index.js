@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import arrow from "../media/arrow.svg";
+import { BiDownArrow } from "react-icons/bi";
 
 export const colors = {
   black: "#1C1816",
@@ -13,11 +13,20 @@ export const colors = {
   whitish: "#E8E8E8",
 };
 
-export const Cta = ({ text, to }) => {
+export const Cta = ({ text, to, theme }) => {
+  console.log(theme, 'cta')
   return (
     <Link to={to} spy={true} smooth={true} duration={500} className="cta">
-      <span className="cta_txt">{text}</span>
-      <img className="arrow" src={arrow} alt="poli" />
+      {theme === "dark" ? (
+        <span className="cta_txt">{text}</span>
+      ) : (
+        <span className="cta_txtLight">{text}</span>
+      )}
+      {theme === "dark" ? (
+        <BiDownArrow className="arrow"/>
+      ) : (
+        <BiDownArrow className="arrowLight"/>
+      )}
     </Link>
   );
 };

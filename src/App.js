@@ -10,11 +10,13 @@ require("dotenv").config();
 
 function App() {
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'es');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
   return (
     <BrowserRouter>
-      <Route path="/" component={Background} />
-      <Route path="/" render={() => <Navbar language={language} setLanguage={setLanguage} /> } />
-      <Route exact path="/" render={() => <Scroll language={language} setLanguage={setLanguage} /> } />
+      <Route path="/" component={Background} theme={theme} setTheme={setTheme}/>
+      <Route path="/" render={() => <Navbar language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/> } />
+      <Route exact path="/" render={() => <Scroll language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/> } />
       <Route exact path="/tecnologias" render={() => <Tecnologies language={language} setLanguage={setLanguage} /> } />
       <Route exact path="/proyectos" render={() => <Projects language={language} setLanguage={setLanguage} /> } />
       <Route exact path="/contacto" render={() => <Contact language={language} setLanguage={setLanguage} /> } />

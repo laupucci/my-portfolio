@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import { colors } from "../../utils";
+const { whitish } = colors;
 
 export const TecContainer = styled.section`
   height: 100vh;
   width: 100vw;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 
 .background {
     height: 100%;
@@ -13,6 +17,56 @@ export const TecContainer = styled.section`
     justify-content: center;
     align-items: center;
   }
+  .title{
+    color: ${whitish};
+    font-size: 250%;
+
+  }
+  .cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 94vh;
+  width: 100vw;
+  }
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+.tec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  width: 6em;
+  height: 6em;
+  color: ${whitish};
+}
+.express{
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.logoE{
+  width: 6em;
+  color: ${whitish};
+}
+.logoTxt{
+  color: ${whitish};
+}
+.logoTxtE{
+  color: ${whitish};
+  margin-top: 2em
+}
+.logoLight{
+  width: 6em;
+  height: 6em;
+  color: #202020;
+}
   .cta {
    // position: absolute;
    color: #3b3228;
@@ -42,9 +96,23 @@ export const TecContainer = styled.section`
     }
     .arrow {
       margin-top: -0.2rem;
-      width: 2rem;
-      height: 2rem;
+      width: 1.7rem;
+      height: 1.7rem;
       transition: 0.3s ease-in-out;
+      color: #e4e4e4;
     }
+  }
+  .backgroundLight {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titleLight {
+    color: #272727;
+    font-size: 250%;
   }
 `
