@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const HomeContainer = styled.section`
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  //margin: 0 auto;
+
 
   .background {
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;

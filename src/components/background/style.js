@@ -11,9 +11,10 @@ export const BackgroundCont = styled.section`
   }
   position: fixed;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   z-index: -1;
+
   img {
     min-height: 100%;
     width: 100%;

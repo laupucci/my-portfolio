@@ -13,7 +13,7 @@ export const ContactContainer = styled.section`
   .background {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.8);
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@ export const ContactContainer = styled.section`
       h2 {
         font-family: "Sanchez", sans-serif;
         font-size: 100%;
-        color:  rgba(200, 200, 200);
+        color: ${whitish};
         width: 40%;
         font-weight: normal;
         display: flex;
@@ -118,7 +118,7 @@ export const ContactContainer = styled.section`
       grid-area: submit;
       width: 95%;
       height: 120%;
-      background-color: rgba(249, 35, 9, 0.9);
+      background-color: rgba(236, 36, 11, 0.87);
       color: ${whitish};
       border: none;
       border-radius: 15px 0;
@@ -184,12 +184,30 @@ export const ContactContainer = styled.section`
   .titleLight {
       padding: 1rem 1.5rem;
       width: 50vw;
-      background-color: rgba(249, 35, 9, 0.85);
+      background-color: rgba(236, 12, 12, 0.85);
       border-radius: 25px 0 0 0;
       display: flex;
       justify-content: center;
       align-items: center;
   }
+  .submit_btnLight {
+      grid-area: submit;
+      width: 95%;
+      height: 120%;
+      background-color: rgba(236, 12, 12, 0.85);
+      color: ${whitish};
+      border: none;
+      border-radius: 15px 0;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: "Sanchez";
+
+      &:hover {
+        background-color: rgba(134, 30, 17, 0.6);
+        color: ${whitish};
+      }
+    }
   .h2Light {
         font-family: "Sanchez", sans-serif;
         font-size: 120%;

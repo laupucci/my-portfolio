@@ -197,7 +197,7 @@ export default function Contact({language, theme}) {
                       : null}
                   </div>
                 </div>
-                <button className="submit_btn" type="submit">
+                <button className="submit_btnLight" type="submit">
                 {languages[language]?.send}
                 </button>
               </Form>

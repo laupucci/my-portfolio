@@ -107,8 +107,8 @@ export const Container = styled.header`
     position: fixed;
     right: 1rem;
     bottom: 1rem;
-    width: 4rem;
-    height: 4rem;
+    width: 3%;
+    height: 6%;
     border-radius: 50%;
     border: 2px solid ${whitish};
     background: none;
@@ -129,8 +129,8 @@ export const Container = styled.header`
     position: fixed;
     right: 1rem;
     bottom: 1rem;
-    width: 5%;
-    height: 10%;
+    width: 3%;
+    height: 6%;
     border-radius: 50%;
     border: 2px solid #272727;
     background: none;

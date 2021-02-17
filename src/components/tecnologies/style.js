@@ -11,7 +11,7 @@ export const TecContainer = styled.section`
 
 .background {
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.8);
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -20,6 +20,7 @@ export const TecContainer = styled.section`
   .title{
     color: ${whitish};
     font-size: 250%;
+    padding-top: 1em;
 
   }
   .cont{
@@ -114,5 +115,6 @@ export const TecContainer = styled.section`
   .titleLight {
     color: #272727;
     font-size: 250%;
+    padding-top: 1em;
   }
 `
