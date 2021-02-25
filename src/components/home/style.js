@@ -33,13 +33,15 @@ export const HomeContainer = styled.section`
     color: #e4e4e4;
     //background-color: rgba(107, 107, 107, 0.5);
     background-color: rgba(249, 35, 9, 0.4);
-    width: 70vw;
-    height: 33vh;
+    width: 40vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0 55px 0 0;
+    border-radius: 7vw 5vw 5vw 0;
+    margin-bottom: 2%;
+    margin-top: 2%;
 
     .title {
       font-size: 4vw;
@@ -59,6 +61,7 @@ export const HomeContainer = styled.section`
     //padding-top: 4%;
     color: ${whitish};
     font-family: 'Acme', sans-serif;
+    margin-bottom: 0;
   }
 
   .description {
@@ -77,7 +80,7 @@ export const HomeContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0 0 0 55px;
+    border-radius: 5vw 9vw 0 5vw;
   }
 
   .cta {
