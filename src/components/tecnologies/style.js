@@ -8,6 +8,7 @@ export const TecContainer = styled.section`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  
 
 .background {
     height: 100%;
@@ -19,8 +20,8 @@ export const TecContainer = styled.section`
   }
   .title{
     color: ${whitish};
-    font-size: 250%;
-    padding-top: 1em;
+    font-size: 4vw;
+    font-family: 'Acme', sans-serif;
 
   }
   .cont{
@@ -40,6 +41,7 @@ export const TecContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1.52vw;
 }
 .logo{
   width: 6em;
@@ -90,18 +92,30 @@ export const TecContainer = styled.section`
     }
   
     .cta_txt {
-      font-size: 1rem;
-      font-family: "Sanchez";
+      font-size: 1vw;
       color: #e4e4e4;
       transition: 0.3s ease-in-out;
+      font-family: 'Acme', sans-serif;
+    }
+    .cta_txtLight {
+      font-size: 1vw;
+      transition: 0.3s ease-in-out;
+      font-family: 'Acme', sans-serif;
     }
     .arrow {
       margin-top: -0.2rem;
-      width: 1.7rem;
-      height: 1.7rem;
+      width: 1.7vw;
+      height: 1.7vw;
       transition: 0.3s ease-in-out;
       color: #e4e4e4;
     }
+    .arrowLight {
+    margin-top: -0.2rem;
+    width: 1.7vw;
+    height: 1.7vw;
+    transition: 0.3s ease-in-out;
+    color: #272727;
+  }
   }
   .backgroundLight {
     height: 100%;
@@ -114,7 +128,13 @@ export const TecContainer = styled.section`
 
   .titleLight {
     color: #272727;
-    font-size: 250%;
-    padding-top: 1em;
+    font-size: 4vw;
+    font-family: 'Acme', sans-serif;
+  }
+  p{
+    font-family: 'Acme', sans-serif;
+  }
+  .titleCont{
+    margin-top: 2%;
   }
 `

@@ -38,15 +38,15 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
         <p className="logo">Laura Puccinelli | Full Stack Developer</p>
       </ScrollLink>{" "}
       <nav className="menu">
-        <ScrollLink to="tecnologias" smooth={true} duration={600}>
+        <ScrollLink to="tecnologias" smooth={true} duration={400}>
           <p className="p2">{languages[language]?.tecnologies}</p>
         </ScrollLink>
 
-        <ScrollLink to="proyectos" smooth={true} duration={600}>
+        <ScrollLink to="proyectos" smooth={true} duration={400}>
           <p className="p2">{languages[language]?.projects}</p>
         </ScrollLink>
 
-        <ScrollLink to="contacto" smooth={true} duration={600}>
+        <ScrollLink to="contacto" smooth={true} duration={400}>
           <p className="p2">{languages[language]?.contact}</p>
         </ScrollLink>
         <button className="theme" onClick={handleThemeChange}>
@@ -66,22 +66,26 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
               <p className="p1Ligth">{languages[language]?.language}</p>
             )}
             <li>
+            {theme === "dark" ? (
               <button id="en" className="btnLanguage">
-                {theme === "dark" ? (
-                  <p className="en">{languages[language]?.language_en}</p>
-                ) : (
-                  <p className="enLight">{languages[language]?.language_en}</p>
-                )}
+                  {languages[language]?.language_en}
               </button>
+                ) : (
+              <button id="en">
+                  {languages[language]?.language_en}
+              </button>
+                )}
             </li>
             <li>
+            {theme === "dark" ? (
               <button id="es" className="btnLanguage">
-                {theme === "dark" ? (
-                  <p className="en">{languages[language]?.language_es}</p>
-                ) : (
-                  <p className="enLight">{languages[language]?.language_es}</p>
-                )}
+                  {languages[language]?.language_es}
               </button>
+                ) : (
+              <button id="es">
+                  {languages[language]?.language_es}
+              </button>
+                )}
             </li>
           </ul>
         </LanguageCont>

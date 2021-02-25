@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { BiDownArrow } from "react-icons/bi";
+import { MdExpandMore } from "react-icons/md";
 
 export const colors = {
   black: "#1C1816",
@@ -23,9 +23,9 @@ export const Cta = ({ text, to, theme }) => {
         <span className="cta_txtLight">{text}</span>
       )}
       {theme === "dark" ? (
-        <BiDownArrow className="arrow"/>
+        <MdExpandMore className="arrow"/>
       ) : (
-        <BiDownArrow className="arrowLight"/>
+        <MdExpandMore className="arrowLight"/>
       )}
     </Link>
   );

@@ -6,7 +6,6 @@ export const Container = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  font-family: "'Julius Sans One";
   background-color: rgba(4, 4, 4, 0.75);
   height: 10vh;
   padding: 0em;
@@ -18,7 +17,7 @@ export const Container = styled.header`
 
   .logo {
     font-size: 1.5rem;
-    font-family: "Julius Sans One";
+    font-family: 'Acme', sans-serif;
     color: ${whitish};
     padding: 1em;
     margin-left: 2.75em;
@@ -35,12 +34,6 @@ export const Container = styled.header`
     justify-content: center;
     align-items: center;
     margin-right: 2.75em;
-  }
-  .en {
-    color: rgba(228, 228, 228);
-  }
-  .enLight {
-    color: #272727;
   }
 
   .theme {
@@ -71,6 +64,8 @@ export const Container = styled.header`
     }
     .pTheme {
       color: ${whitish};
+      font-family: 'Architects Daughter', sans-serif;
+      font-size: 1.2em;
     }
     .iconTheme {
       color: ${whitish};
@@ -80,19 +75,19 @@ export const Container = styled.header`
   .p1 {
     color: ${whitish};
     font-size: 1.2em;
-    font-family: "Sanchez";
+    font-family: 'Architects Daughter', sans-serif;
   }
   .p1Ligth {
     color: #272727;
     padding: 1em;
     font-size: 16px;
-    font-family: "Sanchez";
+    font-family: 'Architects Daughter', sans-serif;
   }
   .p2 {
     color: ${whitish};
     padding: 1em;
     font-size: 16px;
-    font-family: "Sanchez";
+    font-family: 'Architects Daughter', sans-serif;
     &:hover {
       background-color: rgba(249, 35, 9, 0.6);
       border-radius: 0 7px;
@@ -109,9 +104,6 @@ export const Container = styled.header`
     bottom: 1rem;
     width: 3%;
     height: 6%;
-    border-radius: 50%;
-    border: 2px solid ${whitish};
-    background: none;
     font-size: 3rem;
     font-weight: bold;
     display: ${({ active }) => (active ? "flex" : "none")};
@@ -131,9 +123,6 @@ export const Container = styled.header`
     bottom: 1rem;
     width: 3%;
     height: 6%;
-    border-radius: 50%;
-    border: 2px solid #272727;
-    background: none;
     font-size: 250%;
     font-weight: bold;
     display: ${({ active }) => (active ? "flex" : "none")};
@@ -225,12 +214,21 @@ export const LanguageCont = styled.li`
     padding: 1em 2em;
     text-decoration: none;
     margin-right: 2em;
-    background-color: rgba(249, 35, 9, 0.4);
+    background-color: rgba(249, 35, 9, 0.75);
     border: none;
     margin-bottom: 4px;
     border-radius: 0 7px;
+    font-family: 'Architects Daughter', sans-serif;
+   // color: #272727;
+   color: rgba(228, 228, 228);
     &:hover {
       background-color: rgba(249, 35, 9, 0.1);
     }
+  }
+  .btnLanguage{
+    font-family: 'Architects Daughter', sans-serif;
+    color: rgba(228, 228, 228);
+    background-color: rgba(249, 35, 9, 0.4);
+
   }
 `;

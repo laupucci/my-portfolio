@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../utils";
-const { secondaryDark, darkColor, whitish } = colors;
+const { darkColor, whitish } = colors;
 
 export const ContactContainer = styled.section`
   display: flex;
@@ -41,8 +41,9 @@ export const ContactContainer = styled.section`
       align-items: center;
 
       h2 {
-        font-family: "Sanchez", sans-serif;
-        font-size: 100%;
+        font-family: 'Acme', sans-serif;
+        font-size: 2vw;
+        margin: 0;
         color: ${whitish};
         width: 40%;
         font-weight: normal;
@@ -78,7 +79,7 @@ export const ContactContainer = styled.section`
 
     .label {
       color:  rgba(200, 200, 200);
-      font-family: "Sanchez";
+      font-family: 'Acme', sans-serif;
       font-size: 1.1rem;
       padding-bottom: 0.5rem;
     }
@@ -88,7 +89,7 @@ export const ContactContainer = styled.section`
       padding: 1rem;
       background-color: rgba(39, 39, 39, 0.6);
       color: #e4e4e4;
-      font-family: "Sanchez";
+      font-family: 'Architects Daughter', sans-serif;
       font-size: 1.1rem;
       border: 1.5px solid transparent;
       border-radius: 5px;
@@ -102,8 +103,13 @@ export const ContactContainer = styled.section`
     }
     .error {
       height: 0;
-      font-size: 0.8rem;
-      color: ${secondaryDark};
+      font-size: 0.9vw;
+      color: #F97777;
+    }
+    .errorLight {
+      height: 0;
+      font-size: 0.9vw;
+      color: #AB0F0F;
     }
 
     .input.textarea {
@@ -118,15 +124,15 @@ export const ContactContainer = styled.section`
       grid-area: submit;
       width: 95%;
       height: 120%;
-      background-color: rgba(236, 36, 11, 0.87);
+      background-color: rgba(236, 36, 11, 0.80);
       color: ${whitish};
       border: none;
       border-radius: 15px 0;
       padding: 0.5rem;
       cursor: pointer;
       transition: 0.3s;
-      font-family: "Sanchez";
-
+      font-family: 'Acme', sans-serif;
+      font-size: 1.3vw;
       &:hover {
         background-color: rgba(134, 30, 17, 0.6);
         color: ${whitish};
@@ -201,26 +207,27 @@ export const ContactContainer = styled.section`
       padding: 0.5rem;
       cursor: pointer;
       transition: 0.3s;
-      font-family: "Sanchez";
-
+      font-family: 'Acme', sans-serif;
+      font-size: 1.3vw;
       &:hover {
         background-color: rgba(134, 30, 17, 0.6);
         color: ${whitish};
       }
     }
   .h2Light {
-        font-family: "Sanchez", sans-serif;
-        font-size: 120%;
-        color:  rgba(200, 200, 200);
+    font-family: 'Acme', sans-serif;
+        font-size: 2vw;
+        margin: 0;
+        color: ${whitish};
         width: 40%;
-        font-weight: normal;
+         font-weight: normal;
         display: flex;
       justify-content: center;
       align-items: center;
       }
       .labelLight{
         color:  rgba(39, 39, 39, 0.95);
-      font-family: "Sanchez";
+        font-family: 'Acme', sans-serif;
       font-size: 1.1rem;
       padding-bottom: 0.5rem;
 

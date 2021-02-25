@@ -17,29 +17,53 @@ export const ProjectsContainer = styled.section`
     align-items: center;
   }
   .container{
+ height: 85vh;
     justify-content: center;
     align-items: center; 
-    padding: 2.5em
+    /* margin-top: 2%; */
+    padding: 0 3vw 0 3vw;
   }
   h2{
     margin: 0;
-    margin-top: 0.8em
+    margin-top: 6vh;
+    font-family: 'Acme', sans-serif;
+  }
+  h3{
+    font-family: 'Acme', sans-serif;
+    font-size: 1.7vw;
+  }
+  p{
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 1.37vw;
+    margin-top: 0;
   }
   .title {
     color: ${whitish};
-    font-size: 250%;
+    font-size: 4vw;
     max-width: 6em;
     justify-content: center;
-    align-items: center
+    align-items: center;
   }
   .imgsIntegrar{
-    width: 5.5em;
-    margin: 1em;
-    border: 5px solid  #151515;
+    width: 7vw;
+    margin: 1vw;
+    border: 5px solid  #585858;
     border-radius: 17px;
   }
   .imgsDubsnip{
-    width: 21.5em;
+    width: 26vw;
+    margin: 1em;
+    border: 5px solid  #585858;
+    border-radius: 17px;
+  }
+  .imgsIntegrarLight{
+    width: 7vw;
+    margin: 1vw;
+    border: 5px solid  #151515;
+    border-radius: 17px;
+  }
+  .imgsDubsnipLight{
+    width: 26vw;
     margin: 1em;
     border: 5px solid  #151515;
     border-radius: 17px;
@@ -56,19 +80,22 @@ export const ProjectsContainer = styled.section`
     display: flex;
     flex-direction: column; 
     color: ${whitish};
+    padding-right: 2.5%;
   }
   .integrarLight{
     display: flex;
     flex-direction: row; 
-    color: #272727
+    color: #272727;
+    
   }
   .integrarTxtLight{
     display: flex;
     flex-direction: column; 
     color: #202020;
+    padding-right: 2.5%;
   }
   .cta {
-   // position: absolute;
+   margin-bottom: 0;
    color: #3b3228;
     bottom: 0;
     width: 100%;
@@ -89,18 +116,31 @@ export const ProjectsContainer = styled.section`
     }
 
     .cta_txt {
-      font-size: 1rem;
-      font-family: "Sanchez";
+      font-size: 1vw;
+      font-family: 'Acme', sans-serif;
       color: #e4e4e4;
       transition: 0.3s ease-in-out;
     }
+    .cta_txtLight {
+    font-family: 'Acme', sans-serif;
+    font-size: 1vw;
+      transition: 0.3s ease-in-out;
+    }
+
     .arrow {
       margin-top: -0.2rem;
-      width: 1.7rem;
-      height: 1.7rem;
+      width: 1.7vw;
+      height: 1.7vw;
       transition: 0.3s ease-in-out;
       color: #e4e4e4;
     }
+    .arrowLight {
+    margin-top: -0.2rem;
+    width: 1.7vw;
+    height: 1.7vw;
+    transition: 0.3s ease-in-out;
+    color: #272727;
+  }
   }
 
   .backgroundLight {
@@ -114,6 +154,6 @@ export const ProjectsContainer = styled.section`
 
   .titleLight {
     color: #272727;
-    font-size: 250%;
+    font-size: 4vw;
   }
 `

@@ -24,7 +24,7 @@ export default function Tecnologies({ language, theme }) {
       {theme === "dark" ? (
         <div className="background">
           <div className="cont">
-          <div>
+          <div className="titleCont">
             <h2 className="title">{languages[language]?.tecnologies}</h2>
           </div>
           <div className="container">
@@ -85,7 +85,7 @@ export default function Tecnologies({ language, theme }) {
       ) : (
         <div className="backgroundLight">
          <div className="cont">
-          <div>
+         <div className="titleCont">
             <h2 className="titleLight">{languages[language]?.tecnologies}</h2>
           </div>
           <div className="container">

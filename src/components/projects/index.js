@@ -56,9 +56,9 @@ export default function Projects({ language, theme }) {
                   <p>{languages[language]?.integrAr}</p>
                 </div>
                 <div className="imgs">
-                  <img className="imgsIntegrar" src={student} />
-                  <img className="imgsIntegrar" src={teacher} />
-                  <img className="imgsIntegrar" src={preceptor} />
+                  <img className="imgsIntegrarLight" src={student} />
+                  <img className="imgsIntegrarLight" src={teacher} />
+                  <img className="imgsIntegrarLight" src={preceptor} />
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Projects({ language, theme }) {
                   <p>{languages[language]?.dubsnip}</p>
                 </div>
                 <div>
-                  <img className="imgsDubsnip" src={dubsnip} />
+                  <img className="imgsDubsnipLight" src={dubsnip} />
                 </div>
               </div>
             </div>

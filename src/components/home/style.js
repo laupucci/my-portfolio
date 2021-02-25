@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { colors } from "../../utils";
+const { whitish } = colors;
 
 export const HomeContainer = styled.section`
   height: 100vh;
   width: 100vw;
-
+  //font-family: 'Architects Daughter', sans-serif;
 
   .background {
     height: 100%;
@@ -29,7 +31,8 @@ export const HomeContainer = styled.section`
 
   .hero_txt {
     color: #e4e4e4;
-    background-color: rgba(107, 107, 107, 0.5);
+    //background-color: rgba(107, 107, 107, 0.5);
+    background-color: rgba(249, 35, 9, 0.4);
     width: 70vw;
     height: 33vh;
     display: flex;
@@ -39,29 +42,35 @@ export const HomeContainer = styled.section`
     border-radius: 0 55px 0 0;
 
     .title {
-      color: #e4e4e4;
-      font-size: 250%;
+      font-size: 4vw;
+    margin: 1%;
+      font-family: 'Kaushan Script', sans-serif;
+      color: ${whitish};
     }
     .subtitle {
-      font-family: "Nixie One";
-      font-size: 200%;
-      color: #e4e4e4;
+      font-size: 2.5vw;
+    margin: 0;
+    color: ${whitish};
+      font-family: 'Acme', sans-serif;
     }
   }
 
   .descriptionTitle {
     //padding-top: 4%;
-    color: #e4e4e4;
+    color: ${whitish};
+    font-family: 'Acme', sans-serif;
   }
 
   .description {
     font-size: 120%;
     padding: 0 4%;
-    color: #e4e4e4;
+    color: ${whitish};
+    font-family: 'Architects Daughter', sans-serif;
   }
 
   .logo_container {
-    background-color: rgba(249, 35, 9, 0.4);
+    //background-color: rgba(249, 35, 9, 0.4);
+    background-color: rgba(101, 101, 101, 0.55);
     width: 70vw;
     height: 44vh;
     display: flex;
@@ -92,28 +101,28 @@ export const HomeContainer = styled.section`
     }
 
     .cta_txt {
-      font-size: 1rem;
-      font-family: "Sanchez";
-      color: #e4e4e4;
+      font-size: 1vw;
+      font-family: 'Acme', sans-serif;
+      color: ${whitish};
       transition: 0.3s ease-in-out;
     }
     .arrow {
       margin-top: -0.2rem;
-      width: 1.7rem;
-      height: 1.7rem;
-      color: #e4e4e4;
+      width: 1.7vw;
+      height: 1.7vw;
+      color: ${whitish};
       transition: 0.3s ease-in-out;
     }
     .cta_txtLight {
-    font-size: 1rem;
-    font-family: "Sanchez";
+    font-size: 1vw;
+    font-family: 'Acme', sans-serif;
     color: #272727;
     transition: 0.3s ease-in-out;
   }
   .arrowLight {
     margin-top: -0.2rem;
-    width: 2rem;
-    height: 2rem;
+    width: 1.7vw;
+    height: 1.7vw;
     transition: 0.3s ease-in-out;
     color: #272727;
   }
@@ -129,46 +138,51 @@ export const HomeContainer = styled.section`
   }
   .hero_txtLight {
     color: #e4e4e4;
-    background-color: rgba(107, 107, 107, 0.8);
+    margin-bottom: 2%;
     width: 70vw;
-    height: 33vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0 55px 0 0;
+    /* border-radius: 0 55px 0 0; */
 
   .titleLigth {
     color: #202020;
-    font-size: 250%;
+    font-size: 4vw;
+    margin: 1%;
+    font-family: 'Kaushan Script', sans-serif;
   }
   .subtitleLigth {
-    font-family: "Nixie One";
-    font-size: 200%;
+    font-size: 2.5vw;
+    margin: 0;
     color: #272727;
+    font-family: 'Acme', sans-serif;
   }
 }
 
 .logo_containerLight {
-    background-color: rgba(249, 35, 9, 0.7);
+    /* background-color: rgba(249, 35, 9, 0.7); */
     width: 70vw;
     height: 44vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0 0 0 55px;
+    /* border-radius: 0 0 0 55px; */
   }
 
   .descriptionTitleLigth {
     //padding-top: 4%;
     color: #171717;
+    font-family: 'Acme', sans-serif;
   }
 
   .descriptionLigth {
-    font-size: 120%;
+    font-size: 1.6vw;
     padding: 0 4%;
     color: #171717;
+    font-family: 'Architects Daughter', sans-serif;
   }
   
   @media (max-width: 500px) {
@@ -225,7 +239,6 @@ export const HomeContainer = styled.section`
 
       .cta_txt {
         font-size: 1.5vh;
-        font-family: "Sanchez";
         color: #e4e4e4;
         transition: 0.3s ease-in-out;
       }
