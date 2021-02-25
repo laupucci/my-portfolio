@@ -3,6 +3,7 @@ import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { ContactContainer } from "./style";
 import { languages } from "./languages";
+import Swal from 'sweetalert2'
 import { init, send } from "emailjs-com";
 init(process.env.REACT_APP_USER_ID);
 
@@ -42,19 +43,26 @@ export default function Contact({ language, theme }) {
         ).then(
           function (response) {
             console.log("SUCCESS!", response.status, response.text);
-            language === "en"
-              ? alert("message send!")
-              : alert("Mensaje enviado!");
-            resetForm({});
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: language === "en" ? "Message send!" : "Mensaje enviado!",
+              text: language === "en" ? "Thank you, I will contact you!" : "Gracias, te estaré contactando!",
+              showConfirmButton: false,
+              timer: 2500
+            })
+            resetForm({})
+            
           },
           function (error) {
             console.log("FAILED...", error);
-            language === "en"
-              ? alert("Ups! It has been an error, try again!")
-              : alert("Ups! Hubo un error, volvé a intentarlo!");
-          }
-        );
-      }}
+               Swal.fire({
+                icon: 'error',
+                title: language === "en" ? 'Oops...' : 'Ups...',
+                text: language === "en" ? 'Something went wrong, try again!' : 'Hubo un error, volvé a intentarlo!'
+              })
+      })
+    }}
     >
       {({ values, errors, touched }) => (
         <ContactContainer id="contacto">
