@@ -49,14 +49,18 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
         <ScrollLink to="contacto" smooth={true} duration={400}>
           <p className="p2">{languages[language]?.contact}</p>
         </ScrollLink>
-        <button className="theme" onClick={handleThemeChange}>
-          {theme === "dark" ? (
+
+        {theme === "dark" ? (
+          <button className="theme" onClick={handleThemeChange}>
             <BiMoon className="iconTheme" />
-          ) : (
+            <p className="pTheme">{languages[language].dark}</p>
+          </button>
+        ) : (
+          <button className="theme" onClick={handleThemeChange}>
             <ImSun className="iconTheme" />
-          )}
-          <p className="pTheme">{languages[language].theme}</p>
-        </button>
+            <p className="pTheme">{languages[language].light}</p>
+          </button>
+        )}
         <LanguageCont>
           <BiWorld className="icon" />
           <ul className="list" onClick={handleLanguage}>
@@ -66,37 +70,34 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
               <p className="p1Ligth">{languages[language]?.language}</p>
             )}
             <li>
-            {theme === "dark" ? (
-              <button id="en" className="btnLanguage">
+              {theme === "dark" ? (
+                <button id="en" className="btnLanguage">
                   {languages[language]?.language_en}
-              </button>
-                ) : (
-              <button id="en">
-                  {languages[language]?.language_en}
-              </button>
-                )}
+                </button>
+              ) : (
+                <button id="en">{languages[language]?.language_en}</button>
+              )}
             </li>
             <li>
-            {theme === "dark" ? (
-              <button id="es" className="btnLanguage">
+              {theme === "dark" ? (
+                <button id="es" className="btnLanguage">
                   {languages[language]?.language_es}
-              </button>
-                ) : (
-              <button id="es">
-                  {languages[language]?.language_es}
-              </button>
-                )}
+                </button>
+              ) : (
+                <button id="es">{languages[language]?.language_es}</button>
+              )}
             </li>
           </ul>
         </LanguageCont>
       </nav>
       {theme === "dark" ? (
-      <ScrollLink to="home" smooth={true} duration={500} className="top">
-        <span>^</span>
-      </ScrollLink>) : (
-      <ScrollLink to="home" smooth={true} duration={500} className="topLight">
-      <span>^</span>
-    </ScrollLink>
+        <ScrollLink to="home" smooth={true} duration={500} className="top">
+          <span>^</span>
+        </ScrollLink>
+      ) : (
+        <ScrollLink to="home" smooth={true} duration={500} className="topLight">
+          <span>^</span>
+        </ScrollLink>
       )}
     </Container>
   );
