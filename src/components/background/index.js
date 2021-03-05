@@ -8,7 +8,7 @@ const Background = () => {
 
   const handleScroll = () => {
     const scrollPosition =
-      window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+   window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
     setScroll(scrollPosition);
   };
 

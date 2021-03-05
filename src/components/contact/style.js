@@ -6,13 +6,13 @@ export const ContactContainer = styled.section`
   display: flex;
   height: 100vh;
   width: 100vw;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   justify-content: center;
   align-items: center;
   
   .background {
     height: 100%;
-    width: 100%;
+  width: 100%;
     background: rgba(0, 0, 0, 0.8);
     background-repeat: no-repeat;
     display: flex;

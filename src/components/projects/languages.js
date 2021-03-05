@@ -5,7 +5,7 @@ export const languages = {
     language_es: "Spanish",
     projects: "Projects",
     contact: "Contact",
-    integrAr: "Educational application. The main objective is to facilitate the communication of the teachers with their students, and the monitoring of the teachers towards the students. Designed to be administered from the school, its administration is responsible for generating the users of the teachers and students. The technologies used were: Javascript, React-Native, GraphQl, MongoDB, Node y Apollo",
+    integrAr: "Educational application. The main target is to facilitate the communication of the teachers with their students, and the monitoring of the teachers towards the students. Designed to be administered from the school, its administration is responsible for generating the users of the teachers and students. The technologies used were: Javascript, React-Native, GraphQl, MongoDB, Node y Apollo",
     dubsnip: "E-commerce. Web made for the sale of musical instruments. It have a product section, offers, news, admin panel, user registration, guest cart, reviews, among others. The technologies used were: Javascript, Express, PostgreSQL, Styled-components, React, Redux,Sequelize, Node y Passport."
   },
   es: {

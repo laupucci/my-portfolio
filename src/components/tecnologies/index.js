@@ -1,6 +1,6 @@
 import React from "react";
 import { TecContainer } from "./style";
-import { Cta } from "../../utils";
+import Footer from "../footer"
 import { languages } from "./languages";
 import {
   SiApollographql,
@@ -75,12 +75,8 @@ export default function Tecnologies({ language, theme }) {
               <p className="logoTxt">Sequelize</p>
             </div>
           </div>
-          <Cta
-            text={languages[language]?.projects}
-            to="proyectos"
-            theme={theme}
-          />
           </div>
+          <Footer theme={theme} text={languages[language]?.projects} to='proyectos'/>
         </div>
       ) : (
         <div className="backgroundLight">
@@ -134,12 +130,8 @@ export default function Tecnologies({ language, theme }) {
               <p>Sequelize</p>
             </div>
           </div>
-          <Cta
-            text={languages[language]?.projects}
-            to="proyectos"
-            theme={theme}
-          />
           </div>
+          <Footer theme={theme} text={languages[language]?.projects} to='proyectos'/>
         </div>
       )}
     </TecContainer>

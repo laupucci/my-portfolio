@@ -5,7 +5,7 @@ const { whitish } = colors;
 export const Container = styled.header`
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background-color: rgba(4, 4, 4, 0.75);
   height: 10vh;
   padding: 0em;

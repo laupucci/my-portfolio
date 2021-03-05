@@ -1,7 +1,3 @@
-import React from "react";
-import { Link } from "react-scroll";
-import { MdExpandMore } from "react-icons/md";
-
 export const colors = {
   black: "#1C1816",
   primaryColor: "#A3BD31",
@@ -11,22 +7,4 @@ export const colors = {
   darkColor: "#434241",
   darkBrown: "#272727",
   whitish: "#E8E8E8",
-};
-
-export const Cta = ({ text, to, theme }) => {
-  console.log(theme, 'cta')
-  return (
-    <Link to={to} spy={true} smooth={true} duration={500} className="cta">
-      {theme === "dark" ? (
-        <span className="cta_txt">{text}</span>
-      ) : (
-        <span className="cta_txtLight">{text}</span>
-      )}
-      {theme === "dark" ? (
-        <MdExpandMore className="arrow"/>
-      ) : (
-        <MdExpandMore className="arrowLight"/>
-      )}
-    </Link>
-  );
 };

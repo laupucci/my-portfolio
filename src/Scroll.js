@@ -4,14 +4,14 @@ import Tecnologies from "./components/tecnologies";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 
-const Scroll = ({language, setLanguage, theme, setTheme}) => {
+const Scroll = ({ language, theme }) => {
 
   return (
     <>
-      <Home language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
-      <Tecnologies language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
-      <Projects language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
-      <Contact language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
+      <Home language={language} theme={theme} />
+      <Tecnologies language={language} theme={theme}  />
+      <Projects language={language} theme={theme} />
+      <Contact language={language} theme={theme} />
     </>
   );
 };

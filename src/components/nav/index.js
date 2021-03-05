@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import { BiWorld, BiMoon } from "react-icons/bi";
 import { ImSun } from "react-icons/im";
 import { languages } from "./languages";
-import { Link } from "react-router-dom";
 import { Container, LanguageCont } from "./style";
 import { Link as ScrollLink } from "react-scroll";
 //{ language, setLanguage }
 const Navbar = ({ language, setLanguage, theme, setTheme }) => {
   const [active, setActive] = useState(false);
-  console.log(theme);
   const handleLanguage = (ev) => {
     if (ev.target.id) {
       setLanguage(ev.target.id);

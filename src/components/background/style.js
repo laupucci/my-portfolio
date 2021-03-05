@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const BackgroundCont = styled.section`
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
   @keyframes scroll {
     from {
       transform: translateY(-30%);
@@ -9,11 +14,6 @@ export const BackgroundCont = styled.section`
       transform: translateY(-25%);
     }
   }
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1;
 
   img {
     min-height: 100%;
@@ -33,4 +33,5 @@ export const BackgroundCont = styled.section`
       min-height: 142vh;
     }
   }
+
 `;
