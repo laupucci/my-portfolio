@@ -241,7 +241,7 @@ export const Container = styled.header`
     .menu_open.active {
       margin-right: 4%;
       display: block;
-      width:7vw;
+      width: 7vw;
       height: 7vw;
       cursor: pointer;
       color: ${whitish};

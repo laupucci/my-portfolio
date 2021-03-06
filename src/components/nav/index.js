@@ -6,7 +6,6 @@ import { Container, LanguageCont } from "./style";
 import { Link as ScrollLink } from "react-scroll";
 import menuHamb from "../../media/menu.svg";
 import x from "../../media/x.svg";
-//{ language, setLanguage }
 const Navbar = ({ language, setLanguage, theme, setTheme }) => {
   const [active, setActive] = useState(false);
   const [sidebar, setSidebar] = useState(false);

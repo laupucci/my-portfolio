@@ -41,6 +41,7 @@ export default function Projects({ language, theme }) {
           </div>
           <Footer
             theme={theme}
+            language={language} 
             text={languages[language]?.contact}
             to="contacto"
           />
@@ -76,6 +77,7 @@ export default function Projects({ language, theme }) {
           </div>
           <Footer
             theme={theme}
+            language={language} 
             text={languages[language]?.contact}
             to="contacto"
           />

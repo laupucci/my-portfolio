@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-//import logo from "../../media/logo.svg";
 import { HomeContainer } from "./style";
 import Footer from "../footer/index";
 import { languages } from "./languages";
@@ -19,7 +18,7 @@ export default function Home({ language, theme }) {
               <p className="description">{languages[language]?.description}</p>
             </div>
           </div>
-            <Footer theme={theme} text={languages[language]?.tecnologies} to='tecnologias'/>
+            <Footer theme={theme} language={language}  text={languages[language]?.tecnologies} to='tecnologias'/>
         </div>
       ) : (
         <div className="backgroundLigth">
@@ -33,7 +32,7 @@ export default function Home({ language, theme }) {
               <p className="descriptionLigth">{languages[language]?.description}</p>
             </div>
           </div>
-            <Footer theme={theme} text={languages[language]?.tecnologies} to='tecnologias'/>
+            <Footer theme={theme} language={language} text={languages[language]?.tecnologies} to='tecnologias'/>
         </div>
       )}
     </HomeContainer>

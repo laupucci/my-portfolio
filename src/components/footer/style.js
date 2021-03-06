@@ -1,6 +1,6 @@
 import styled from "styled-components";
-// import { colors } from "./index";
-// const { whitish } = colors;
+import { colors } from "../../utils/index";
+const { whitish } = colors;
 
 export const FooterContainer = styled.section`
   position: relative;
@@ -13,12 +13,14 @@ export const FooterContainer = styled.section`
   text-decoration: none;
   padding-bottom: 1.2%;
   .pages {
-    width: 10%;
+    width: 15%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .git {
+  .git,
+  .linkedin,
+  .cv {
     color: #e8e8e8;
     width: 5vw;
     height: 5vh;
@@ -28,8 +30,11 @@ export const FooterContainer = styled.section`
       margin-top: -0.4rem;
     }
   }
-  .linkedin {
-    color: #e8e8e8;
+  .cvDiv {
+    color: ${whitish};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 5vw;
     height: 5vh;
     cursor: pointer;
@@ -37,8 +42,33 @@ export const FooterContainer = styled.section`
       transform: scale(1.5);
       margin-top: -0.4rem;
     }
+    .cv,
+    p {
+      font-family: "Acme", sans-serif;
+      margin: 0;
+    }
   }
-  .gitLight {
+  .cvDivLight {
+    color: #272727;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.5);
+      margin-top: -0.4rem;
+    }
+    .cvLight,
+    p {
+      font-family: "Acme", sans-serif;
+      margin: 0;
+    }
+  }
+  .gitLight,
+  .linkedinLight,
+  .cvLight {
     color: #272727;
     width: 5vw;
     height: 5vh;
@@ -48,18 +78,9 @@ export const FooterContainer = styled.section`
       margin-top: -0.4rem;
     }
   }
-  .linkedinLight {
-    color: #272727;
-    width: 5vw;
-    height: 5vh;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.5);
-      margin-top: -0.4rem;
-    }
-  }
+
   .cta {
-    width: 80%;
+    width: 75%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -105,10 +126,10 @@ export const FooterContainer = styled.section`
 
   @media screen and (max-width: 1024px) {
     .pages {
-      width: 25%;
+      width: 35%;
     }
     .cta {
-      width: 50%;
+      width: 35%;
       .cta_txt,
       .cta_txtLight {
         font-size: 2.2vw;
@@ -123,17 +144,19 @@ export const FooterContainer = styled.section`
   @media screen and (max-width: 500px) {
     width: 100vw;
     .pages {
-      width: 25%;
+      width: 45%;
     }
     .git,
     .linkedin,
+    .cv,
     .gitLight,
-    .linkedinLight {
+    .linkedinLight,
+    .cvLight {
       width: 7vw;
       height: 7vh;
     }
     .cta {
-      width: 50%;
+      width: 45%;
       .cta_txt,
       .cta_txtLight {
         font-size: 3vw;

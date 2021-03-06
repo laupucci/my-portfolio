@@ -227,28 +227,34 @@ export const HomeContainer = styled.section`
   }
 
   @media screen and (max-width: 1024px) {
-    .me_container, .me_containerLight {
+    .me_container,
+    .me_containerLight {
       width: 62vw;
       height: 24vh;
       padding: 0 3%;
       justify-content: center;
-      .title, .titleLigth {
+      .title,
+      .titleLigth {
         font-size: 7vh;
         text-align: center;
       }
-      .subtitle, .subtitleLigth {
+      .subtitle,
+      .subtitleLigth {
         font-size: 5vh;
       }
     }
-    .descriptionTitle, .descriptionTitleLigth{
+    .descriptionTitle,
+    .descriptionTitleLigth {
       font-size: 4.5vh;
     }
-    .desc_container, .desc_containerLight {
+    .desc_container,
+    .desc_containerLight {
       width: 81vw;
       height: 55vh;
     }
-    .description,  .descriptionLigth  {
-    font-size: 3.9vw;
+    .description,
+    .descriptionLigth {
+      font-size: 3.9vw;
     }
   }
   @media screen and (max-width: 500px) {
@@ -260,17 +266,20 @@ export const HomeContainer = styled.section`
       top: 12%;
     }
 
-    .me_container, .me_containerLight {
+    .me_container,
+    .me_containerLight {
       width: 73vw;
       height: 17vh;
       padding: 0 3%;
       justify-content: center;
 
-      .title, .titleLigth {
+      .title,
+      .titleLigth {
         font-size: 5vh;
         text-align: center;
       }
-      .subtitle, .subtitleLigth {
+      .subtitle,
+      .subtitleLigth {
         font-size: 3.8vh;
       }
     }
@@ -279,20 +288,20 @@ export const HomeContainer = styled.section`
       width: 38vw;
       height: 31vh;
     }
-    .descriptionTitle, .descriptionTitleLigth{
-      display: none
+    .descriptionTitle,
+    .descriptionTitleLigth {
+      display: none;
     }
-    .desc_container, .desc_containerLight {
+    .desc_container,
+    .desc_containerLight {
       width: 81vw;
       height: 60vh;
     }
     .description {
-    font-size: 4.7vw;
+      font-size: 4.7vw;
     }
     .descriptionLigth {
-    font-size: 5vw;
+      font-size: 5vw;
     }
-
-  
   }
 `;

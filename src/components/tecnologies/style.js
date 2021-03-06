@@ -55,21 +55,23 @@ export const TecContainer = styled.section`
     width: 6.7vw;
     color: ${whitish};
   }
-  .express, .expressLight {
+  .express,
+  .expressLight {
     height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .logoE, .logoELight {
+  .logoE,
+  .logoELight {
     width: 9vw;
     height: 7vh;
     color: ${whitish};
   }
   .logoTxt {
     color: ${whitish};
-    text-align: center
+    text-align: center;
   }
   .logoTxtE {
     color: ${whitish};
@@ -106,83 +108,86 @@ export const TecContainer = styled.section`
   @media screen and (max-width: 1024px) {
     justify-content: center;
     align-items: center;
-    .title, .titleLight {
-    font-size: 6vw;
-    margin-bottom: 0;
-  }
-    .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  
-  }
-  .logo, .logoLight {
-    width: 7vw;
-    height: 7vh;
-  }
-  .logoS, .logoLightS {
-    width: 10.5vw;
-  }
-  .express, .expressLight{
-    height: 7vh;
-
-  }
-  .logoE{
-    width: 17vw;
-    height: 4vh;
-  } 
-  .logoELight{
-    width: 17vw;
-  }
-  .logoTxt, .logoTxtLight {
-   font-size: 4.2vw;
-   text-align: center;
-  }
-  .logoTxtE {
-    font-size: 5vw
-  }
-
+    .title,
+    .titleLight {
+      font-size: 6vw;
+      margin-bottom: 0;
     }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .logo,
+    .logoLight {
+      width: 7vw;
+      height: 7vh;
+    }
+    .logoS,
+    .logoLightS {
+      width: 10.5vw;
+    }
+    .express,
+    .expressLight {
+      height: 7vh;
+    }
+    .logoE {
+      width: 17vw;
+      height: 4vh;
+    }
+    .logoELight {
+      width: 17vw;
+    }
+    .logoTxt,
+    .logoTxtLight {
+      font-size: 4.2vw;
+      text-align: center;
+    }
+    .logoTxtE {
+      font-size: 5vw;
+    }
+  }
   @media screen and (max-width: 500px) {
     justify-content: center;
     align-items: center;
-    .cont{
+    .cont {
       margin-top: 1%;
-      justify-content: center
+      justify-content: center;
     }
-    .title, .titleLight {
-    font-size: 8vw;
-  }
+    .title,
+    .titleLight {
+      font-size: 8vw;
+    }
     .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  
-  }
-  .logo, .logoLight {
-    width: 7vw;
-    height: 7vh;
-  }
-  .logoS, .logoLightS {
-    width: 10.5vw;
-  }
-  .express, .expressLight{
-    height: 7vh;
-
-  }
-  .logoE{
-    width: 17vw;
-    height: 4vh;
-  } 
-  .logoELight{
-    width: 17vw;
-  }
-  .logoTxt, .logoTxtLight {
-   font-size: 4.2vw;
-   text-align: center;
-  }
-  .logoTxtE {
-    font-size: 5vw
-  }
-
-    
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
+    .logo,
+    .logoLight {
+      width: 7vw;
+      height: 7vh;
+    }
+    .logoS,
+    .logoLightS {
+      width: 10.5vw;
+    }
+    .express,
+    .expressLight {
+      height: 7vh;
+    }
+    .logoE {
+      width: 17vw;
+      height: 4vh;
+    }
+    .logoELight {
+      width: 17vw;
+    }
+    .logoTxt,
+    .logoTxtLight {
+      font-size: 4.2vw;
+      text-align: center;
+    }
+    .logoTxtE {
+      font-size: 5vw;
+    }
+  }
 `;

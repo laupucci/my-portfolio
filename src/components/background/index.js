@@ -16,7 +16,6 @@ const Background = () => {
     window.addEventListener(
       "scroll",
       () => window.requestAnimationFrame(handleScroll)
-      // handleScroll
     );
     return () => {
       window.removeEventListener("scroll", handleScroll);
