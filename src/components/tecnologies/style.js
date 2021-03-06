@@ -47,18 +47,29 @@ export const TecContainer = styled.section`
     height: 7vw;
     color: ${whitish};
   }
-  .express {
-    height: 6em;
+  .logoS {
+    width: 6.7vw;
+    color: ${whitish};
+  }
+  .logoLightS {
+    width: 6.7vw;
+    color: ${whitish};
+  }
+  .express, .expressLight {
+    height: 15vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .logoE {
-    width: 6em;
+  .logoE, .logoELight {
+    width: 9vw;
+    height: 7vh;
     color: ${whitish};
   }
   .logoTxt {
     color: ${whitish};
+    text-align: center
   }
   .logoTxtE {
     color: ${whitish};
@@ -92,20 +103,14 @@ export const TecContainer = styled.section`
     margin-top: 2%;
   }
 
-  @media (max-width: 1400px) {
-    min-height: 100vh;
-    min-width: 100vw;
+  @media screen and (max-width: 900px) {
+   
     }
-  @media (max-width: 500px) {
-    min-height: 100vh;
-    min-width: 100vw;
+  @media screen and (max-width: 500px) {
     justify-content: center;
     align-items: center;
-    .background {
-    height: 100%;
-    width: 100%;
-    }
     .cont{
+      margin-top: 1%;
       justify-content: center
     }
     .title, .titleLight {
@@ -116,36 +121,32 @@ export const TecContainer = styled.section`
     grid-template-columns: 1fr 1fr 1fr;
   
   }
-  .logo {
+  .logo, .logoLight {
     width: 7vw;
     height: 7vh;
-    color: ${whitish};
   }
-  .express {
+  .logoS, .logoLightS {
+    width: 10.5vw;
+  }
+  .express, .expressLight{
     height: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
   }
-  .logoE {
+  .logoE{
     width: 17vw;
-    color: ${whitish};
+    height: 4vh;
+  } 
+  .logoELight{
+    width: 17vw;
   }
-  .logoTxt {
+  .logoTxt, .logoTxtLight {
    font-size: 4.2vw;
    text-align: center;
-
   }
   .logoTxtE {
     font-size: 5vw
   }
-  .logoLight {
-    width: 7vw;
-    height: 7vh;
-    color: #202020;
-  }
 
-    
     
     }
 `;

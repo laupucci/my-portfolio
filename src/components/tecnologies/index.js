@@ -68,10 +68,10 @@ export default function Tecnologies({ language, theme }) {
               <div className="express">
               <img src={expressW} className="logoE"/>
               </div>
-              <p className="logoTxt">Exress</p>
+              <p className="logoTxt">Express</p>
             </div>
             <div className="tec">
-              <img src={sequelizeW} className="logo"/>
+              <img src={sequelizeW} className="logoS"/>
               <p className="logoTxt">Sequelize</p>
             </div>
           </div>
@@ -87,47 +87,49 @@ export default function Tecnologies({ language, theme }) {
           <div className="container">
             <div className="tec">
               <SiReact className="logoLight"/>
-              <p>React | React-Native</p>
+              <p className="logoTxtLight">React | React-Native</p>
             </div>
             <div className="tec">
               <SiRedux className="logoLight"/>
-              <p>Redux</p>
+              <p className="logoTxtLight">Redux</p>
             </div>
             <div className="tec">
               <SiJavascript className="logoLight"/>
-              <p>Javascript</p>
+              <p className="logoTxtLight">Javascript</p>
             </div>
             <div className="tec">
               <SiNodeDotJs className="logoLight"/>
-              <p>Node</p>
+              <p className="logoTxtLight">Node</p>
             </div>
             <div className="tec">
               <SiPostgresql className="logoLight"/>
-              <p>PostgreSqñ</p>
+              <p className="logoTxtLight">PostgreSqñ</p>
             </div>
             <div className="tec">
               <SiMongodb className="logoLight"/>
-              <p>MongoDB</p>
+              <p className="logoTxtLight">MongoDB</p>
             </div>
             <div className="tec">
               <SiGraphql className="logoLight"/>
-              <p>GraphQL</p>
+              <p className="logoTxtLight">GraphQL</p>
             </div>
             <div className="tec">
               <SiApollographql className="logoLight"/>
-              <p>Apollo</p>
+              <p className="logoTxtLight">Apollo</p>
             </div>
             <div className="tec">
               <SiExpo className="logoLight"/>
-              <p>Expo</p>
+              <p className="logoTxtLight">Expo</p>
             </div>
             <div className="tec">
-              <img src={express} className="logoLight"/>
-              <p>Exress</p>
+            <div className="expressLight">
+              <img src={express} className="logoELight"/>
+              </div>
+              <p className="logoTxtLight">Express</p>
             </div>
             <div className="tec">
-              <img src={sequelize} className="logoLight"/>
-              <p>Sequelize</p>
+              <img src={sequelize} className="logoLightS"/>
+              <p className="logoTxtLight">Sequelize</p>
             </div>
           </div>
           </div>

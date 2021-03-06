@@ -59,8 +59,6 @@ export const FooterContainer = styled.section`
     }
   }
   .cta {
-    // position: relative;
-    // bottom: 0;
     width: 80%;
     overflow: hidden;
     display: flex;
@@ -105,7 +103,7 @@ export const FooterContainer = styled.section`
     }
   }
   @media screen and (max-width: 500px) {
-    width: 85vw;
+    width: 100vw;
     .pages {
       width: 25%;
     }
@@ -117,7 +115,7 @@ export const FooterContainer = styled.section`
       height: 7vh;
     }
     .cta {
-      width: 100%;
+      width: 50%;
       .cta_txt,
       .cta_txtLight {
         font-size: 3vw;

@@ -121,19 +121,58 @@ export const ProjectsContainer = styled.section`
     font-size: 4vw;
   }
 
-  @media (max-width: 1400px) {
-    min-height: 100vh;
-    min-width: 100vw;
-      .background {
-    height: 100%;
-    width: 100%;
-    }
+  @media (max-width: 900px) {
+    
     }
   @media (max-width: 500px) {
-    min-height: 100vh;
-    min-width: 100vw;
-    .background {
-    height: 100%;
-    width: 100%;
-    }}
+    .background, .backgroundLight {
+    justify-content: flex-end;
+
+  }
+    .container{
+      width: 100vw;
+      height: 84%;
+      justify-content: flex-start
+    }
+    .titleLight, .title{
+      font-size: 8vw;
+      /* margin-top:1.5%; */
+    }
+    .integrarLight, .integrar{
+    flex-direction: column;
+    width: 100vw;
+    }
+    .integrarTxtLight, .integrarTxt{
+      width: 98vw;
+      h3{
+        font-size: 5vw;
+        margin: 1%;
+      }
+      p{
+        font-size: 4vw;
+        text-align: justify;
+        padding: 0 2%
+      }
+   }
+   .imgsIntegrarLight, .imgsIntegrar {
+    width: 13.6vw;
+    margin: 1vw;
+    border: 2px solid #151515;
+    border-radius: 7px;
+    margin-right: 2%;
+
+  }
+  .imgsDubsnipLight, .imgsDubsnip {
+    width: 33vw;
+    margin: 1em;
+    border: 2px solid #151515;
+    border-radius: 17px;
+    padding: 0;
+    margin: 0
+  }
+  }
+  .imgs, .img{
+    display: flex;
+    justify-content: center;
+  }
 `;

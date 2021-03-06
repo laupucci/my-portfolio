@@ -123,7 +123,7 @@ export const ContactContainer = styled.section`
     .submit_btn {
       grid-area: submit;
       width: 95%;
-      height: 120%;
+      height: 100%;
       background-color: rgba(236, 36, 11, 0.8);
       color: ${whitish};
       border: none;
@@ -166,7 +166,7 @@ export const ContactContainer = styled.section`
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .form_containerLight {
@@ -199,7 +199,7 @@ export const ContactContainer = styled.section`
   .submit_btnLight {
     grid-area: submit;
     width: 95%;
-    height: 120%;
+    height: 100%;
     background-color: rgba(236, 12, 12, 0.85);
     color: ${whitish};
     border: none;
@@ -232,54 +232,57 @@ export const ContactContainer = styled.section`
     padding-bottom: 0.5rem;
   }
 
-  @media screen and (max-width: 1400px) {
-    height: 100vh;
-    width: 100vw;
-    .background {
-      height: 100%;
-      width: 100%;
-    }
+  @media screen and (max-width: 900px) {
+   
   }
   @media screen and (max-width: 500px) {
-    height: 100vh;
-    width: 100vw;
-    .background {
-      height: 100%;
-      width: 100%;
-    }
-    .contact_form {
-      .title {
-        padding: 2.5%;
-        margin: 0;
-        width: 80vw;
 
-        h2 {
+    .contact_form {
+
+      .title, .titleLight {
+        padding: 2% 0.5%;
+        width: 87vw;
+
+        h2, .h2Light {
           font-size: 100%;
         }
       }
-      .form_container {
-        width: 80vw;
-        height: 55%;
-        padding: 0.5%;
-        grid-gap: 0.85rem;
+      .form_container, .form_containerLight {
+        width: 87vw;
+        height: 72vh;
+        padding: 2% 0.5%;
+        margin-bottom: 3vh;
+      grid-template:
+        " _name   lastname" 2fr
+        " phone   email   " 2fr
+        "   msg   msg     " 3fr
+        "submit   submit  " 1fr/
+        1fr 1fr;
+        grid-gap: 1%;
       }
 
-      label {
+      .submit_btnLight, .submit_btn {
+    height: 80%;
+    padding: 0.5rem;
+    font-size: 5vw;
+  }
+     
+      label, .labelLight {
         color: #272727;
         font-family: "Sanchez";
-        font-size: 75%;
+        font-size: 100%;
       }
-      .input {
-        height: 50%;
-        font-size: 75%;
+      .input, .inputLight {
+        height: 40%;
+        font-size: 100%;
         padding: 3%;
       }
-      .error {
-        font-size: 0.7rem;
+      .error, .errorLight {
+        font-size: 0.8rem;
       }
 
       .input.textarea {
-        height: 65%;
+        height: 55%;
       }
     }
   }

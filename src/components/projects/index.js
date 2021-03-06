@@ -33,7 +33,7 @@ export default function Projects({ language, theme }) {
                   <h3>DubsNip</h3>
                   <p>{languages[language]?.dubsnip}</p>
                 </div>
-                <div>
+                <div className="img">
                   <img className="imgsDubsnip" src={dubsnip} />
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function Projects({ language, theme }) {
                   <h3>DubsNip</h3>
                   <p>{languages[language]?.dubsnip}</p>
                 </div>
-                <div>
+                <div className="img">
                   <img className="imgsDubsnipLight" src={dubsnip} />
                 </div>
               </div>

@@ -53,7 +53,6 @@ export const Container = styled.header`
       background-color: rgba(249, 35, 9, 0.6);
       border-radius: 0 7px;
       cursor: pointer;
-      min-height: 50px;
     }
     &:focus {
       box-decoration-break: none;
@@ -90,7 +89,7 @@ export const Container = styled.header`
   }
   .menu_item {
     color: ${whitish};
-    padding: 1em;
+    padding: 0 1em;
     font-size: 1.2vw;
     font-family: "Architects Daughter", sans-serif;
     transition: 0.3s;
