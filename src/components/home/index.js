@@ -6,8 +6,8 @@ import { languages } from "./languages";
 export default function Home({ language, theme }) {
   return (
     <HomeContainer id="home">
-    {theme === "dark" ? (
-      <div className="background">
+      {theme === "dark" ? (
+        <div className="background">
           <div className="container">
             <div className="me_container">
               <p className="subtitle">{languages[language]?.hello}</p>
@@ -18,7 +18,15 @@ export default function Home({ language, theme }) {
               <p className="description">{languages[language]?.description}</p>
             </div>
           </div>
-            <Footer theme={theme} language={language}  text={languages[language]?.tecnologies} to='tecnologias'/>
+          <div className="footer">
+            <Footer
+              theme={theme}
+              language={language}
+              text={languages[language]?.tecnologies}
+              to="tecnologias"
+              className="footer"
+            />
+          </div>
         </div>
       ) : (
         <div className="backgroundLigth">
@@ -28,11 +36,23 @@ export default function Home({ language, theme }) {
               <h2 className="titleLigth">{languages[language]?.me}</h2>
             </div>
             <div className="desc_containerLight">
-              <h2 className="descriptionTitleLigth">{languages[language]?.full}</h2>
-              <p className="descriptionLigth">{languages[language]?.description}</p>
+              <h2 className="descriptionTitleLigth">
+                {languages[language]?.full}
+              </h2>
+              <p className="descriptionLigth">
+                {languages[language]?.description}
+              </p>
             </div>
           </div>
-            <Footer theme={theme} language={language} text={languages[language]?.tecnologies} to='tecnologias'/>
+          <div className="footer">
+            <Footer
+              theme={theme}
+              language={language}
+              text={languages[language]?.tecnologies}
+              to="tecnologias"
+              className="footer"
+            />
+          </div>
         </div>
       )}
     </HomeContainer>

@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { ContactContainer } from "./style";
 import { languages } from "./languages";
 import Swal from 'sweetalert2'
+import FooterMedia from "../footer/footerMedia"
 import { init, send } from "emailjs-com";
 init(process.env.REACT_APP_USER_ID);
 
@@ -151,6 +152,15 @@ export default function Contact({ language, theme }) {
                   </button>
                 </Form>
               </div>
+              <div className="footer">
+            <FooterMedia
+              theme={theme}
+              language={language}
+              text={languages[language]?.tecnologies}
+              to="tecnologias"
+              className="footer"
+            />
+          </div>
             </div>
           ) : (
             <div className="backgroundLight">
@@ -239,6 +249,15 @@ export default function Contact({ language, theme }) {
                   </button>
                 </Form>
               </div>
+              <div className="footer">
+            <FooterMedia
+              theme={theme}
+              language={language}
+              text={languages[language]?.tecnologies}
+              to="tecnologias"
+              className="footer"
+            />
+          </div>
             </div>
           )}
         </ContactContainer>

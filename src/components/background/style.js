@@ -26,4 +26,9 @@ export const BackgroundCont = styled.section`
     animation-iteration-count: 1;
     animation-fill-mode: both;
   }
+
+  @media (max-width: 500px) {
+    min-height: 110%;
+    width: 100%;
+  }
 `;

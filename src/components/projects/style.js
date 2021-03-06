@@ -179,12 +179,15 @@ export const ProjectsContainer = styled.section`
   @media (max-width: 500px) {
     .background,
     .backgroundLight {
-      justify-content: flex-end;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100vw;
     }
     .container {
-      width: 100vw;
-      height: 84%;
+      width: 95vw;
+      height: 100%;
       justify-content: flex-start;
+      align-items: center;
     }
     .titleLight,
     .title {
@@ -194,7 +197,7 @@ export const ProjectsContainer = styled.section`
     .integrarLight,
     .integrar {
       flex-direction: column;
-      width: 100vw;
+      width: 95vw;
     }
     .integrarTxtLight,
     .integrarTxt {
@@ -228,10 +231,13 @@ export const ProjectsContainer = styled.section`
       padding: 0;
       margin: 0;
     }
-  }
-  .imgs,
-  .img {
-    display: flex;
-    justify-content: center;
+    .imgs,
+    .img {
+      display: flex;
+      justify-content: center;
+    }
+    .footer{
+      display: none
+    }
   }
 `;

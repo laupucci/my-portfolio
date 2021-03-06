@@ -292,7 +292,7 @@ export const HomeContainer = styled.section`
     .desc_container,
     .desc_containerLight {
       width: 81vw;
-      height: 56vh;
+      height: 64vh;
     }
     .description {
       font-size: 4.7vw;
@@ -300,6 +300,11 @@ export const HomeContainer = styled.section`
     .descriptionLigth {
       font-size: 5vw;
     }
+
+    .footer{
+      display: none
+    }
+
   }
  
 `;

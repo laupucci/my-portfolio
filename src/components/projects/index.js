@@ -39,12 +39,15 @@ export default function Projects({ language, theme }) {
               </div>
             </div>
           </div>
-          <Footer
-            theme={theme}
-            language={language} 
-            text={languages[language]?.contact}
-            to="contacto"
-          />
+          <div className="footer">
+            <Footer
+              theme={theme}
+              language={language}
+              text={languages[language]?.contact}
+              to="contacto"
+              className="footer"
+            />
+          </div>
         </div>
       ) : (
         <div className="backgroundLight">
@@ -75,12 +78,15 @@ export default function Projects({ language, theme }) {
               </div>
             </div>
           </div>
-          <Footer
-            theme={theme}
-            language={language} 
-            text={languages[language]?.contact}
-            to="contacto"
-          />
+          <div className="footer">
+            <Footer
+              theme={theme}
+              language={language}
+              text={languages[language]?.contact}
+              to="contacto"
+              className="footer"
+            />
+          </div>
         </div>
       )}
     </ProjectsContainer>

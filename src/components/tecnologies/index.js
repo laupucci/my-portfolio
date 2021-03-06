@@ -76,12 +76,15 @@ export default function Tecnologies({ language, theme }) {
               </div>
             </div>
           </div>
-          <Footer
-            theme={theme}
-            language={language}
-            text={languages[language]?.projects}
-            to="proyectos"
-          />
+          <div className="footer">
+            <Footer
+              theme={theme}
+              language={language}
+              text={languages[language]?.projects}
+              to="proyectos"
+              className="footer"
+            />
+          </div>
         </div>
       ) : (
         <div className="backgroundLight">
@@ -138,12 +141,15 @@ export default function Tecnologies({ language, theme }) {
               </div>
             </div>
           </div>
-          <Footer
-            theme={theme}
-            language={language}
-            text={languages[language]?.projects}
-            to="proyectos"
-          />
+          <div className="footer">
+            <Footer
+              theme={theme}
+              language={language}
+              text={languages[language]?.projects}
+              to="proyectos"
+              className="footer"
+            />
+          </div>
         </div>
       )}
     </TecContainer>

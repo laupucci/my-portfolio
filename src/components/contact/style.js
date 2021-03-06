@@ -231,7 +231,9 @@ export const ContactContainer = styled.section`
     font-size: 1.1rem;
     padding-bottom: 0.5rem;
   }
-
+.footer{
+  display: none
+}
   @media screen and (max-width: 1024px) {
     .background, .backgroundLight{
       align-items: center;
@@ -285,7 +287,9 @@ export const ContactContainer = styled.section`
     }
   }
   @media screen and (max-width: 500px) {
+
     .background, .backgroundLight{
+      flex-direction: column;
       align-items: center;
     }
     .contact_form {
@@ -334,5 +338,12 @@ export const ContactContainer = styled.section`
         height: 55%;
       }
     }
+    .footer{
+      position: relative;
+      display: flex;
+      bottom: 0;
+      margin: 0;
+      width: 90vw;
+    height: 5vh}
   }
 `;

@@ -150,12 +150,12 @@ export const TecContainer = styled.section`
     justify-content: center;
     align-items: center;
     .cont {
-      margin-top: 1%;
+      margin-top: -7%;
       justify-content: center;
     }
     .title,
     .titleLight {
-      font-size: 8vw;
+      font-size: 10vw;
     }
     .container {
       display: grid;
@@ -188,6 +188,9 @@ export const TecContainer = styled.section`
     }
     .logoTxtE {
       font-size: 5vw;
+    }
+    .footer{
+      display: none
     }
   }
 `;
