@@ -20,17 +20,47 @@ export const BackgroundCont = styled.section`
     width: 100%;
     transition: 0.5s;
     object-fit: cover;
-    /* transform: scaleX(-1); */
-    /* transform: translateY(-50%); */
     animation: scroll 1s linear infinite;
     animation-play-state: paused;
     animation-delay: ${(props) => props.scrollInput * -1}s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
   }
-    @media (max-width: 500px) {
+  @media (max-width: 1400px) {
+    width: 100vw;
+      height: 100vh;  
     img {
-      min-height: 142vh;
+      min-width: 120%;
+      min-height: 145%;
+    }}
+    @media (max-width: 1000px) {
+      width: 100vw;
+      height: 100vh;
+      img {
+      min-width: 130%;
+      min-height: 150%;
+    }}
+    @media (max-width: 700px) {
+      width: 100vw;
+      height: 100vh;
+      img {
+      min-width: 100%;
+      min-height: 100%;
+    }}
+    @media (max-width: 500px) {
+      min-height: 100vh;
+    min-width: 100vw;
+      img {
+      min-width: 100%;
+      min-height: 160%;
+    }
+  }
+  @media (max-width: 350px) {
+    min-height: 100vh;
+    min-width: 100vw;
+      img {
+      min-width: 100%;
+      min-height: 100%;
     }
   }
 

@@ -8,8 +8,8 @@ export const HomeContainer = styled.section`
   //font-family: 'Architects Daughter', sans-serif;
 
   .background {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     background: rgba(0, 0, 0, 0.8);
     background-repeat: no-repeat;
     display: flex;
@@ -102,7 +102,8 @@ export const HomeContainer = styled.section`
   .descriptionTitle {
     color: ${whitish};
     font-family: "Acme", sans-serif;
-    margin-bottom: 0;
+    margin: 0;
+    margin-top: 1%;
     //name duration timing delay fill-mode
     animation: descTitle 2s ease-in 5s backwards;
     overflow: hidden;
@@ -118,7 +119,8 @@ export const HomeContainer = styled.section`
   }
 
   .description {
-    font-size: 120%;
+    font-size: 1.7vw;
+    margin: 1%  0;
     padding: 0 4%;
     color: ${whitish};
     font-family: "Acme", sans-serif;
@@ -224,8 +226,21 @@ export const HomeContainer = styled.section`
     color: #171717;
     font-family: "Acme", sans-serif;
   }
-
+  
+  @media (max-width: 1400px) {
+    min-height: 100vh;
+    min-width: 100vw;
+     .background {
+    height: 100vh;
+    width: 100%; }
+    }
   @media (max-width: 500px) {
+    min-height: 100vh;
+    min-width: 100vw;
+    .background {
+    height: 100%;
+    width: 100%;
+    }
     .container {
       display: flex;
       flex-direction: column-reverse;

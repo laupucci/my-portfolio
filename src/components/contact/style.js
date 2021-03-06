@@ -233,7 +233,20 @@ export const ContactContainer = styled.section`
 
       }
 
+      @media (max-width: 1400px) {
+        min-height: 100vh;
+    min-width: 100vw;
+    .background {
+    height: 100%;
+    width: 100%;
+    }}
   @media (max-width: 500px) {
+    min-height: 100vh;
+    min-width: 100vw;
+    .background {
+    height: 100%;
+    width: 100%;
+    }
     .contact_form {
       .title {
         padding: 2.5%;

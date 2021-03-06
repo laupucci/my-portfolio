@@ -8,7 +8,7 @@ export const Container = styled.header`
   width: 100vw;
   background-color: rgba(4, 4, 4, 0.75);
   height: 10vh;
-  padding: 0em;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@ export const Container = styled.header`
   transition: background 0.5s ease;
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-family: 'Acme', sans-serif;
     color: ${whitish};
     padding: 1em;
@@ -24,7 +24,6 @@ export const Container = styled.header`
   }
   .icon {
     color: ${whitish};
-    // padding: 1em;
     width: 2vw;
   }
   .menu {
@@ -65,7 +64,7 @@ export const Container = styled.header`
     .pTheme {
       color: ${whitish};
       font-family: 'Architects Daughter', sans-serif;
-      font-size: 1.2em;
+      font-size: 1.2vw;
     }
     .iconTheme {
       color: ${whitish};
@@ -74,19 +73,19 @@ export const Container = styled.header`
 
   .p1 {
     color: ${whitish};
-    font-size: 1.2em;
+    font-size: 1.2vw;
     font-family: 'Architects Daughter', sans-serif;
   }
   .p1Ligth {
     color: #272727;
     padding: 1em;
-    font-size: 16px;
+    font-size: 1.2vw;
     font-family: 'Architects Daughter', sans-serif;
   }
   .p2 {
     color: ${whitish};
     padding: 1em;
-    font-size: 16px;
+    font-size: 1.2vw;
     font-family: 'Architects Daughter', sans-serif;
     &:hover {
       background-color: rgba(249, 35, 9, 0.6);

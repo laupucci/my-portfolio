@@ -117,4 +117,20 @@ export const ProjectsContainer = styled.section`
     color: #272727;
     font-size: 4vw;
   }
+
+  @media (max-width: 1400px) {
+    min-height: 100vh;
+    min-width: 100vw;
+      .background {
+    height: 100%;
+    width: 100%;
+    }
+    }
+  @media (max-width: 500px) {
+    min-height: 100vh;
+    min-width: 100vw;
+    .background {
+    height: 100%;
+    width: 100%;
+    }}
 `;
