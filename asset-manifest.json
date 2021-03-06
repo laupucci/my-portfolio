@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.bcd39711.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.9a2a185c.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.9a2a185c.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.f21f8404.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.f21f8404.js.map",
+    "static/js/2.a1a5fc82.chunk.js": "/my-portfolio/static/js/2.a1a5fc82.chunk.js",
+    "static/js/2.a1a5fc82.chunk.js.map": "/my-portfolio/static/js/2.a1a5fc82.chunk.js.map",
+    "static/js/3.ddcb8114.chunk.js": "/my-portfolio/static/js/3.ddcb8114.chunk.js",
+    "static/js/3.ddcb8114.chunk.js.map": "/my-portfolio/static/js/3.ddcb8114.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "static/css/main.bcd39711.chunk.css.map": "/my-portfolio/static/css/main.bcd39711.chunk.css.map",
+    "static/js/2.a1a5fc82.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.a1a5fc82.chunk.js.LICENSE.txt",
+    "static/media/English.2d0c08af.pdf": "/my-portfolio/static/media/English.2d0c08af.pdf",
+    "static/media/Spanish.68d18a55.pdf": "/my-portfolio/static/media/Spanish.68d18a55.pdf",
+    "static/media/dubsnip.3f921685.png": "/my-portfolio/static/media/dubsnip.3f921685.png",
+    "static/media/expressjs-whitish.cc7c458e.svg": "/my-portfolio/static/media/expressjs-whitish.cc7c458e.svg",
+    "static/media/expressjs.b15c9e4d.svg": "/my-portfolio/static/media/expressjs.b15c9e4d.svg",
+    "static/media/img1.eec181cd.jpg": "/my-portfolio/static/media/img1.eec181cd.jpg",
+    "static/media/img2.c15a91a6.jpg": "/my-portfolio/static/media/img2.c15a91a6.jpg",
+    "static/media/img3.6aa918c6.jpg": "/my-portfolio/static/media/img3.6aa918c6.jpg",
+    "static/media/menu.3f7ecbf6.svg": "/my-portfolio/static/media/menu.3f7ecbf6.svg",
+    "static/media/note.3aef74ae.jpg": "/my-portfolio/static/media/note.3aef74ae.jpg",
+    "static/media/sequelize-icon.20d967bd.svg": "/my-portfolio/static/media/sequelize-icon.20d967bd.svg",
+    "static/media/sequelize-whitish.3a4564a2.svg": "/my-portfolio/static/media/sequelize-whitish.3a4564a2.svg",
+    "static/media/x.b893a7d2.svg": "/my-portfolio/static/media/x.b893a7d2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f21f8404.js",
+    "static/js/2.a1a5fc82.chunk.js",
+    "static/css/main.bcd39711.chunk.css",
+    "static/js/main.9a2a185c.chunk.js"
+  ]
+}
