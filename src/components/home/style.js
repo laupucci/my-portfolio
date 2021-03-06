@@ -262,20 +262,17 @@ export const HomeContainer = styled.section`
       display: flex;
       align-items: center;
     }
-    .container {
-      top: 12%;
-    }
 
     .me_container,
     .me_containerLight {
       width: 73vw;
-      height: 17vh;
+      height: 15vh;
       padding: 0 3%;
       justify-content: center;
 
       .title,
       .titleLigth {
-        font-size: 5vh;
+        font-size: 4vh;
         text-align: center;
       }
       .subtitle,
@@ -295,13 +292,14 @@ export const HomeContainer = styled.section`
     .desc_container,
     .desc_containerLight {
       width: 81vw;
-      height: 60vh;
+      height: 56vh;
     }
     .description {
       font-size: 4.7vw;
-    }
+  }
     .descriptionLigth {
       font-size: 5vw;
     }
   }
+ 
 `;

@@ -212,6 +212,7 @@ export const ProjectsContainer = styled.section`
     .imgsIntegrarLight,
     .imgsIntegrar {
       width: 13.6vw;
+      height: 15vh;
       margin: 1vw;
       border: 2px solid #151515;
       border-radius: 7px;
@@ -221,6 +222,7 @@ export const ProjectsContainer = styled.section`
     .imgsDubsnip {
       width: 33vw;
       margin: 1em;
+      height: 9vh;
       border: 2px solid #151515;
       border-radius: 17px;
       padding: 0;
