@@ -18,11 +18,12 @@ export const ProjectsContainer = styled.section`
     align-items: center;
   }
   .container {
-    height: 98vh;
+    height: 99vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 1%
     
   }
   .proyects{
@@ -51,25 +52,25 @@ export const ProjectsContainer = styled.section`
     align-items: center;
   }
   .imgsIntegrar {
-    width: 7vw;
+    width: 6.2vw;
     margin: 1vw;
     border: 5px solid #585858;
     border-radius: 17px;
   }
   .imgsDubsnip {
-    width: 26vw;
+    width: 24.5vw;
     margin: 1em;
     border: 5px solid #585858;
     border-radius: 17px;
   }
   .imgsIntegrarLight {
-    width: 7vw;
+    width: 6.2vw;
     margin: 1vw;
     border: 5px solid #151515;
     border-radius: 17px;
   }
   .imgsDubsnipLight {
-    width: 26vw;
+    width: 24.5vw;
     margin: 1em;
     border: 5px solid #151515;
     border-radius: 17px;
@@ -88,6 +89,7 @@ export const ProjectsContainer = styled.section`
     flex-direction: column;
     color: ${whitish};
     padding-right: 2.5%;
+    width: 60vw;
     
   }
   .integrarLight {
@@ -101,6 +103,7 @@ export const ProjectsContainer = styled.section`
     flex-direction: column;
     color: #202020;
     padding-right: 2.5%;
+    width: 60vw;
   }
   
   .backgroundLight {

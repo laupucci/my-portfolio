@@ -17,11 +17,17 @@ export const Container = styled.header`
 
   .logo {
     font-size: 2vw;
-    font-family: 'Acme', sans-serif;
+    font-family: "Acme", sans-serif;
     color: ${whitish};
     padding: 1em;
     margin-left: 2.75em;
   }
+  .menu_open,
+  .menu_close,
+  .buttonLanguage {
+    display: none;
+  }
+
   .icon {
     color: ${whitish};
     width: 2vw;
@@ -63,7 +69,7 @@ export const Container = styled.header`
     }
     .pTheme {
       color: ${whitish};
-      font-family: 'Architects Daughter', sans-serif;
+      font-family: "Architects Daughter", sans-serif;
       font-size: 1.2vw;
     }
     .iconTheme {
@@ -74,19 +80,20 @@ export const Container = styled.header`
   .p1 {
     color: ${whitish};
     font-size: 1.2vw;
-    font-family: 'Architects Daughter', sans-serif;
+    font-family: "Architects Daughter", sans-serif;
   }
   .p1Ligth {
     color: #272727;
     padding: 1em;
     font-size: 1.2vw;
-    font-family: 'Architects Daughter', sans-serif;
+    font-family: "Architects Daughter", sans-serif;
   }
-  .p2 {
+  .menu_item {
     color: ${whitish};
     padding: 1em;
     font-size: 1.2vw;
-    font-family: 'Architects Daughter', sans-serif;
+    font-family: "Architects Daughter", sans-serif;
+    transition: 0.3s;
     &:hover {
       background-color: rgba(249, 35, 9, 0.6);
       border-radius: 0 7px;
@@ -135,43 +142,123 @@ export const Container = styled.header`
     }
   }
 
-  @media screen and (max-width: 500px) {
-    width: 100%;
+  @media screen and (max-width: 950px) {
+    width: 100vw;
+    height: 9vh;
     justify-content: space-between;
+    position: fixed;
 
     .logo {
+      margin: 0;
       font-size: 4vw;
     }
+
     .menu {
-      justify-content: flex-end;
+      position: absolute;
+      width: 87vw;
+      height: 100vh;
+      top: -100vh;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       align-items: center;
+      transition: 0.3s ease-out;
+      .buttonLanguage {
+        background-color: transparent;
+        border: none;
+        display: block;
+        margin-top: 0;
+        font-family: "Architects Daughter", sans-serif;
+        width: 13vw;
+        color: ${whitish};
+        font-size: 5vw;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(249, 35, 9, 0.6);
+          border-radius: 0 7px;
+          height: 8vh;
+        }
+      }
     }
 
     .p2 {
       color: ${whitish};
-      font-size: 2.6vw;
-      font-family: "Sanchez";
-      justify-content: flex-end;
+      font-size: 5vw;
+      font-family: "Architects Daughter", sans-serif;
+      justify-content: center;
       align-items: center;
-      margin: 3%;
+      margin: 2%;
+    }
+
+    .theme {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      min-width: 28vw;
+      height: 7vh;
+      background-color: transparent;
+      border: none;
+      margin-bottom: 0;
       &:hover {
-        background-color: rgba(163, 189, 49, 0.6);
-        border-radius: 7px;
-        min-height: 7vh;
+        background-color: rgba(249, 35, 9, 0.6);
+        border-radius: 0 7px;
+        cursor: pointer;
+        height: 8vh;
+      }
+      &:focus {
+        box-decoration-break: none;
+        border: none;
+        border-color: none;
+        box-shadow: 0;
+      }
+      &:active {
+        box-decoration-break: none;
+        border: none;
+        border-color: none;
+        box-shadow: 0;
+      }
+      .iconTheme {
+        width: 5vw;
+        height: 5vh;
+        color: ${whitish};
+      }
+      .pTheme {
+        color: ${whitish};
+        font-family: "Architects Daughter", sans-serif;
+        font-size: 5vw;
       }
     }
+
     .top {
       width: 8%;
       height: 6%;
     }
-  }
-  @media (max-width: 400px) {
-    width: 100vw;
-    padding: 0;
-    justify-content: space-between;
-    .top {
-      width: 7.2%;
-      height: 4.2%;
+    .menu.active {
+      top: 0;
+    }
+    .menu_open.active {
+      margin-right: 4%;
+      display: block;
+      width:7vw;
+      height: 7vw;
+      cursor: pointer;
+      color: ${whitish};
+    }
+    .menu_close.active {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      width: 1.2vw;
+      height: 1.2vw;
+      top: 0.9vh;
+      right: 1.2vw;
+      z-index: 11;
+      width: 5vw;
+      height: 5vw;
+      padding: 1%;
     }
   }
 `;
@@ -217,17 +304,19 @@ export const LanguageCont = styled.li`
     border: none;
     margin-bottom: 4px;
     border-radius: 0 7px;
-    font-family: 'Architects Daughter', sans-serif;
-   // color: #272727;
-   color: rgba(228, 228, 228);
+    font-family: "Architects Daughter", sans-serif;
+    // color: #272727;
+    color: rgba(228, 228, 228);
     &:hover {
       background-color: rgba(249, 35, 9, 0.1);
     }
   }
-  .btnLanguage{
-    font-family: 'Architects Daughter', sans-serif;
+  .btnLanguage {
+    font-family: "Architects Daughter", sans-serif;
     color: rgba(228, 228, 228);
     background-color: rgba(249, 35, 9, 0.4);
-
+  }
+  @media screen and (max-width: 950px) {
+    display: none;
   }
 `;

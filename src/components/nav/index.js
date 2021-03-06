@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { BiWorld, BiMoon } from "react-icons/bi";
 import { ImSun } from "react-icons/im";
 import { languages } from "./languages";
 import { Container, LanguageCont } from "./style";
 import { Link as ScrollLink } from "react-scroll";
+import menuHamb from "../../media/menu.svg";
+import x from "../../media/x.svg";
 //{ language, setLanguage }
 const Navbar = ({ language, setLanguage, theme, setTheme }) => {
   const [active, setActive] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
+  const closer = useRef(null);
+  const opener = useRef(null);
+  const menu = useRef(null);
   const handleLanguage = (ev) => {
     if (ev.target.id) {
       setLanguage(ev.target.id);
@@ -25,6 +31,19 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
+  const handleClick = () => {
+    if (sidebar) {
+      opener.current.classList.add("active");
+      closer.current.classList.remove("active");
+      menu.current.classList.remove("active");
+    } else {
+      opener.current.classList.remove("active");
+      closer.current.classList.add("active");
+      menu.current.classList.add("active");
+    }
+    setSidebar(!sidebar);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -32,19 +51,50 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
 
   return (
     <Container active={active}>
-      <ScrollLink to="home" smooth={true} duration={500}>
-        <p className="logo">Laura Puccinelli | Full Stack Developer</p>
-      </ScrollLink>{" "}
-      <nav className="menu">
-        <ScrollLink to="tecnologias" smooth={true} duration={400}>
+      <div className="logo_container">
+        <ScrollLink to="home" smooth={true} duration={500}>
+          <p className="logo">Laura Puccinelli | Full Stack Developer</p>
+        </ScrollLink>{" "}
+      </div>
+      <img
+        className="menu_open active"
+        onClick={handleClick}
+        ref={opener}
+        src={menuHamb}
+        alt="Abrir Menu"
+      />
+      <img
+        className="menu_close"
+        onClick={handleClick}
+        ref={closer}
+        src={x}
+        alt="Cerrar Menu"
+      />
+      <nav ref={menu} onClick={handleClick} className="menu">
+        <ScrollLink
+          className="menu_item"
+          to="tecnologias"
+          smooth={true}
+          duration={400}
+        >
           <p className="p2">{languages[language]?.tecnologies}</p>
         </ScrollLink>
 
-        <ScrollLink to="proyectos" smooth={true} duration={400}>
+        <ScrollLink
+          className="menu_item"
+          to="proyectos"
+          smooth={true}
+          duration={400}
+        >
           <p className="p2">{languages[language]?.projects}</p>
         </ScrollLink>
 
-        <ScrollLink to="contacto" smooth={true} duration={400}>
+        <ScrollLink
+          className="menu_item"
+          to="contacto"
+          smooth={true}
+          duration={400}
+        >
           <p className="p2">{languages[language]?.contact}</p>
         </ScrollLink>
 
@@ -57,6 +107,15 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
           <button className="theme" onClick={handleThemeChange}>
             <ImSun className="iconTheme" />
             <p className="pTheme">{languages[language].light}</p>
+          </button>
+        )}
+        {language === "en" ? (
+          <button id="es" className="buttonLanguage" onClick={handleLanguage}>
+            Es
+          </button>
+        ) : (
+          <button id="en" className="buttonLanguage" onClick={handleLanguage}>
+            En
           </button>
         )}
         <LanguageCont>

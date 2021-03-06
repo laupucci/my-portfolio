@@ -3,64 +3,64 @@ import styled from "styled-components";
 // const { whitish } = colors;
 
 export const FooterContainer = styled.section`
-    position: relative;
-    bottom: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    text-decoration: none;
-    padding-bottom: 1.2%;
-.pages{
-  width: 10%;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-}
-.git{
-  color: #E8E8E8;
-  width: 5vw;
-  height: 5vh;
-  cursor: pointer;
+  text-decoration: none;
+  padding-bottom: 1.2%;
+  .pages {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .git {
+    color: #e8e8e8;
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
     &:hover {
-        transform: scale(1.5);
-        margin-top: -0.4rem;
+      transform: scale(1.5);
+      margin-top: -0.4rem;
     }
-}
-.linkedin{
-  color: #E8E8E8;
-  width: 5vw;
-  height: 5vh;
-  cursor: pointer;
+  }
+  .linkedin {
+    color: #e8e8e8;
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
     &:hover {
-        transform: scale(1.5);
-        margin-top: -0.4rem;
+      transform: scale(1.5);
+      margin-top: -0.4rem;
     }
-}
-.gitLight{
-  color: #272727;
-  width: 5vw;
-  height: 5vh;
-  cursor: pointer;
+  }
+  .gitLight {
+    color: #272727;
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
     &:hover {
-        transform: scale(1.5);
-        margin-top: -0.4rem;
+      transform: scale(1.5);
+      margin-top: -0.4rem;
     }
-}
-.linkedinLight{
-  color: #272727;
-  width: 5vw;
-  height: 5vh;
-  cursor: pointer;
+  }
+  .linkedinLight {
+    color: #272727;
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
     &:hover {
-        transform: scale(1.5);
-        margin-top: -0.4rem;
+      transform: scale(1.5);
+      margin-top: -0.4rem;
     }
-}
- .cta {
-   // position: relative;
-    bottom: 0;
+  }
+  .cta {
+    // position: relative;
+    // bottom: 0;
     width: 80%;
     overflow: hidden;
     display: flex;
@@ -80,14 +80,14 @@ export const FooterContainer = styled.section`
     .cta_txt {
       font-size: 1vw;
       font-family: "Acme", sans-serif;
-      color: #E8E8E8;
+      color: #e8e8e8;
       transition: 0.3s ease-in-out;
     }
     .arrow {
       margin-top: -0.2rem;
       width: 1.7vw;
       height: 1.7vw;
-      color: #E8E8E8;
+      color: #e8e8e8;
       transition: 0.3s ease-in-out;
     }
     .cta_txtLight {
@@ -103,5 +103,30 @@ export const FooterContainer = styled.section`
       transition: 0.3s ease-in-out;
       color: #272727;
     }
-  } 
-`
+  }
+  @media screen and (max-width: 500px) {
+    width: 85vw;
+    .pages {
+      width: 25%;
+    }
+    .git,
+    .linkedin,
+    .gitLight,
+    .linkedinLight {
+      width: 7vw;
+      height: 7vh;
+    }
+    .cta {
+      width: 100%;
+      .cta_txt,
+      .cta_txtLight {
+        font-size: 3vw;
+      }
+      .arrow,
+      .arrowLight {
+        width: 8vw;
+        height: 8.7vw;
+      }
+    }
+  }
+`;

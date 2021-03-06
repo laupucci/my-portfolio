@@ -19,9 +19,7 @@ export const HomeContainer = styled.section`
 
   .container {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +28,6 @@ export const HomeContainer = styled.section`
 
   .me_container {
     color: #e4e4e4;
-    //background-color: rgba(107, 107, 107, 0.5);
     background-color: rgba(249, 35, 9, 0.4);
     width: 40vw;
     height: 28vh;
@@ -120,13 +117,14 @@ export const HomeContainer = styled.section`
 
   .description {
     font-size: 1.7vw;
-    margin: 1%  0;
+    margin: 1% 0;
     padding: 0 4%;
     color: ${whitish};
     font-family: "Acme", sans-serif;
     //name duration timing delay fill-mode
     animation: descrip 1s ease-in 6s backwards;
     overflow: hidden;
+    text-align: center;
   }
   @keyframes descrip {
     from {
@@ -150,7 +148,7 @@ export const HomeContainer = styled.section`
     justify-content: center;
     align-items: center;
     border-radius: 5vw 9vw 0 5vw;
-       //name duration timing delay fill-mode
+    //name duration timing delay fill-mode
     animation: descCont 3s ease-in 3s backwards;
     overflow: hidden;
   }
@@ -225,39 +223,41 @@ export const HomeContainer = styled.section`
     padding: 0 4%;
     color: #171717;
     font-family: "Acme", sans-serif;
+    text-align: center;
   }
-  
-  @media (max-width: 1400px) {
-    min-height: 100vh;
-    min-width: 100vw;
-     .background {
-    height: 100vh;
-    width: 100%; }
-    }
-  @media (max-width: 500px) {
+
+  @media screen and (max-width: 1400px) {
     min-height: 100vh;
     min-width: 100vw;
     .background {
-    height: 100%;
-    width: 100%;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    min-height: 100vh;
+    min-width: 100vw;
+    .background {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
     }
     .container {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1vh;
+      top: 12%;
     }
 
-    .me_container {
-      width: 78vw;
-      height: 43vh;
-      padding: 0 0rem 0 1rem;
+    .me_container, .me_containerLight {
+      width: 73vw;
+      height: 17vh;
+      padding: 0 3%;
+      justify-content: center;
 
-      .title {
-        font-size: 7.5vh;
+      .title, .titleLigth {
+        font-size: 5vh;
+        text-align: center;
       }
-      .subtitle {
+      .subtitle, .subtitleLigth {
         font-size: 3.8vh;
       }
     }
@@ -266,44 +266,20 @@ export const HomeContainer = styled.section`
       width: 38vw;
       height: 31vh;
     }
-
-    .desc_container {
-      width: 78vw;
-      height: 35vh;
+    .descriptionTitle, .descriptionTitleLigth{
+      display: none
+    }
+    .desc_container, .desc_containerLight {
+      width: 81vw;
+      height: 60vh;
+    }
+    .description {
+    font-size: 4.7vw;
+    }
+    .descriptionLigth {
+    font-size: 5vw;
     }
 
-    .cta {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      overflow: hidden;
-      padding: 0.5rem 0.5rem 0 0.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: 0.3s ease-in-out;
-      cursor: pointer;
-      &:hover {
-        .arrow {
-          transform: scale(1.5);
-          margin-top: -0.4rem;
-        }
-      }
-
-      .cta_txt {
-        font-size: 1.5vh;
-        color: #e4e4e4;
-        transition: 0.3s ease-in-out;
-      }
-      .arrow {
-        margin-top: -0.2rem;
-        width: 2rem;
-        height: 2rem;
-        transition: 0.3s ease-in-out;
-        margin-bottom: 1vh;
-      }
-    }
+  
   }
 `;

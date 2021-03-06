@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
 import Background from "./components/background";
 import Navbar from "./components/nav";
-// import Contact from "./components/contact";
-// import Tecnologies from "./components/tecnologies";
-// import Projects from "./components/projects";
-import Scroll from "./Scroll";
+import Home from "./components/home";
+import Tecnologies from "./components/tecnologies";
+import Projects from "./components/projects";
+import Contact from "./components/contact";
 require("dotenv").config();
 
 function App() {
@@ -13,12 +12,18 @@ function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   return (
-    <BrowserRouter>
-      <Route path="/" component={Background} theme={theme} setTheme={setTheme}/>
-      <Route path="/" render={() => <Navbar language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/> } />
-      <Route exact path="/" render={() => <Scroll language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/> } />
-    </BrowserRouter>
-  );
+  <>
+  <Background theme={theme} setTheme={setTheme}/>
+  <Navbar language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
+    <div>
+    <Home language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
+    <Tecnologies language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
+    <Projects language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
+    <Contact language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}
+    />
+    </div>
+  </>
+  )
 }
 
 export default App;
