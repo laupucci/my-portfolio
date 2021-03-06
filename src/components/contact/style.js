@@ -11,6 +11,7 @@ export const ContactContainer = styled.section`
   align-items: center;
 
   .background {
+    position: absolute;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -160,6 +161,7 @@ export const ContactContainer = styled.section`
     }
   }
   .backgroundLight {
+    position: absolute;
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.75);
@@ -304,7 +306,7 @@ export const ContactContainer = styled.section`
       }
       .form_container, .form_containerLight {
         width: 87vw;
-        height: 72vh;
+        height: 64vh;
         padding: 2% 0.5%;
       grid-template:
         " _name   lastname" 2fr

@@ -8,6 +8,7 @@ export const HomeContainer = styled.section`
   //font-family: 'Architects Daughter', sans-serif;
 
   .background {
+    position: absolute;
     min-height: 100%;
     min-width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -38,7 +39,7 @@ export const HomeContainer = styled.section`
     border-radius: 7vw 5vw 5vw 0;
     margin-bottom: 2%;
     //name duration delay fill-mode
-    animation: meCont 3s 2s backwards;
+    animation: meCont 2s 1s backwards;
 
     overflow: hidden;
   }
@@ -60,7 +61,7 @@ export const HomeContainer = styled.section`
     font-family: "Acme", sans-serif;
     color: ${whitish};
     //name duration timing delay fill-mode
-    animation: title 0.2s ease-in 3.7s backwards;
+    animation: title 0.2s ease-in 3s backwards;
     overflow: hidden;
   }
   @keyframes title {
@@ -81,7 +82,7 @@ export const HomeContainer = styled.section`
     color: ${whitish};
     font-family: "Acme", sans-serif;
     //name duration timing delay fill-mode
-    animation: title 0s ease-in 3s backwards;
+    animation: title 0s ease-in 2.5s backwards;
     overflow: hidden;
   }
   @keyframes subtitle {
@@ -102,7 +103,7 @@ export const HomeContainer = styled.section`
     margin: 0;
     margin-top: 1%;
     //name duration timing delay fill-mode
-    animation: descTitle 2s ease-in 5s backwards;
+    animation: descTitle 2s ease-in 4s backwards;
     overflow: hidden;
   }
   @keyframes descTitle {
@@ -122,7 +123,7 @@ export const HomeContainer = styled.section`
     color: ${whitish};
     font-family: "Acme", sans-serif;
     //name duration timing delay fill-mode
-    animation: descrip 1s ease-in 6s backwards;
+    animation: descrip 1s ease-in 4.5s backwards;
     overflow: hidden;
     text-align: center;
   }
@@ -149,7 +150,7 @@ export const HomeContainer = styled.section`
     align-items: center;
     border-radius: 5vw 9vw 0 5vw;
     //name duration timing delay fill-mode
-    animation: descCont 3s ease-in 3s backwards;
+    animation: descCont 2.5s ease-in 2.7s backwards;
     overflow: hidden;
   }
 
@@ -166,6 +167,7 @@ export const HomeContainer = styled.section`
   }
 
   .backgroundLigth {
+    position: absolute;
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.75);

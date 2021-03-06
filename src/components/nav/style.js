@@ -155,7 +155,7 @@ export const Container = styled.header`
     .menu {
       position: absolute;
       width: 87vw;
-      height: 100vh;
+      height: 87vh;
       top: -100vh;
       left: 0;
       background-color: rgba(0, 0, 0, 0.8);
