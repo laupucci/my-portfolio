@@ -103,8 +103,44 @@ export const TecContainer = styled.section`
     margin-top: 2%;
   }
 
-  @media screen and (max-width: 900px) {
-   
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    align-items: center;
+    .title, .titleLight {
+    font-size: 6vw;
+    margin-bottom: 0;
+  }
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  }
+  .logo, .logoLight {
+    width: 7vw;
+    height: 7vh;
+  }
+  .logoS, .logoLightS {
+    width: 10.5vw;
+  }
+  .express, .expressLight{
+    height: 7vh;
+
+  }
+  .logoE{
+    width: 17vw;
+    height: 4vh;
+  } 
+  .logoELight{
+    width: 17vw;
+  }
+  .logoTxt, .logoTxtLight {
+   font-size: 4.2vw;
+   text-align: center;
+  }
+  .logoTxtE {
+    font-size: 5vw
+  }
+
     }
   @media screen and (max-width: 500px) {
     justify-content: center;

@@ -226,20 +226,33 @@ export const HomeContainer = styled.section`
     text-align: center;
   }
 
-  @media screen and (max-width: 1400px) {
-    min-height: 100vh;
-    min-width: 100vw;
-    .background {
-      height: 100vh;
-      width: 100%;
+  @media screen and (max-width: 1024px) {
+    .me_container, .me_containerLight {
+      width: 62vw;
+      height: 24vh;
+      padding: 0 3%;
+      justify-content: center;
+      .title, .titleLigth {
+        font-size: 7vh;
+        text-align: center;
+      }
+      .subtitle, .subtitleLigth {
+        font-size: 5vh;
+      }
+    }
+    .descriptionTitle, .descriptionTitleLigth{
+      font-size: 4.5vh;
+    }
+    .desc_container, .desc_containerLight {
+      width: 81vw;
+      height: 55vh;
+    }
+    .description,  .descriptionLigth  {
+    font-size: 3.9vw;
     }
   }
   @media screen and (max-width: 500px) {
-    min-height: 100vh;
-    min-width: 100vw;
     .background {
-      height: 100%;
-      width: 100%;
       display: flex;
       align-items: center;
     }

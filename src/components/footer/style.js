@@ -102,6 +102,24 @@ export const FooterContainer = styled.section`
       color: #272727;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    .pages {
+      width: 25%;
+    }
+    .cta {
+      width: 50%;
+      .cta_txt,
+      .cta_txtLight {
+        font-size: 2.2vw;
+      }
+      .arrow,
+      .arrowLight {
+        width: 6vw;
+        height: 6.7vw;
+      }
+    }
+  }
   @media screen and (max-width: 500px) {
     width: 100vw;
     .pages {

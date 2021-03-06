@@ -23,10 +23,9 @@ export const ProjectsContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 1%
-    
+    padding-top: 1%;
   }
-  .proyects{
+  .proyects {
     display: flex;
     justify-content: center;
   }
@@ -82,7 +81,7 @@ export const ProjectsContainer = styled.section`
   .integrar {
     display: flex;
     flex-direction: row;
-    width: 90%
+    width: 90%;
   }
   .integrarTxt {
     display: flex;
@@ -90,7 +89,6 @@ export const ProjectsContainer = styled.section`
     color: ${whitish};
     padding-right: 2.5%;
     width: 60vw;
-    
   }
   .integrarLight {
     display: flex;
@@ -105,7 +103,7 @@ export const ProjectsContainer = styled.section`
     padding-right: 2.5%;
     width: 60vw;
   }
-  
+
   .backgroundLight {
     height: 100%;
     background: rgba(255, 255, 255, 0.75);
@@ -121,57 +119,116 @@ export const ProjectsContainer = styled.section`
     font-size: 4vw;
   }
 
-  @media (max-width: 900px) {
-    
+  @media (max-width: 1024px) {
+    .background,
+    .backgroundLight {
+      justify-content: flex-end;
     }
-  @media (max-width: 500px) {
-    .background, .backgroundLight {
-    justify-content: flex-end;
-
-  }
-    .container{
+    .container {
       width: 100vw;
       height: 84%;
-      justify-content: flex-start
+      justify-content: flex-start;
     }
-    .titleLight, .title{
+    .titleLight,
+    .title {
+      font-size: 6vw;
+      /* margin-top:1.5%; */
+    }
+    .integrarLight,
+    .integrar {
+      flex-direction: column;
+      width: 100vw;
+    }
+    .integrarTxtLight,
+    .integrarTxt {
+      width: 98vw;
+      h3 {
+        font-size: 3vw;
+        margin: 1%;
+      }
+      p {
+        font-size: 3.1vw;
+        text-align: justify;
+        padding: 0 2%;
+      }
+    }
+    .imgsIntegrarLight,
+    .imgsIntegrar {
+      width: 13vw;
+      margin: 1vw;
+      border: 2px solid #151515;
+      border-radius: 7px;
+      margin-right: 2%;
+    }
+    .imgsDubsnipLight,
+    .imgsDubsnip {
+      width: 33vw;
+      margin: 1em;
+      border: 2px solid #151515;
+      border-radius: 17px;
+      padding: 0;
+      margin: 0;
+    }
+    .imgs,
+    .img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .background,
+    .backgroundLight {
+      justify-content: flex-end;
+    }
+    .container {
+      width: 100vw;
+      height: 84%;
+      justify-content: flex-start;
+    }
+    .titleLight,
+    .title {
       font-size: 8vw;
       /* margin-top:1.5%; */
     }
-    .integrarLight, .integrar{
-    flex-direction: column;
-    width: 100vw;
+    .integrarLight,
+    .integrar {
+      flex-direction: column;
+      width: 100vw;
     }
-    .integrarTxtLight, .integrarTxt{
+    .integrarTxtLight,
+    .integrarTxt {
       width: 98vw;
-      h3{
+      h3 {
         font-size: 5vw;
         margin: 1%;
       }
-      p{
+      p {
         font-size: 4vw;
         text-align: justify;
-        padding: 0 2%
+        padding: 0 2%;
       }
-   }
-   .imgsIntegrarLight, .imgsIntegrar {
-    width: 13.6vw;
-    margin: 1vw;
-    border: 2px solid #151515;
-    border-radius: 7px;
-    margin-right: 2%;
-
+    }
+    .imgsIntegrarLight,
+    .imgsIntegrar {
+      width: 13.6vw;
+      margin: 1vw;
+      border: 2px solid #151515;
+      border-radius: 7px;
+      margin-right: 2%;
+    }
+    .imgsDubsnipLight,
+    .imgsDubsnip {
+      width: 33vw;
+      margin: 1em;
+      border: 2px solid #151515;
+      border-radius: 17px;
+      padding: 0;
+      margin: 0;
+    }
   }
-  .imgsDubsnipLight, .imgsDubsnip {
-    width: 33vw;
-    margin: 1em;
-    border: 2px solid #151515;
-    border-radius: 17px;
-    padding: 0;
-    margin: 0
-  }
-  }
-  .imgs, .img{
+  .imgs,
+  .img {
     display: flex;
     justify-content: center;
   }

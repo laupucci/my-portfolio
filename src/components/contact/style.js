@@ -232,26 +232,25 @@ export const ContactContainer = styled.section`
     padding-bottom: 0.5rem;
   }
 
-  @media screen and (max-width: 900px) {
-   
-  }
-  @media screen and (max-width: 500px) {
-
+  @media screen and (max-width: 1024px) {
+    .background, .backgroundLight{
+      align-items: center;
+    }
     .contact_form {
-
+      margin-top: 1%;
       .title, .titleLight {
         padding: 2% 0.5%;
         width: 87vw;
+        font-size: 5vw;
 
         h2, .h2Light {
-          font-size: 100%;
+          font-size: 4vw;
         }
       }
       .form_container, .form_containerLight {
         width: 87vw;
         height: 72vh;
         padding: 2% 0.5%;
-        margin-bottom: 3vh;
       grid-template:
         " _name   lastname" 2fr
         " phone   email   " 2fr
@@ -267,8 +266,58 @@ export const ContactContainer = styled.section`
     font-size: 5vw;
   }
      
-      label, .labelLight {
-        color: #272727;
+      .label, .labelLight {
+        font-family: "Sanchez";
+        font-size: 4vw;
+      }
+      .input, .inputLight {
+        height: 40%;
+        font-size: 4vw;
+        padding: 3%;
+      }
+      .error, .errorLight {
+        font-size: 2.5vw;
+      }
+
+      .input.textarea {
+        height: 55%;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .background, .backgroundLight{
+      align-items: center;
+    }
+    .contact_form {
+      margin-top: 1%;
+      .title, .titleLight {
+        padding: 2% 0.5%;
+        width: 87vw;
+
+        h2, .h2Light {
+          font-size: 100%;
+        }
+      }
+      .form_container, .form_containerLight {
+        width: 87vw;
+        height: 72vh;
+        padding: 2% 0.5%;
+      grid-template:
+        " _name   lastname" 2fr
+        " phone   email   " 2fr
+        "   msg   msg     " 3fr
+        "submit   submit  " 1fr/
+        1fr 1fr;
+        grid-gap: 1%;
+      }
+
+      .submit_btnLight, .submit_btn {
+    height: 80%;
+    padding: 0.5rem;
+    font-size: 5vw;
+  }
+     
+      .label, .labelLight {
         font-family: "Sanchez";
         font-size: 100%;
       }
