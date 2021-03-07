@@ -8,6 +8,7 @@ export const HomeContainer = styled.section`
   //font-family: 'Architects Daughter', sans-serif;
 
   .background {
+    object-fit: cover;
     min-height: 100%;
     min-width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -122,7 +123,7 @@ export const HomeContainer = styled.section`
     color: ${whitish};
     font-family: "Acme", sans-serif;
     //name duration timing delay fill-mode
-    animation: descrip 1s ease-in 4.5s backwards;
+    animation: descrip 0.4s ease-in 4.5s backwards;
     overflow: hidden;
     text-align: center;
   }
@@ -166,6 +167,7 @@ export const HomeContainer = styled.section`
   }
 
   .backgroundLigth {
+    object-fit: cover;
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.75);
@@ -295,7 +297,7 @@ export const HomeContainer = styled.section`
       height: 64vh;
     }
     .description {
-      font-size: 4.7vw;
+      font-size: 4.4vw;
   }
     .descriptionLigth {
       font-size: 5vw;

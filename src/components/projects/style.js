@@ -8,6 +8,7 @@ export const ProjectsContainer = styled.section`
   /* margin: 0 auto; */
 
   .background {
+    object-fit: cover;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -105,7 +106,9 @@ export const ProjectsContainer = styled.section`
   }
 
   .backgroundLight {
+    object-fit: cover;
     height: 100%;
+    width: 100%;
     background: rgba(255, 255, 255, 0.75);
     background-repeat: no-repeat;
     display: flex;
@@ -184,8 +187,9 @@ export const ProjectsContainer = styled.section`
       width: 100vw;
     }
     .container {
+      margin-top: 7.5%;
       width: 95vw;
-      height: 100%;
+      height: 90%;
       justify-content: flex-start;
       align-items: center;
     }

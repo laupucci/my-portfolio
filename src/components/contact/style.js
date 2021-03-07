@@ -11,6 +11,7 @@ export const ContactContainer = styled.section`
   align-items: center;
 
   .background {
+    object-fit: cover;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -29,7 +30,7 @@ export const ContactContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.7%;
+    margin-bottom: 3%;
 
     .title {
       padding: 2% 5.1%;
@@ -160,6 +161,7 @@ export const ContactContainer = styled.section`
     }
   }
   .backgroundLight {
+    object-fit: cover;
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.75);
