@@ -99,15 +99,15 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
 
         {theme === "dark" ? (
           <button className="theme" onClick={handleThemeChange}>
-            <BiMoon className="iconTheme" />
-            <p className="pTheme">{languages[language].dark}</p>
-          </button>
-        ) : (
-          <button className="theme" onClick={handleThemeChange}>
             <ImSun className="iconTheme" />
             <p className="pTheme">{languages[language].light}</p>
           </button>
-        )}
+        ) : (
+          <button className="theme" onClick={handleThemeChange}>
+            <BiMoon className="iconTheme" />
+            <p className="pTheme">{languages[language].dark}</p>
+          </button>
+        ) }
         {language === "en" ? (
           <button id="es" className="buttonLanguage" onClick={handleLanguage}>
             Es

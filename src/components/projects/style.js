@@ -183,12 +183,11 @@ export const ProjectsContainer = styled.section`
     .background,
     .backgroundLight {
       justify-content: center;
-      align-items: flex-start;
-      width: 100vw;
+      align-items: center;
     }
     .container {
       margin-top: 7.5%;
-      width: 95vw;
+      width: 87vw;
       height: 90%;
       justify-content: flex-start;
       align-items: center;
@@ -201,17 +200,17 @@ export const ProjectsContainer = styled.section`
     .integrarLight,
     .integrar {
       flex-direction: column;
-      width: 95vw;
+      width: 85%;
     }
     .integrarTxtLight,
     .integrarTxt {
-      width: 98vw;
+      width: 100%;
       h3 {
-        font-size: 5vw;
+        font-size: 4vw;
         margin: 1%;
       }
       p {
-        font-size: 4vw;
+        font-size: 3.5vw;
         text-align: justify;
         padding: 0 2%;
       }
