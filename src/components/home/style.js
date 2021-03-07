@@ -296,12 +296,9 @@ export const HomeContainer = styled.section`
       width: 81vw;
       height: 64vh;
     }
-    .description {
+    .description,.descriptionLigth {
       font-size: 4.4vw;
   }
-    .descriptionLigth {
-      font-size: 5vw;
-    }
 
     .footer{
       display: none

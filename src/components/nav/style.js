@@ -76,18 +76,21 @@ export const Container = styled.header`
     }
   }
 
-  .p1 {
+  .pLanguage {
     color: ${whitish};
     font-size: 1.2vw;
     font-family: "Architects Daughter", sans-serif;
   }
-  .p1Ligth {
+  .pLanguageLigth {
     color: #272727;
     padding: 1em;
     font-size: 1.2vw;
     font-family: "Architects Daughter", sans-serif;
   }
   .menu_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: ${whitish};
     padding: 0 1em;
     font-size: 1.2vw;
@@ -177,12 +180,13 @@ export const Container = styled.header`
         &:hover {
           background-color: rgba(249, 35, 9, 0.6);
           border-radius: 0 7px;
-          height: 8vh;
+          min-height: 10vh;
+          min-width: 35vw;
         }
       }
     }
 
-    .p2 {
+    .pMenuItems {
       color: ${whitish};
       font-size: 5vw;
       font-family: "Architects Daughter", sans-serif;
@@ -190,43 +194,31 @@ export const Container = styled.header`
       align-items: center;
       margin: 2%;
     }
+    .menu_item {
+      margin: 0;
+      &:hover {
+        min-height: 10vh;
+        min-width: 35vw;
+      }
+    }
 
     .theme {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
       min-width: 28vw;
       height: 7vh;
-      background-color: transparent;
-      border: none;
       margin-bottom: 0;
       &:hover {
-        background-color: rgba(249, 35, 9, 0.6);
-        border-radius: 0 7px;
-        cursor: pointer;
-        height: 8vh;
-      }
-      &:focus {
-        box-decoration-break: none;
-        border: none;
-        border-color: none;
-        box-shadow: 0;
+        min-height: 10vh;
+        min-width: 35vw;
       }
       &:active {
-        box-decoration-break: none;
-        border: none;
-        border-color: none;
-        box-shadow: 0;
+        text-decoration: none;
       }
+
       .iconTheme {
         width: 5vw;
         height: 5vh;
-        color: ${whitish};
       }
       .pTheme {
-        color: ${whitish};
-        font-family: "Architects Daughter", sans-serif;
         font-size: 5vw;
       }
     }

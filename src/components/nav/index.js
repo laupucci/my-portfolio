@@ -76,7 +76,7 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
           smooth={true}
           duration={400}
         >
-          <p className="p2">{languages[language]?.tecnologies}</p>
+          <p className="pMenuItems">{languages[language]?.tecnologies}</p>
         </ScrollLink>
 
         <ScrollLink
@@ -85,7 +85,7 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
           smooth={true}
           duration={400}
         >
-          <p className="p2">{languages[language]?.projects}</p>
+          <p className="pMenuItems">{languages[language]?.projects}</p>
         </ScrollLink>
 
         <ScrollLink
@@ -94,7 +94,7 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
           smooth={true}
           duration={400}
         >
-          <p className="p2">{languages[language]?.contact}</p>
+          <p className="pMenuItems">{languages[language]?.contact}</p>
         </ScrollLink>
 
         {theme === "dark" ? (
@@ -121,9 +121,9 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
           <BiWorld className="icon" />
           <ul className="list" onClick={handleLanguage}>
             {theme === "dark" ? (
-              <p className="p1">{languages[language]?.language}</p>
+              <p className="pLanguage">{languages[language]?.language}</p>
             ) : (
-              <p className="p1Ligth">{languages[language]?.language}</p>
+              <p className="pLanguageLigth">{languages[language]?.language}</p>
             )}
             <li>
               {theme === "dark" ? (
