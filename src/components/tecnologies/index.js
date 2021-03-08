@@ -21,7 +21,6 @@ import expressW from "../../media/expressjs-whitish.svg";
 export default function Tecnologies({ language, theme }) {
   return (
     <TecContainer id="tecnologias">
-      {theme === "dark" ? (
         <div className="background">
           <div className="cont">
             <div className="titleCont">
@@ -46,7 +45,7 @@ export default function Tecnologies({ language, theme }) {
               </div>
               <div className="tec">
                 <SiPostgresql className="logo" />
-                <p className="logoTxt">PostgreSqñ</p>
+                <p className="logoTxt">PostgreSQL</p>
               </div>
               <div className="tec">
                 <SiMongodb className="logo" />
@@ -66,12 +65,12 @@ export default function Tecnologies({ language, theme }) {
               </div>
               <div className="tec">
                 <div className="express">
-                  <img src={expressW} className="logoE" />
+                  <img src={theme === 'dark' ? expressW : express} className="logoE" />
                 </div>
                 <p className="logoTxt">Express</p>
               </div>
               <div className="tec">
-                <img src={sequelizeW} className="logoS" />
+                <img src={theme === 'dark' ? sequelizeW : sequelize} className="logoS" />
                 <p className="logoTxt">Sequelize</p>
               </div>
             </div>
@@ -86,72 +85,6 @@ export default function Tecnologies({ language, theme }) {
             />
           </div>
         </div>
-      ) : (
-        <div className="backgroundLight">
-          <div className="cont">
-            <div className="titleCont">
-              <h2 className="titleLight">{languages[language]?.tecnologies}</h2>
-            </div>
-            <div className="container">
-              <div className="tec">
-                <SiReact className="logoLight" />
-                <p className="logoTxtLight">React | React-Native</p>
-              </div>
-              <div className="tec">
-                <SiRedux className="logoLight" />
-                <p className="logoTxtLight">Redux</p>
-              </div>
-              <div className="tec">
-                <SiJavascript className="logoLight" />
-                <p className="logoTxtLight">Javascript</p>
-              </div>
-              <div className="tec">
-                <SiNodeDotJs className="logoLight" />
-                <p className="logoTxtLight">Node</p>
-              </div>
-              <div className="tec">
-                <SiPostgresql className="logoLight" />
-                <p className="logoTxtLight">PostgreSqñ</p>
-              </div>
-              <div className="tec">
-                <SiMongodb className="logoLight" />
-                <p className="logoTxtLight">MongoDB</p>
-              </div>
-              <div className="tec">
-                <SiGraphql className="logoLight" />
-                <p className="logoTxtLight">GraphQL</p>
-              </div>
-              <div className="tec">
-                <SiApollographql className="logoLight" />
-                <p className="logoTxtLight">Apollo</p>
-              </div>
-              <div className="tec">
-                <SiExpo className="logoLight" />
-                <p className="logoTxtLight">Expo</p>
-              </div>
-              <div className="tec">
-                <div className="expressLight">
-                  <img src={express} className="logoELight" />
-                </div>
-                <p className="logoTxtLight">Express</p>
-              </div>
-              <div className="tec">
-                <img src={sequelize} className="logoLightS" />
-                <p className="logoTxtLight">Sequelize</p>
-              </div>
-            </div>
-          </div>
-          <div className="footer">
-            <Footer
-              theme={theme}
-              language={language}
-              text={languages[language]?.projects}
-              to="proyectos"
-              className="footer"
-            />
-          </div>
-        </div>
-      )}
     </TecContainer>
   );
 }

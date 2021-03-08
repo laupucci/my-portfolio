@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../utils/index";
-const { whitish } = colors;
 
 export const FooterContainer = styled.section`
   position: relative;
@@ -21,7 +19,7 @@ export const FooterContainer = styled.section`
   .git,
   .linkedin,
   .cv {
-    color: #e8e8e8;
+    color: ${({ theme }) => theme.text};
     width: 5vw;
     height: 5vh;
     cursor: pointer;
@@ -31,7 +29,7 @@ export const FooterContainer = styled.section`
     }
   }
   .cvDiv {
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,36 +46,7 @@ export const FooterContainer = styled.section`
       margin: 0;
     }
   }
-  .cvDivLight {
-    color: #272727;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 5vw;
-    height: 5vh;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.5);
-      margin-top: -0.4rem;
-    }
-    .cvLight,
-    p {
-      font-family: "Acme", sans-serif;
-      margin: 0;
-    }
-  }
-  .gitLight,
-  .linkedinLight,
-  .cvLight {
-    color: #272727;
-    width: 5vw;
-    height: 5vh;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.5);
-      margin-top: -0.4rem;
-    }
-  }
+ 
 
   .cta {
     width: 75%;
@@ -99,28 +68,15 @@ export const FooterContainer = styled.section`
     .cta_txt {
       font-size: 1vw;
       font-family: "Acme", sans-serif;
-      color: #e8e8e8;
+      color: ${({ theme }) => theme.text};
       transition: 0.3s ease-in-out;
     }
     .arrow {
       margin-top: -0.2rem;
       width: 1.7vw;
       height: 1.7vw;
-      color: #e8e8e8;
+      color: ${({ theme }) => theme.text};
       transition: 0.3s ease-in-out;
-    }
-    .cta_txtLight {
-      font-size: 1vw;
-      font-family: "Acme", sans-serif;
-      color: #272727;
-      transition: 0.3s ease-in-out;
-    }
-    .arrowLight {
-      margin-top: -0.2rem;
-      width: 1.7vw;
-      height: 1.7vw;
-      transition: 0.3s ease-in-out;
-      color: #272727;
     }
   }
 
@@ -130,12 +86,10 @@ export const FooterContainer = styled.section`
     }
     .cta {
       width: 35%;
-      .cta_txt,
-      .cta_txtLight {
+      .cta_txt {
         font-size: 2.2vw;
       }
-      .arrow,
-      .arrowLight {
+      .arrow {
         width: 6vw;
         height: 6.7vw;
       }
@@ -148,21 +102,16 @@ export const FooterContainer = styled.section`
     }
     .git,
     .linkedin,
-    .cv,
-    .gitLight,
-    .linkedinLight,
-    .cvLight {
+    .cv {
       width: 7vw;
       height: 7vh;
     }
     .cta {
       width: 45%;
-      .cta_txt,
-      .cta_txtLight {
+      .cta_txt {
         font-size: 3vw;
       }
-      .arrow,
-      .arrowLight {
+      .arrow {
         width: 8vw;
         height: 8.7vw;
       }

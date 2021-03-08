@@ -54,18 +54,6 @@ export const Container = styled.header`
       border-radius: 0 7px;
       cursor: pointer;
     }
-    &:focus {
-      box-decoration-break: none;
-      border: none;
-      border-color: none;
-      box-shadow: 0;
-    }
-    &:active {
-      box-decoration-break: none;
-      border: none;
-      border-color: none;
-      box-shadow: 0;
-    }
     .pTheme {
       color: ${whitish};
       font-family: "Architects Daughter", sans-serif;
@@ -75,16 +63,10 @@ export const Container = styled.header`
       color: ${whitish};
     }
   }
-
   .pLanguage {
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     font-size: 1.2vw;
-    font-family: "Architects Daughter", sans-serif;
-  }
-  .pLanguageLigth {
-    color: #272727;
     padding: 1em;
-    font-size: 1.2vw;
     font-family: "Architects Daughter", sans-serif;
   }
   .menu_item {
@@ -112,38 +94,21 @@ export const Container = styled.header`
     bottom: 1rem;
     width: 3%;
     height: 6%;
-    font-size: 3rem;
+    font-size: 5vw;
     font-weight: bold;
     display: ${({ active }) => (active ? "flex" : "none")};
     justify-content: center;
     align-items: center;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     cursor: pointer;
     span {
       position: relative;
       top: 0.5rem;
     }
   }
-
-  .topLight {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    width: 3%;
-    height: 6%;
-    font-size: 250%;
-    font-weight: bold;
-    display: ${({ active }) => (active ? "flex" : "none")};
-    justify-content: center;
-    align-items: center;
-    color: #272727;
-    cursor: pointer;
-    span {
-      position: relative;
-      top: 0.5rem;
-    }
-  }
-
+.mobile{
+  display: none
+}
   @media screen and (max-width: 950px) {
     width: 100vw;
     height: 9vh;
@@ -154,6 +119,14 @@ export const Container = styled.header`
       margin: 0;
       font-size: 4vw;
     }
+    .mobile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pages{
+    width: 95%;
+  }
+}
 
     .menu {
       position: absolute;
@@ -305,7 +278,7 @@ export const LanguageCont = styled.li`
   .btnLanguage {
     font-family: "Architects Daughter", sans-serif;
     color: rgba(228, 228, 228);
-    background-color: rgba(249, 35, 9, 0.4);
+    background-color: ${({ theme }) => theme.btnLanguage};
   }
   @media screen and (max-width: 950px) {
     display: none;

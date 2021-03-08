@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../utils";
-const { whitish } = colors;
 
 export const TecContainer = styled.section`
   height: 100vh;
@@ -12,7 +10,7 @@ export const TecContainer = styled.section`
     object-fit: cover;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: ${({ theme }) => theme.body};
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -20,7 +18,7 @@ export const TecContainer = styled.section`
     align-items: center;
   }
   .title {
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     font-size: 4vw;
     font-family: "Acme", sans-serif;
   }
@@ -46,60 +44,31 @@ export const TecContainer = styled.section`
   .logo {
     width: 7vw;
     height: 7vw;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
   }
   .logoS {
     width: 6.7vw;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
   }
-  .logoLightS {
-    width: 6.7vw;
-    color: ${whitish};
-  }
-  .express,
-  .expressLight {
+  .express {
     height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .logoE,
-  .logoELight {
+  .logoE {
     width: 9vw;
     height: 7vh;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
   }
   .logoTxt {
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     text-align: center;
   }
   .logoTxtE {
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     margin-top: 2em;
-  }
-  .logoLight {
-    width: 7vw;
-    height: 7vw;
-    color: #202020;
-  }
-
-  .backgroundLight {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.75);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .titleLight {
-    color: #272727;
-    font-size: 4vw;
-    font-family: "Acme", sans-serif;
   }
   p {
     font-family: "Acme", sans-serif;
@@ -111,8 +80,7 @@ export const TecContainer = styled.section`
   @media screen and (max-width: 1024px) {
     justify-content: center;
     align-items: center;
-    .title,
-    .titleLight {
+    .title {
       font-size: 6vw;
       margin-bottom: 0;
     }
@@ -120,28 +88,21 @@ export const TecContainer = styled.section`
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    .logo,
-    .logoLight {
+    .logo {
       width: 7vw;
       height: 7vh;
     }
-    .logoS,
-    .logoLightS {
+    .logoS {
       width: 10.5vw;
     }
-    .express,
-    .expressLight {
+    .express {
       height: 7vh;
     }
     .logoE {
       width: 17vw;
       height: 4vh;
     }
-    .logoELight {
-      width: 17vw;
-    }
-    .logoTxt,
-    .logoTxtLight {
+    .logoTxt {
       font-size: 4.2vw;
       text-align: center;
     }
@@ -156,36 +117,28 @@ export const TecContainer = styled.section`
       margin-top: 1%;
       justify-content: center;
     }
-    .title,
-    .titleLight {
+    .title {
       font-size: 10vw;
     }
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
-    .logo,
-    .logoLight {
+    .logo {
       width: 7vw;
       height: 7vh;
     }
-    .logoS,
-    .logoLightS {
+    .logoS {
       width: 10.5vw;
     }
-    .express,
-    .expressLight {
+    .express {
       height: 7vh;
     }
     .logoE {
       width: 17vw;
       height: 4vh;
     }
-    .logoELight {
-      width: 17vw;
-    }
-    .logoTxt,
-    .logoTxtLight {
+    .logoTxt {
       font-size: 4.2vw;
       text-align: center;
     }

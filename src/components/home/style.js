@@ -12,6 +12,7 @@ export const HomeContainer = styled.section`
     min-height: 100%;
     min-width: 100%;
     background: rgba(0, 0, 0, 0.8);
+    background: ${({ theme }) => theme.body};
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column-reverse;
@@ -59,7 +60,7 @@ export const HomeContainer = styled.section`
     font-size: 4vw;
     margin: 1%;
     font-family: "Acme", sans-serif;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     //name duration timing delay fill-mode
     animation: title 0.2s ease-in 3s backwards;
     overflow: hidden;
@@ -75,11 +76,10 @@ export const HomeContainer = styled.section`
       font-size: 4vw;
     }
   }
-
   .subtitle {
     font-size: 2.5vw;
     margin: 0;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     font-family: "Acme", sans-serif;
     //name duration timing delay fill-mode
     animation: title 0s ease-in 2.5s backwards;
@@ -98,7 +98,7 @@ export const HomeContainer = styled.section`
   }
 
   .descriptionTitle {
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     font-family: "Acme", sans-serif;
     margin: 0;
     margin-top: 1%;
@@ -120,7 +120,7 @@ export const HomeContainer = styled.section`
     font-size: 1.7vw;
     margin: 1% 0;
     padding: 0 4%;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     font-family: "Acme", sans-serif;
     //name duration timing delay fill-mode
     animation: descrip 0.4s ease-in 4.5s backwards;
@@ -170,7 +170,7 @@ export const HomeContainer = styled.section`
     object-fit: cover;
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.75);
+    background: ${({ theme }) => theme.body};
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column-reverse;

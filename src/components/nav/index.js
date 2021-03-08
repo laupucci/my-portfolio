@@ -6,6 +6,8 @@ import { Container, LanguageCont } from "./style";
 import { Link as ScrollLink } from "react-scroll";
 import menuHamb from "../../media/menu.svg";
 import x from "../../media/x.svg";
+import { MdKeyboardArrowUp } from "react-icons/md"
+import FooterMedia from "../footer/footerMedia";
 const Navbar = ({ language, setLanguage, theme, setTheme }) => {
   const [active, setActive] = useState(false);
   const [sidebar, setSidebar] = useState(false);
@@ -120,41 +122,26 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
         <LanguageCont>
           <BiWorld className="icon" />
           <ul className="list" onClick={handleLanguage}>
-            {theme === "dark" ? (
               <p className="pLanguage">{languages[language]?.language}</p>
-            ) : (
-              <p className="pLanguageLigth">{languages[language]?.language}</p>
-            )}
             <li>
-              {theme === "dark" ? (
                 <button id="en" className="btnLanguage">
                   {languages[language]?.language_en}
                 </button>
-              ) : (
-                <button id="en">{languages[language]?.language_en}</button>
-              )}
             </li>
             <li>
-              {theme === "dark" ? (
                 <button id="es" className="btnLanguage">
                   {languages[language]?.language_es}
                 </button>
-              ) : (
-                <button id="es">{languages[language]?.language_es}</button>
-              )}
             </li>
           </ul>
         </LanguageCont>
+        <div className="mobile">
+          <FooterMedia/>
+        </div>
       </nav>
-      {theme === "dark" ? (
         <ScrollLink to="home" smooth={true} duration={500} className="top">
-          <span>^</span>
+          <MdKeyboardArrowUp/>
         </ScrollLink>
-      ) : (
-        <ScrollLink to="home" smooth={true} duration={500} className="topLight">
-          <span>^</span>
-        </ScrollLink>
-      )}
     </Container>
   );
 };

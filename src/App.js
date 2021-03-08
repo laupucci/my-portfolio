@@ -5,6 +5,9 @@ import Home from "./components/home";
 import Tecnologies from "./components/tecnologies";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './styles/theme_style';
+import { GlobalStyles } from './styles/global_style';
 require("dotenv").config();
 
 function App() {
@@ -12,7 +15,9 @@ function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   return (
+   <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
   <>
+        <GlobalStyles />
   <Background theme={theme} setTheme={setTheme}/>
   <Navbar language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
     <div>
@@ -23,6 +28,7 @@ function App() {
     />
     </div>
   </>
+  </ThemeProvider>
   )
 }
 

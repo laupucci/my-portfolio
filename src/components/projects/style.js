@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../utils";
-const { whitish } = colors;
+
 
 export const ProjectsContainer = styled.section`
   height: 100vh;
@@ -11,7 +10,7 @@ export const ProjectsContainer = styled.section`
     object-fit: cover;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: ${({ theme }) => theme.body};
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -45,7 +44,7 @@ export const ProjectsContainer = styled.section`
     margin-top: 0;
   }
   .title {
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     font-size: 4vw;
     max-width: 6em;
     justify-content: center;
@@ -54,27 +53,16 @@ export const ProjectsContainer = styled.section`
   .imgsIntegrar {
     width: 6.2vw;
     margin: 1vw;
-    border: 5px solid #585858;
+    border: 5px solid ${({ theme }) => theme.imgs};
     border-radius: 17px;
   }
   .imgsDubsnip {
     width: 24.5vw;
     margin: 1em;
-    border: 5px solid #585858;
+    border: 5px solid ${({ theme }) => theme.imgs};
     border-radius: 17px;
   }
-  .imgsIntegrarLight {
-    width: 6.2vw;
-    margin: 1vw;
-    border: 5px solid #151515;
-    border-radius: 17px;
-  }
-  .imgsDubsnipLight {
-    width: 24.5vw;
-    margin: 1em;
-    border: 5px solid #151515;
-    border-radius: 17px;
-  }
+
   .imgs {
     display: flex;
     flex-direction: row;
@@ -87,44 +75,13 @@ export const ProjectsContainer = styled.section`
   .integrarTxt {
     display: flex;
     flex-direction: column;
-    color: ${whitish};
+    color: ${({ theme }) => theme.text};
     padding-right: 2.5%;
     width: 60vw;
-  }
-  .integrarLight {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    color: #272727;
-  }
-  .integrarTxtLight {
-    display: flex;
-    flex-direction: column;
-    color: #202020;
-    padding-right: 2.5%;
-    width: 60vw;
-  }
-
-  .backgroundLight {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.75);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .titleLight {
-    color: #272727;
-    font-size: 4vw;
   }
 
   @media (max-width: 1024px) {
-    .background,
-    .backgroundLight {
+    .background {
       justify-content: flex-end;
     }
     .container {
@@ -132,17 +89,13 @@ export const ProjectsContainer = styled.section`
       height: 84%;
       justify-content: flex-start;
     }
-    .titleLight,
     .title {
       font-size: 6vw;
-      /* margin-top:1.5%; */
     }
-    .integrarLight,
     .integrar {
       flex-direction: column;
       width: 100vw;
     }
-    .integrarTxtLight,
     .integrarTxt {
       width: 98vw;
       h3 {
@@ -155,7 +108,6 @@ export const ProjectsContainer = styled.section`
         padding: 0 2%;
       }
     }
-    .imgsIntegrarLight,
     .imgsIntegrar {
       width: 13vw;
       margin: 1vw;
@@ -163,7 +115,6 @@ export const ProjectsContainer = styled.section`
       border-radius: 7px;
       margin-right: 2%;
     }
-    .imgsDubsnipLight,
     .imgsDubsnip {
       width: 33vw;
       margin: 1em;
@@ -180,8 +131,7 @@ export const ProjectsContainer = styled.section`
   }
 
   @media (max-width: 500px) {
-    .background,
-    .backgroundLight {
+    .background {
       justify-content: center;
       align-items: center;
     }
@@ -192,17 +142,13 @@ export const ProjectsContainer = styled.section`
       justify-content: flex-start;
       align-items: center;
     }
-    .titleLight,
     .title {
       font-size: 8vw;
-      /* margin-top:1.5%; */
     }
-    .integrarLight,
     .integrar {
       flex-direction: column;
       width: 85%;
     }
-    .integrarTxtLight,
     .integrarTxt {
       width: 100%;
       h3 {
@@ -215,7 +161,6 @@ export const ProjectsContainer = styled.section`
         padding: 0 2%;
       }
     }
-    .imgsIntegrarLight,
     .imgsIntegrar {
       width: 13.6vw;
       height: 15vh;
@@ -224,7 +169,6 @@ export const ProjectsContainer = styled.section`
       border-radius: 7px;
       margin-right: 2%;
     }
-    .imgsDubsnipLight,
     .imgsDubsnip {
       width: 33vw;
       margin: 1em;

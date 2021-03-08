@@ -6,7 +6,6 @@ export const ContactContainer = styled.section`
   display: flex;
   height: 100vh;
   width: 100vw;
-  /* margin: 0 auto; */
   justify-content: center;
   align-items: center;
 
@@ -14,7 +13,7 @@ export const ContactContainer = styled.section`
     object-fit: cover;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: ${({ theme }) => theme.body};
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -35,7 +34,7 @@ export const ContactContainer = styled.section`
     .title {
       padding: 2% 5.1%;
       width: 50vw;
-      background-color: rgba(249, 35, 9, 0.6);
+      background-color: ${({ theme }) => theme.formTitle};
       border-radius: 25px 0 0 0;
       display: flex;
       justify-content: center;
@@ -45,7 +44,7 @@ export const ContactContainer = styled.section`
         font-family: "Acme", sans-serif;
         font-size: 2vw;
         margin: 0;
-        color: ${whitish};
+        color: #E8E8E8;
         width: 40%;
         font-weight: normal;
         display: flex;
@@ -54,7 +53,7 @@ export const ContactContainer = styled.section`
       }
     }
     .form_container {
-      background-color: rgba(107, 107, 107, 0.6);
+      background-color: ${({ theme }) => theme.form};
       width: 50vw;
       height: 80%;
       padding: 5%;
@@ -68,7 +67,7 @@ export const ContactContainer = styled.section`
         "   msg   msg     " 4fr
         "submit   submit  " 1fr/
         1fr 1fr;
-      grid-gap: 2%;
+      grid-gap: 3%;
     }
 
     .field {
@@ -79,10 +78,13 @@ export const ContactContainer = styled.section`
     }
 
     .label {
-      color: rgba(200, 200, 200);
+      color: ${({ theme }) => theme.label};
       font-family: "Acme", sans-serif;
       font-size: 1.1rem;
       padding-bottom: 0.5rem;
+    }
+    .label.message {
+      margin-top: 2.2%
     }
     .input {
       width: 87%;
@@ -98,19 +100,14 @@ export const ContactContainer = styled.section`
       outline: none;
 
       &:focus {
-        border: 1.5px solid ${whitish};
+        border: 1.5px solid ${({ theme }) => theme.text};
         background-color: rgba(39, 39, 39, 0.5);
       }
     }
     .error {
       height: 0;
       font-size: 0.9vw;
-      color: #f97777;
-    }
-    .errorLight {
-      height: 0;
-      font-size: 0.9vw;
-      color: #ab0f0f;
+      color: ${({ theme }) => theme.error};
     }
 
     .input.textarea {
@@ -122,11 +119,12 @@ export const ContactContainer = styled.section`
       color: rgba(228, 228, 228, 0.6);
     }
     .submit_btn {
+      margin-top: 1.1%;
       grid-area: submit;
       width: 95%;
       height: 100%;
       background-color: rgba(236, 36, 11, 0.8);
-      color: ${whitish};
+      color: #E8E8E8;
       border: none;
       border-radius: 15px 0;
       padding: 0.5rem;
@@ -136,7 +134,7 @@ export const ContactContainer = styled.section`
       font-size: 1.3vw;
       &:hover {
         background-color: rgba(134, 30, 17, 0.6);
-        color: ${whitish};
+        color: #E8E8E8;
       }
     }
     .name_field {
@@ -160,98 +158,26 @@ export const ContactContainer = styled.section`
       width: 94%;
     }
   }
-  .backgroundLight {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.75);
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
 
-  .form_containerLight {
-    background-color: rgba(249, 35, 9, 0.4);
-    width: 50vw;
-    height: 80%;
-    padding: 1.5rem;
-    display: grid;
-    // align-items:center;
-    justify-items: center;
-    border-radius: 0 0 25px 0;
-    grid-template:
-      " _name   lastname" 2fr
-      " phone   email   " 2fr
-      "   msg   msg     " 4fr
-      "submit   submit  " 1fr/
-      1fr 1fr;
-    grid-gap: 1.2rem;
-  }
-
-  .titleLight {
-    padding: 1rem 1.5rem;
-    width: 50vw;
-    background-color: rgba(236, 12, 12, 0.85);
-    border-radius: 25px 0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .submit_btnLight {
-    grid-area: submit;
-    width: 95%;
-    height: 100%;
-    background-color: rgba(236, 12, 12, 0.85);
-    color: ${whitish};
-    border: none;
-    border-radius: 15px 0;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: "Acme", sans-serif;
-    font-size: 1.3vw;
-    &:hover {
-      background-color: rgba(134, 30, 17, 0.6);
-      color: ${whitish};
-    }
-  }
-  .h2Light {
-    font-family: "Acme", sans-serif;
-    font-size: 2vw;
-    margin: 0;
-    color: ${whitish};
-    width: 40%;
-    font-weight: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .labelLight {
-    color: rgba(39, 39, 39, 0.95);
-    font-family: "Acme", sans-serif;
-    font-size: 1.1rem;
-    padding-bottom: 0.5rem;
-  }
 .footer{
   display: none
 }
   @media screen and (max-width: 1024px) {
-    .background, .backgroundLight{
+    .background {
       align-items: center;
     }
     .contact_form {
       margin-top: 1%;
-      .title, .titleLight {
+      .title {
         padding: 2% 0.5%;
         width: 87vw;
         font-size: 5vw;
 
-        h2, .h2Light {
+        h2 {
           font-size: 4vw;
         }
       }
-      .form_container, .form_containerLight {
+      .form_container {
         width: 87vw;
         height: 72vh;
         padding: 2% 0.5%;
@@ -264,22 +190,22 @@ export const ContactContainer = styled.section`
         grid-gap: 1%;
       }
 
-      .submit_btnLight, .submit_btn {
+      .submit_btn {
     height: 80%;
     padding: 0.5rem;
     font-size: 5vw;
   }
      
-      .label, .labelLight {
+      .label {
         font-family: "Sanchez";
         font-size: 4vw;
       }
-      .input, .inputLight {
+      .input {
         height: 40%;
         font-size: 4vw;
         padding: 3%;
       }
-      .error, .errorLight {
+      .error {
         font-size: 2.5vw;
       }
 
@@ -290,22 +216,22 @@ export const ContactContainer = styled.section`
   }
   @media screen and (max-width: 500px) {
 
-    .background, .backgroundLight{
+    .background {
       flex-direction: column;
       align-items: center;
     }
     .contact_form {
       margin-top: 1%;
-      .title, .titleLight {
+      .title {
         padding: 2% 0.5%;
-        width: 87vw;
+        width: 82vw;
 
-        h2, .h2Light {
+        h2 {
           font-size: 100%;
         }
       }
-      .form_container, .form_containerLight {
-        width: 87vw;
+      .form_container {
+        width: 82vw;
         height: 64vh;
         padding: 2% 0.5%;
       grid-template:
@@ -317,22 +243,22 @@ export const ContactContainer = styled.section`
         grid-gap: 1%;
       }
 
-      .submit_btnLight, .submit_btn {
+      .submit_btn {
     height: 80%;
     padding: 0.5rem;
     font-size: 5vw;
   }
      
-      .label, .labelLight {
+      .label {
         font-family: "Sanchez";
         font-size: 100%;
       }
-      .input, .inputLight {
+      .input {
         height: 40%;
         font-size: 100%;
         padding: 3%;
       }
-      .error, .errorLight {
+      .error {
         font-size: 0.8rem;
       }
 

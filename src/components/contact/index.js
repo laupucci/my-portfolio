@@ -67,7 +67,6 @@ export default function Contact({ language, theme }) {
     >
       {({ values, errors, touched }) => (
         <ContactContainer id="contacto">
-          {theme === "dark" ? (
             <div className="background">
               <div className="contact_form">
                 <div className="title">
@@ -131,7 +130,7 @@ export default function Contact({ language, theme }) {
                     </div>
                   </div>
                   <div className="field message_field">
-                    <label className="label">
+                    <label className="label message">
                       {languages[language]?.message}
                     </label>
                     <Field
@@ -162,104 +161,6 @@ export default function Contact({ language, theme }) {
             />
           </div>
             </div>
-          ) : (
-            <div className="backgroundLight">
-              <div className="contact_form">
-                <div className="titleLight">
-                  <h2 className="h2Light">{languages[language]?.write}</h2>
-                </div>
-                <Form className="form_containerLight">
-                  <div className="field name_field">
-                    <label className="labelLight">
-                      {languages[language]?.name}
-                    </label>
-                    <Field
-                      className="input"
-                      type="text"
-                      name="name"
-                      placeholder={languages[language]?.name}
-                    />
-                    <div className="errorLight">
-                      {touched.name && errors.name ? errors.name : null}
-                    </div>
-                  </div>
-                  <div className="field lastname_field">
-                    <label className="labelLight">
-                      {languages[language]?.lastname}
-                    </label>
-                    <Field
-                      className="input"
-                      type="text"
-                      name="lastname"
-                      placeholder={languages[language]?.lastname}
-                    />
-                    <div className="errorLight">
-                      {touched.lastname && errors.lastname
-                        ? errors.lastname
-                        : null}
-                    </div>
-                  </div>
-                  <div className="field phone_field">
-                    <label className="labelLight">
-                      {languages[language]?.phone}
-                    </label>
-                    <Field
-                      name="phone"
-                      type="text"
-                      className="input"
-                      placeholder={languages[language]?.phone}
-                    />
-                    <div className="errorLight">
-                      {touched.phone && errors.phone ? errors.phone : null}
-                    </div>
-                  </div>
-                  <div className="field email_field">
-                    <label className="labelLight">
-                      {languages[language]?.email}
-                    </label>
-                    <Field
-                      name="email"
-                      type="email"
-                      className="input"
-                      placeholder={languages[language]?.email}
-                    />
-                    <div className="errorLight">
-                      {touched.email && errors.email ? errors.email : null}
-                    </div>
-                  </div>
-                  <div className="field message_field">
-                    <label className="labelLight">
-                      {languages[language]?.message}
-                    </label>
-                    <Field
-                      component="textarea"
-                      type="text"
-                      name="message"
-                      placeholder={languages[language]?.message}
-                      className="input textarea"
-                    />
-                    <div className="errorLight">
-                      {touched.message && errors.message
-                        ? errors.message
-                        : null}
-                    </div>
-                  </div>
-                  <button type="submit" className="submit_btnLight">
-                    {languages[language]?.send}
-                  </button>
-                </Form>
-              </div>
-              <div className="footer">
-            <FooterMedia
-              theme={theme}
-              language={language}
-              text={languages[language]?.tecnologies}
-              to="tecnologias"
-              className="footer"
-            />
-          </div>
-            </div>
-          )}
         </ContactContainer>
       )}
     </Formik>
