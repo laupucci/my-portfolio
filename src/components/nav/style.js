@@ -106,9 +106,9 @@ export const Container = styled.header`
       top: 0.5rem;
     }
   }
-.mobile{
-  display: none
-}
+  .mobile {
+    display: none;
+  }
   @media screen and (max-width: 950px) {
     width: 100vw;
     height: 9vh;
@@ -119,15 +119,20 @@ export const Container = styled.header`
       margin: 0;
       font-size: 4vw;
     }
-    .mobile{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .pages{
-    width: 95%;
-  }
-}
-
+    .mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .pages {
+        width: 95%;
+        .git,
+        .linkedin,
+        .cv,
+        p {
+          color: #e8e8e8;
+        }
+      }
+    }
     .menu {
       position: absolute;
       width: 87vw;
@@ -197,8 +202,9 @@ export const Container = styled.header`
     }
 
     .top {
-      width: 8%;
-      height: 6%;
+      width: 18%;
+      height: 11%;
+      font-size: 14vw;
     }
     .menu.active {
       top: 0;
