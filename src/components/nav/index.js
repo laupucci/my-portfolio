@@ -136,7 +136,7 @@ const Navbar = ({ language, setLanguage, theme, setTheme }) => {
           </ul>
         </LanguageCont>
         <div className="mobile">
-          <FooterMedia/>
+          <FooterMedia language={language}/>
         </div>
       </nav>
         <ScrollLink to="home" smooth={true} duration={500} className="top">
