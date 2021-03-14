@@ -39,7 +39,7 @@ export const ProjectsContainer = styled.section`
     font-size: 1.7vw;
   }
   p {
-    font-family: "Acme", sans-serif;
+    font-family: "Overpass", sans-serif;
     font-size: 1.1vw;
     margin-top: 0;
   }

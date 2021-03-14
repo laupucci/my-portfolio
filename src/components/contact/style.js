@@ -122,7 +122,7 @@ export const ContactContainer = styled.section`
       margin-top: 1.1%;
       grid-area: submit;
       width: 95%;
-      height: 100%;
+      height: 93%;
       background-color: rgba(236, 36, 11, 0.8);
       color: #E8E8E8;
       border: none;
@@ -197,7 +197,7 @@ export const ContactContainer = styled.section`
   }
      
       .label {
-        font-family: "Sanchez";
+        font-family: "Overpass";
         font-size: 4vw;
       }
       .input {

@@ -121,7 +121,7 @@ export const HomeContainer = styled.section`
     margin: 1% 0;
     padding: 0 4%;
     color: ${({ theme }) => theme.text};
-    font-family: "Acme", sans-serif;
+    font-family: "Overpass", sans-serif;
     //name duration timing delay fill-mode
     animation: descrip 0.4s ease-in 4.5s backwards;
     overflow: hidden;
@@ -224,7 +224,7 @@ export const HomeContainer = styled.section`
     font-size: 1.6vw;
     padding: 0 4%;
     color: #171717;
-    font-family: "Acme", sans-serif;
+    font-family: "Overpass", sans-serif;
     text-align: center;
   }
 
