@@ -14,7 +14,7 @@ export const languages = {
     language_es: "Español",
     projects: "Proyectos",
     contact: "Contacto",
-    integrAr: "Aplicación educativa. El principal objetivo es facilitar la comuniciación de los profesores con sus alumnos, y el seguimiento de los profesores hacia los alumnos. Ideada para ser administrada desde la escuela, la administración de la misma se encarga de generar los usuarios de los profesores y de los alumnos. Las tecnologías usadas fueron: Javascript, React-Native, GraphQl, MongoDB, Node y Apollo",
+    integrAr: "Aplicación educativa. El principal objetivo es facilitar la comunicación de los profesores con sus alumnos, y el seguimiento de los profesores hacia los alumnos. Ideada para ser administrada desde la escuela, la administración de la misma se encarga de generar los usuarios de los profesores y de los alumnos. Las tecnologías usadas fueron: Javascript, React-Native, GraphQl, MongoDB, Node y Apollo",
     dubsnip: "E-commerce. Página realizada para la venta de instrumentos musicales. Posee sección de productos, ofertas, novedades, panel de admin, registro de usuario, carrito de invitado, reviews entre otras. Las tecnologías utilizadas fueron: Javascript, Express, PostgreSQL, Styled-components, React, Redux,Sequelize, Node y Passport."
   },
 };

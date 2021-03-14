@@ -117,7 +117,7 @@ export const HomeContainer = styled.section`
   }
 
   .description {
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     margin: 1% 0;
     padding: 0 4%;
     color: ${({ theme }) => theme.text};
