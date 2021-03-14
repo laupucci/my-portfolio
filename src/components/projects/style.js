@@ -103,7 +103,7 @@ export const ProjectsContainer = styled.section`
         margin: 1%;
       }
       p {
-        font-size: 3.1vw;
+        font-size: 2.5vw;
         text-align: justify;
         padding: 0 2%;
       }
