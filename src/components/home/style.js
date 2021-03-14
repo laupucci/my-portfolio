@@ -297,7 +297,7 @@ export const HomeContainer = styled.section`
       height: 64vh;
     }
     .description,.descriptionLigth {
-      font-size: 3.4vw;
+      font-size: 4vw;
   }
 
     .footer{
