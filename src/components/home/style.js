@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../utils";
-const { whitish } = colors;
 
 export const HomeContainer = styled.section`
   height: 100vh;
