@@ -81,7 +81,7 @@ export const TecContainer = styled.section`
     justify-content: center;
     align-items: center;
     .title {
-      font-size: 6vw;
+      font-size: 5vw;
       margin-bottom: 0;
     }
     .container {
@@ -89,21 +89,21 @@ export const TecContainer = styled.section`
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     .logo {
-      width: 7vw;
-      height: 7vh;
-    }
-    .logoS {
-      width: 10.5vw;
-    }
-    .express {
-      height: 7vh;
-    }
-    .logoE {
-      width: 17vw;
+      width: 4vw;
       height: 4vh;
     }
+    .logoS {
+      width: 4.5vw;
+    }
+    .express {
+      height: 4vh;
+    }
+    .logoE {
+      width: 9vw;
+      height: 2vh;
+    }
     .logoTxt {
-      font-size: 4.2vw;
+      font-size: 3.5vh;
       text-align: center;
     }
     .logoTxtE {

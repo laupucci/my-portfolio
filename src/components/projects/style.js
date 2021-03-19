@@ -90,33 +90,36 @@ export const ProjectsContainer = styled.section`
       justify-content: flex-start;
     }
     .title {
-      font-size: 6vw;
+      font-size: 5vw;
     }
     .integrar {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 100vw;
     }
     .integrarTxt {
-      width: 98vw;
+      width: 90vw;
       h3 {
-        font-size: 3vw;
+        font-size: 90%;
         margin: 1%;
+        padding-left: 2%;
       }
       p {
-        font-size: 2.5vw;
+        font-size: 70%;
         text-align: justify;
         padding: 0 2%;
       }
     }
     .imgsIntegrar {
-      width: 13vw;
+      width: 4%;
       margin: 1vw;
       border: 2px solid #151515;
       border-radius: 7px;
       margin-right: 2%;
     }
     .imgsDubsnip {
-      width: 33vw;
+      width: 18%;
       margin: 1em;
       border: 2px solid #151515;
       border-radius: 17px;

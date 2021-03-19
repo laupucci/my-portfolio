@@ -230,7 +230,7 @@ export const HomeContainer = styled.section`
     .me_container,
     .me_containerLight {
       width: 62vw;
-      height: 24vh;
+      height: 22vh;
       padding: 0 3%;
       justify-content: center;
       .title,
@@ -245,16 +245,16 @@ export const HomeContainer = styled.section`
     }
     .descriptionTitle,
     .descriptionTitleLigth {
-      font-size: 4.5vh;
+      font-size: 2.5vw;
     }
     .desc_container,
     .desc_containerLight {
       width: 81vw;
-      height: 55vh;
+      height: 50vh;
     }
     .description,
     .descriptionLigth {
-      font-size: 3.9vw;
+      font-size: 2.0vw;
     }
   }
   @media screen and (max-width: 500px) {

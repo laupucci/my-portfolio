@@ -169,17 +169,17 @@ export const ContactContainer = styled.section`
     .contact_form {
       margin-top: 1%;
       .title {
-        padding: 2% 0.5%;
-        width: 87vw;
-        font-size: 5vw;
+        margin-top: 1%;
+        padding: 1.5% 0.5%;
+        width: 75vw;
 
         h2 {
-          font-size: 4vw;
+          font-size: 130%;
         }
       }
       .form_container {
-        width: 87vw;
-        height: 72vh;
+        width: 75vw;
+        height: 66vh;
         padding: 2% 0.5%;
       grid-template:
         " _name   lastname" 2fr
@@ -191,18 +191,18 @@ export const ContactContainer = styled.section`
       }
 
       .submit_btn {
-    height: 80%;
-    padding: 0.5rem;
-    font-size: 5vw;
+    height: 88%;
+    padding: 0.5%;
+    font-size: 98%;
   }
      
       .label {
         font-family: "Overpass";
-        font-size: 4vw;
+        font-size: 100%;
       }
       .input {
         height: 40%;
-        font-size: 4vw;
+        font-size: 100%;
         padding: 3%;
       }
       .error {
@@ -246,7 +246,7 @@ export const ContactContainer = styled.section`
       .submit_btn {
     height: 80%;
     padding: 0.5rem;
-    font-size: 5vw;
+    font-size: 3.2vw;
   }
      
       .label {

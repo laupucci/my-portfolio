@@ -46,7 +46,6 @@ export const FooterContainer = styled.section`
       margin: 0;
     }
   }
- 
 
   .cta {
     width: 75%;
@@ -84,14 +83,20 @@ export const FooterContainer = styled.section`
     .pages {
       width: 35%;
     }
+    .git,
+    .linkedin,
+    .cv {
+      width: 2vw;
+      height: 2vw;
+    }
     .cta {
       width: 35%;
       .cta_txt {
-        font-size: 2.2vw;
+        font-size: 1vw;
       }
       .arrow {
-        width: 6vw;
-        height: 6.7vw;
+        width: 3vw;
+        height: 3.7vw;
       }
     }
   }

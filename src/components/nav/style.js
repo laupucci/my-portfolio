@@ -117,14 +117,14 @@ export const Container = styled.header`
 
     .logo {
       margin: 0;
-      font-size: 4vw;
+      font-size: 2.5vw;
     }
     .mobile {
       display: flex;
       justify-content: center;
       align-items: center;
       .pages {
-        width: 95%;
+        width: 100%;
         .git,
         .linkedin,
         .cv,
@@ -135,8 +135,8 @@ export const Container = styled.header`
     }
     .menu {
       position: absolute;
-      width: 87vw;
-      height: 87vh;
+      width: 100vw;
+      height: 100vh;
       top: -100vh;
       left: 0;
       background-color: rgba(0, 0, 0, 0.8);
@@ -181,7 +181,7 @@ export const Container = styled.header`
     }
 
     .theme {
-      min-width: 28vw;
+      min-width: 33vw;
       height: 7vh;
       margin-bottom: 0;
       &:hover {
@@ -212,8 +212,8 @@ export const Container = styled.header`
     .menu_open.active {
       margin-right: 4%;
       display: block;
-      width: 7vw;
-      height: 7vw;
+      width: 5vw;
+      height: 5vw;
       cursor: pointer;
       color: ${whitish};
     }
@@ -226,10 +226,44 @@ export const Container = styled.header`
       top: 0.9vh;
       right: 1.2vw;
       z-index: 11;
+      width: 3.5vw;
+      height: 3.5vw;
+      padding: 1%;
+    }
+    .top {
+      width: 3vw;
+      height: 3vw;
+    }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+    .menu {
+      position: absolute;
+      max-width: 85%;
+      height: 100vh;
+    }
+    .pages {
+       max-width: 100%;
+    }
+    .logo {
+      font-size: 4vw;
+    }
+    .menu_open.active {
+      width: 7vw;
+      height: 7vw;
+      }
+    .menu_close.active {
       width: 5vw;
       height: 5vw;
       padding: 1%;
     }
+    .top {
+      width: 8vw;
+      height: 8vw;
+    }
+    
   }
 `;
 
