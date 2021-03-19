@@ -135,11 +135,11 @@ export const Container = styled.header`
     }
     .menu {
       position: absolute;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       top: -100vh;
-      left: 0;
       background-color: rgba(0, 0, 0, 0.8);
+      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -170,7 +170,7 @@ export const Container = styled.header`
       font-family: "Architects Daughter", sans-serif;
       justify-content: center;
       align-items: center;
-      margin: 2%;
+      margin: 0 2%;
     }
     .menu_item {
       margin: 0;
@@ -218,6 +218,7 @@ export const Container = styled.header`
       color: ${whitish};
     }
     .menu_close.active {
+      margin-right: 4%;
       position: absolute;
       display: block;
       cursor: pointer;
@@ -238,14 +239,15 @@ export const Container = styled.header`
 
 
   @media screen and (max-width: 600px) {
-    max-width: 100%;
+    max-width: 100vw;
     .menu {
       position: absolute;
-      max-width: 85%;
+      max-width: 100%;
       height: 100vh;
     }
     .pages {
-       max-width: 100%;
+       width: 100%;
+   
     }
     .logo {
       font-size: 4vw;
@@ -257,7 +259,7 @@ export const Container = styled.header`
     .menu_close.active {
       width: 5vw;
       height: 5vw;
-      padding: 1%;
+      margin-top: 2%
     }
     .top {
       width: 8vw;
