@@ -86,8 +86,8 @@ export const FooterContainer = styled.section`
     .git,
     .linkedin,
     .cv {
-      width: 2vw;
-      height: 2vw;
+      width: 3.2vw;
+      height: 3.2vw;
     }
     .cta {
       width: 35%;
