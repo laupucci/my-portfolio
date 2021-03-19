@@ -12,8 +12,9 @@ export const FooterContainer = styled.section`
   padding-bottom: 1.2%;
   .pages {
     width: 15%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     align-items: center;
   }
   .git,
@@ -33,8 +34,7 @@ export const FooterContainer = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 5vw;
-    height: 5vh;
+    justify-content: center;
     cursor: pointer;
     &:hover {
       transform: scale(1.5);

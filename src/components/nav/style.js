@@ -121,8 +121,6 @@ export const Container = styled.header`
     }
     .mobile {
       display: flex;
-      justify-content: center;
-      align-items: center;
       .pages {
         width: 100%;
         .git,
