@@ -14,7 +14,7 @@ export default function FooterMedia({ theme, language }) {
         <a href="http://www.github.com/laupucci">
             <SiGithub className="git" />
         </a>
-        <a href="https://www.linkedin.com/in/mar%C3%ADa-laura-puccinelli-859935178/">
+        <a href="https://www.linkedin.com/in/m-laura-puccinelli/">
             <SiLinkedin className="linkedin" />
          
         </a>
