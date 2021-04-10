@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { HomeContainer } from "./style";
 import Footer from "../footer/index";
 import { languages } from "./languages";
+import Typed from "react-typed";
 
 export default function Home({ language, theme }) {
   return (
@@ -15,7 +16,13 @@ export default function Home({ language, theme }) {
             </div>
             <div className="desc_container">
               <h2 className="descriptionTitle">{languages[language]?.full}</h2>
-              <p className="description">{languages[language]?.description}</p>
+              <Typed
+                className="description"
+                strings={[languages[language]?.description]}
+                typeSpeed={20}
+                showCursor={false}
+              />
+              <span id="typed"></span>
             </div>
           </div>
           <div className="footer">
@@ -39,9 +46,12 @@ export default function Home({ language, theme }) {
               <h2 className="descriptionTitleLigth">
                 {languages[language]?.full}
               </h2>
-              <p className="descriptionLigth">
-                {languages[language]?.description}
-              </p>
+
+              <Typed
+                className="descriptionLigth"
+                strings={[languages[language]?.description]}
+                typeSpeed={20}
+              />
             </div>
           </div>
           <div className="footer">

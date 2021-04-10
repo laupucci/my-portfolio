@@ -115,24 +115,25 @@ export const HomeContainer = styled.section`
   }
 
   .description {
+    /* display: inline; */
     font-size: 1.4vw;
     margin: 1% 0;
     padding: 0 4%;
     color: ${({ theme }) => theme.text};
     font-family: "Overpass", sans-serif;
     //name duration timing delay fill-mode
-    animation: descrip 0.4s ease-in 4.5s backwards;
+    animation: descrip 0.4s linear 5s backwards;
     overflow: hidden;
     text-align: center;
   }
   @keyframes descrip {
     from {
-      margin-bottom: 100vw;
+      
       font-size: 0vw;
     }
 
     to {
-      margin-bottom: 0%;
+      
       font-size: 120%;
     }
   }
