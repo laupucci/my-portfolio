@@ -14,20 +14,77 @@ export const ProjectsContainer = styled.section`
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
+  .scrollCont{
+    width: 90%;
+ height: 70vh;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+
+  }
   .container {
-    height: 99vh;
+    /* height: 99vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 1%;
-  }
-  .proyects {
+    padding-top: 1%; */
     display: flex;
-    justify-content: center;
+ width: 80%;
+ height: 68vh;
+ border: none;
+ margin: 1px;
+ overflow: hidden;
+ white-space: nowrap
+
+ /*will change this to hidden later to deny scolling to user*/
+
+  }
+
+  .right{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+ float: right; 
+ width: 6.5vw;
+ height: 68vh;
+ .rightArrow{
+  width: 6vw;
+   height:  6vw;
+   cursor: pointer;
+ }
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ float: left; 
+ width: 6.5vw;
+ height: 68vh;
+
+ .leftArrow{
+   width: 6vw;
+   height:  6vw;
+   cursor: pointer;
+ }
+}
+
+  .proyects {
+//    display: flex;
+   // flex-direction: column; 
+    //justify-content: center;
+ display: inline-block;
+    min-width: 90%;
+    height: 98%;
+    background-color: ${({ theme }) => theme.body};
+ border: 1px dotted  ${({ theme }) => !theme.body};
+ border-radius: 10px;
+ //overflow: visible
+ /* white-space: pre */
   }
   h2 {
     margin: 0;
@@ -36,12 +93,25 @@ export const ProjectsContainer = styled.section`
   }
   h3 {
     font-family: "Acme", sans-serif;
-    font-size: 1.7vw;
+    font-size: 2.5vw;
+    margin: 1%; 
   }
   p {
     font-family: "Overpass", sans-serif;
     font-size: 1.1vw;
     margin-top: 0;
+    flex-wrap: nowrap;
+    white-space: normal;
+    margin: 0 1%; 
+    text-align: justify;
+  }
+  li{
+    font-family: "Overpass", sans-serif;
+    font-size: 1.1vw;
+    margin-top: 0;
+    flex-wrap: nowrap;
+    white-space: normal;
+    
   }
   .title {
     color: ${({ theme }) => theme.text};
@@ -51,36 +121,45 @@ export const ProjectsContainer = styled.section`
     align-items: center;
   }
   .imgsIntegrar {
-    width: 6.2vw;
+    width: 10vw;
     margin: 1vw;
     border: 5px solid ${({ theme }) => theme.imgs};
     border-radius: 17px;
   }
   .imgsDubsnip {
-    width: 24.5vw;
+    width: 24vw;
     margin: 1em;
     border: 5px solid ${({ theme }) => theme.imgs};
-    border-radius: 17px;
+    border-radius: 10px;
   }
-
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .imgs {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .integrar {
     display: flex;
-    flex-direction: row;
-    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 96%;
+    padding: 1%
   }
   .integrarTxt {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: ${({ theme }) => theme.text};
-    padding-right: 2.5%;
-    width: 60vw;
   }
 
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     .background {
       justify-content: flex-end;
     }
@@ -99,7 +178,7 @@ export const ProjectsContainer = styled.section`
       width: 100vw;
     }
     .integrarTxt {
-      width: 90vw;
+      width: 80vw;
       h3 {
         font-size: 90%;
         margin: 1%;
@@ -189,5 +268,5 @@ export const ProjectsContainer = styled.section`
     .footer{
       display: none
     }
-  }
+  } */
 `;
