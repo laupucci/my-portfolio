@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Background from "./components/background";
 import Navbar from "./components/nav";
 import Home from "./components/home";
@@ -8,13 +8,24 @@ import Contact from "./components/contact";
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme_style';
 import { GlobalStyles } from './styles/global_style';
+import load from './media/loading.gif'
+import "./App.css";
 require("dotenv").config();
 
 function App() {
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'es');
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const [loading, setLoading] = useState(true)
+   useEffect(() => {
+    setTimeout(function(){     setLoading(false) }, 3000);
+ }, [])
 
-  return (
+ if (loading){
+   return(
+    <img src={load} className="loader"/>
+   )
+ }
+else return (
    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
   <>
         <GlobalStyles />
