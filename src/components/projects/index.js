@@ -8,6 +8,8 @@ import preceptor from "../../media/img3.jpg";
 import dubsnip from "../../media/dubsnip.png";
 import { IoMdArrowDropleftCircle } from "react-icons/io"
 import { IoMdArrowDroprightCircle } from "react-icons/io"
+import pampa from "../../media/pampa.png"
+import quiz from "../../media/quiz-query.png"
 
 export default function Projects({ language, theme }) {
   //   document.getElementById('left-button').onclick = function () {
@@ -15,9 +17,10 @@ export default function Projects({ language, theme }) {
   //  }
   const handleLeftClick = () => {
     let scrollPosition = document.getElementById("content")?.scrollLeft;
-    console.log(scrollPosition);
+    console.log(document.getElementsByClassName("proyects")[0].scrollWidth);
     if (scrollPosition) {
-      scrollPosition = scrollPosition - 800;
+      //scrollPosition = scrollPosition - 800;
+      scrollPosition = scrollPosition - document.getElementsByClassName("proyects")[0].scrollWidth
       document
         .getElementById("content")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
@@ -27,7 +30,8 @@ export default function Projects({ language, theme }) {
     let scrollPosition = document.getElementById("content")?.scrollLeft;
     console.log(scrollPosition);
     if (scrollPosition || scrollPosition === 0) {
-      scrollPosition = scrollPosition + 800;
+      scrollPosition = scrollPosition + document.getElementsByClassName("proyects")[0].scrollWidth
+      //scrollPosition = scrollPosition + 800;
       document
         .getElementById("content")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
@@ -44,7 +48,7 @@ export default function Projects({ language, theme }) {
       
         </div>
         <div className="container" id="content">
-          <div className="proyects">
+          <div className="proyects" id="proyect1">
             <div className="integrar">
               <div className="integrarTxt">
                 <h3>IntegrAr</h3>
@@ -58,19 +62,43 @@ export default function Projects({ language, theme }) {
               </div>
             </div>
           </div>
-          <div className="proyects">
+          <div className="proyects" id="proyect2">
             <div className="integrar">
               <div className="integrarTxt">
                 <h3>DubsNip</h3>
                 <p>{languages[language]?.dubsnip.desc}</p>
-                {languages[language]?.dubsnip.list.map(item =>
-                <li>{item}</li>
+                {languages[language]?.dubsnip.list.map((item, i) =>
+                <li key={i}>{item}</li>
                 )}
                 <p>{languages[language]?.dubsnip.stack}</p>
                 <p>{languages[language]?.dubsnip.henry}</p>
               </div>
               <div className="img">
                 <img className="imgsDubsnip" src={dubsnip} />
+              </div>
+            </div>
+          </div>
+          <div className="proyects" id="proyect3">
+            <div className="integrar">
+              <div className="integrarTxt">
+                <h3>Pampa del Río</h3>
+                <p>{languages[language]?.pampa.desc}</p>
+                <p>{languages[language]?.pampa.stack}</p>
+              </div>
+              <div className="imgs">
+                <img className="imgsDubsnip" src={pampa} />
+              </div>
+            </div>
+          </div>
+          <div className="proyects" id="proyect4">
+            <div className="integrar">
+              <div className="integrarTxt">
+                <h3>QuizQuery</h3>
+                <p>{languages[language]?.quizQuery.desc}</p>
+                <p>{languages[language]?.quizQuery.stack}</p>
+              </div>
+              <div className="imgs">
+                <img className="imgsDubsnip" src={quiz} />
               </div>
             </div>
           </div>

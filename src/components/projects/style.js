@@ -123,13 +123,13 @@ export const ProjectsContainer = styled.section`
   .imgsIntegrar {
     width: 10vw;
     margin: 1vw;
-    border: 5px solid ${({ theme }) => theme.imgs};
+    border: 3px solid ${({ theme }) => theme.imgs};
     border-radius: 17px;
   }
   .imgsDubsnip {
     width: 24vw;
     margin: 1em;
-    border: 5px solid ${({ theme }) => theme.imgs};
+    //border: 5px solid ${({ theme }) => theme.imgs};
     border-radius: 10px;
   }
   .img {
