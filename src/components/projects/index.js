@@ -86,7 +86,7 @@ export default function Projects({ language, theme }) {
                 <p>{languages[language]?.pampa.stack}</p>
               </div>
               <div className="imgs">
-                <img className="imgsDubsnip" src={pampa} />
+                <img className="imgsPampaQuiz" src={pampa} />
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Projects({ language, theme }) {
                 <p>{languages[language]?.quizQuery.stack}</p>
               </div>
               <div className="imgs">
-                <img className="imgsDubsnip" src={quiz} />
+                <img className="imgsPampaQuiz" src={quiz} />
               </div>
             </div>
           </div>
