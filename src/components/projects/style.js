@@ -67,7 +67,7 @@ export const ProjectsContainer = styled.section`
     height: 98%;
     background-color: ${({ theme }) => theme.body};
     border: 1px dotted ${({ theme }) => !theme.body};
-    border-radius: 10px;
+    border-radius: 0 30px;
   }
   h2 {
     margin: 0;
@@ -193,6 +193,9 @@ export const ProjectsContainer = styled.section`
       width: 87vw;
       height: 95%;
       margin-bottom: 10%;
+    }
+    .proyects {
+      min-width: 99.5%
     }
     .integrar {
       padding: 2% 4%;
