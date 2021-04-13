@@ -195,7 +195,7 @@ export const ProjectsContainer = styled.section`
       margin-bottom: 10%;
     }
     .proyects {
-      min-width: 99.5%
+      min-width: 99%
     }
     .integrar {
       padding: 2% 4%;

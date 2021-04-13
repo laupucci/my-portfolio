@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { HomeContainer } from "./style";
 import Footer from "../footer/index";
 import { languages } from "./languages";
 import Typed from "react-typed";
 
 export default function Home({ language, theme }) {
+
   return (
     <HomeContainer id="home">
       {theme === "dark" ? (
@@ -15,13 +16,14 @@ export default function Home({ language, theme }) {
               <h2 className="title">{languages[language]?.me}</h2>
             </div>
             <div className="desc_container">
+            {/* <Typed
+                  className="descriptionTitle"
+                  strings={[languages[language]?.full]}
+                  typeSpeed={40}
+                  showCursor={false}
+                /> */}
               <h2 className="descriptionTitle">{languages[language]?.full}</h2>
-              <Typed
-                className="description"
-                strings={[languages[language]?.description]}
-                typeSpeed={20}
-                showCursor={false}
-              />
+              <p className="description">{[languages[language]?.description]}</p>
               <span id="typed"></span>
             </div>
           </div>
@@ -43,15 +45,14 @@ export default function Home({ language, theme }) {
               <h2 className="titleLigth">{languages[language]?.me}</h2>
             </div>
             <div className="desc_containerLight">
-              <h2 className="descriptionTitleLigth">
-                {languages[language]?.full}
-              </h2>
-
               <Typed
-                className="descriptionLigth"
-                strings={[languages[language]?.description]}
-                typeSpeed={20}
-              />
+                  className="descriptionTitleLigth"
+                  strings={[languages[language]?.full]}
+                  typeSpeed={40}
+                  showCursor={false}
+                />
+              {/* <h2 className="descriptionTitleLigth">{languages[language]?.full}</h2> */}
+              <p className="descriptionLigth">{[languages[language]?.description]}</p>
             </div>
           </div>
           <div className="footer">

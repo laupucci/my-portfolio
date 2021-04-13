@@ -110,7 +110,7 @@ export const HomeContainer = styled.section`
     }
 
     to {
-      margin-right: 0%;
+      margin-right: 0;
     }
   }
 
@@ -217,6 +217,8 @@ export const HomeContainer = styled.section`
     //padding-top: 4%;
     color: #171717;
     font-family: "Acme", sans-serif;
+    font-weight: bold;
+    font-size: 150%
   }
 
   .descriptionLigth {
