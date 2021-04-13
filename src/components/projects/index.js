@@ -12,14 +12,10 @@ import pampa from "../../media/pampa.png"
 import quiz from "../../media/quiz-query.png"
 
 export default function Projects({ language, theme }) {
-  //   document.getElementById('left-button').onclick = function () {
-  //     scrollLeft(document.getElementById('content'), -300, 1000);
-  //  }
   const handleLeftClick = () => {
     let scrollPosition = document.getElementById("content")?.scrollLeft;
     console.log(document.getElementsByClassName("proyects")[0].scrollWidth);
     if (scrollPosition) {
-      //scrollPosition = scrollPosition - 800;
       scrollPosition = scrollPosition - document.getElementsByClassName("proyects")[0].scrollWidth
       document
         .getElementById("content")
@@ -31,7 +27,6 @@ export default function Projects({ language, theme }) {
     console.log(scrollPosition);
     if (scrollPosition || scrollPosition === 0) {
       scrollPosition = scrollPosition + document.getElementsByClassName("proyects")[0].scrollWidth
-      //scrollPosition = scrollPosition + 800;
       document
         .getElementById("content")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
