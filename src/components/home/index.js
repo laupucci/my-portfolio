@@ -48,7 +48,7 @@ export default function Home({ language, theme }) {
               <Typed
                   className="descriptionTitleLigth"
                   strings={[languages[language]?.full]}
-                  typeSpeed={40}
+                  typeSpeed={110}
                   showCursor={false}
                 />
               {/* <h2 className="descriptionTitleLigth">{languages[language]?.full}</h2> */}
