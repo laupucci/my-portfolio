@@ -7,7 +7,6 @@ import pdfEnglish from "../../media/English.pdf";
 import pdfSpanish from "../../media/Spanish.pdf";
 
 export default function FooterMedia({ theme, language }) {
-  console.log(language, theme);
   return (
     <FooterContainer>
       <div className="pages">
