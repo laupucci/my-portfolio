@@ -28,14 +28,12 @@ export default function Contact({ language, theme }) {
       }}
       validationSchema={validationSchema}
       onSubmit={(values, { resetForm }) => {
-        console.log(values);
         var templateParams = {
           from_name: "Laura Puccinelli",
           to_name: values.name + " " + values.lastname,
           message: values.message,
           to_email: values.email,
         };
-        console.log(templateParams);
 
         send(
           process.env.REACT_APP_SERVICE_ID,
