@@ -14,21 +14,12 @@ require("dotenv").config();
 function App() {
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'es');
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
-//   const [loading, setLoading] = useState(true)
-//    useEffect(() => {
-//     setTimeout(function(){     setLoading(false) }, 3500);
-//  }, [])
 
-//  if (loading){
-//    return(
-//     <img src={load} className="loader"/>
-//    )
-//  }
-return (
-   <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+  return (
+   <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme} >
   <>
         <GlobalStyles />
-  <Background theme={theme} setTheme={setTheme} />
+  <Background theme={theme} setTheme={setTheme}/>
   <Navbar language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
     <div>
     <Home language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme}/>
