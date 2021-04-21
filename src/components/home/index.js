@@ -50,6 +50,9 @@ export default function Home({ language, theme }) {
                   strings={[languages[language]?.full]}
                   typeSpeed={110}
                   showCursor={false}
+                  backSpeed={60}
+                  backDelay={380}
+                  loop
                 />
               {/* <h2 className="descriptionTitleLigth">{languages[language]?.full}</h2> */}
               <p className="descriptionLigth">{[languages[language]?.description]}</p>

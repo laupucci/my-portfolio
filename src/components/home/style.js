@@ -208,7 +208,7 @@ export const HomeContainer = styled.section`
     height: 44vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     /* border-radius: 0 0 0 55px; */
   }

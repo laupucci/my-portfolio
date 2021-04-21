@@ -66,8 +66,9 @@ export const ProjectsContainer = styled.section`
     min-width: 90%;
     height: 98%;
     background-color: ${({ theme }) => theme.body};
-    border: 1px dotted ${({ theme }) => !theme.body};
+    border: 1px solid ${({ theme }) => !theme.body};
     border-radius: 0 30px;
+    margin-right:0.5%
   }
   h2 {
     margin: 0;
@@ -147,7 +148,7 @@ export const ProjectsContainer = styled.section`
     color: ${({ theme }) => theme.text};
   }
   @media (max-width: 1024px) {
-    .title{
+    .title {
       font-size: 6vw;
     }
     .integrar {
@@ -161,8 +162,8 @@ export const ProjectsContainer = styled.section`
         font-size: 2vw;
       }
     }
-    .imgsIntegrar{
-      width: 5vw
+    .imgsIntegrar {
+      width: 5vw;
     }
     #proyect2 {
       h3 {
@@ -174,8 +175,8 @@ export const ProjectsContainer = styled.section`
       li {
         font-size: 1.5vw;
       }
-      .imgsDubsnip{
-        width: 20vw
+      .imgsDubsnip {
+        width: 20vw;
       }
     }
   }
@@ -195,7 +196,7 @@ export const ProjectsContainer = styled.section`
       margin-bottom: 10%;
     }
     .proyects {
-      min-width: 99%
+      min-width: 99%;
     }
     .integrar {
       padding: 2% 4%;
