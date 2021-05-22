@@ -4,33 +4,40 @@ export const ProjectsContainer = styled.section`
   height: 100vh;
   width: 100vw;
 
+
   .background {
     object-fit: cover;
     height: 100%;
-    width: 100%;
+  width: 100%;
     background: ${({ theme }) => theme.body};
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+   justify-content: space-between;
     align-items: center;
   }
+
   .scrollCont {
-    width: 90%;
+    /* width: 90%; */
     height: 70vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top:220%;
+    z-index: 1;
+    animation: bannermove 10s linear infinite;
   }
   .container {
     display: flex;
-    width: 80%;
+    width: 60rem;
     height: 68vh;
     border: none;
     margin: 1px;
-    overflow: hidden;
-    white-space: nowrap;
+    //overflow: hidden;
+    //white-space: nowrap;
+  
   }
 
   .right {
@@ -82,16 +89,19 @@ export const ProjectsContainer = styled.section`
   }
   p {
     font-family: "Overpass", sans-serif;
-    font-size: 1.1vw;
+    font-size: 1em;
     margin-top: 0;
     flex-wrap: nowrap;
     white-space: normal;
     margin: 0 1%;
     text-align: justify;
   }
+  .pDubsnip{
+    font-size: 0.8em;
+  }
   li {
     font-family: "Overpass", sans-serif;
-    font-size: 1.1vw;
+    font-size: 0.8em;
     margin-top: 0;
     flex-wrap: nowrap;
     white-space: normal;
@@ -102,36 +112,65 @@ export const ProjectsContainer = styled.section`
     max-width: 6em;
     justify-content: center;
     align-items: center;
+    margin-top: 4%
   }
-  .imgsIntegrar {
-    width: 10vw;
-    margin: 1vw;
-    border: 3px solid ${({ theme }) => theme.imgs};
-    border-radius: 17px;
-  }
-  .imgsDubsnip {
-    width: 24vw;
-    margin: 1em;
-    //border: 5px solid ${({ theme }) => theme.imgs};
-    border-radius: 10px;
-  }
-  .imgsPampaQuiz {
-    width: 24vw;
-    margin: 1em;
-    //border: 5px solid ${({ theme }) => theme.imgs};
-    border-radius: 10px;
-  }
-  .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   .imgs {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden;
+    white-space: nowrap; */
+    width: 33vw;
+    height: 19vw;
+    text-align: center;
   }
+  .imgsIntegrar {
+    width: 10vw;
+    height: 15vw;
+    margin: 1vw;
+    border: 3px solid ${({ theme }) => theme.imgs};
+    border-radius: 17px;
+    &:hover {
+      transition: 0.5s;
+      transform: scale(1.4);
+    }
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24em;
+    /* overflow: hidden;
+    white-space: nowrap; */
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .imgsDubsnip {
+    width: 20em;
+    margin: 1em;
+    //border: 5px solid ${({ theme }) => theme.imgs};
+    border-radius: 10px;
+    &:hover {
+      transition: 0.5s;
+      transform: scale(1.2);
+    }
+  }
+  .imgsPampaQuiz {
+    width: 24em;
+    margin: 1em;
+    //border: 5px solid ${({ theme }) => theme.imgs};
+    border-radius: 10px;
+    &:hover {
+      transition: 0.5s;
+      transform: scale(1.2);
+    }
+  }
+
+
   .integrar {
     display: flex;
     flex-direction: column;
@@ -182,18 +221,25 @@ export const ProjectsContainer = styled.section`
   }
 
   @media (max-width: 500px) {
+    overflow: hidden;
     .background {
-      justify-content: flex-end;
+      justify-content: flex-start;
+      overflow: hidden;
     }
     .scrollCont {
-      height: 77%;
-      margin-bottom: 7%;
+      top: 215%;
+      height: 80vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      align-content: space-between;
+      overflow: hidden;
     }
     .container {
-      margin-top: 7.5%;
+  
       width: 87vw;
-      height: 95%;
-      margin-bottom: 10%;
+      height: 79vh;
+      
     }
     .proyects {
       min-width: 99%;
@@ -215,10 +261,10 @@ export const ProjectsContainer = styled.section`
     }
     .integrarTxt {
       h3 {
-        font-size: 6vw;
+        font-size: 3em;
       }
       p {
-        font-size: 3.5vw;
+        font-size: 1em;
       }
     }
     #proyect2 {
@@ -232,9 +278,13 @@ export const ProjectsContainer = styled.section`
         font-size: 3vw;
       }
     }
+    .imgs{
+      height: 8em;
+      width: 19em;
+    }
     .imgsIntegrar {
-      width: 11vw;
-      height: 16vw;
+      width: 4em;
+      height: 7em;
     }
     .imgsPampaQuiz {
       width: 60vw;

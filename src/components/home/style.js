@@ -298,13 +298,19 @@ export const HomeContainer = styled.section`
       height: 64vh;
     }
     .description,.descriptionLigth {
-      font-size: 4vw;
+      font-size: 1.1em;
   }
 
     .footer{
       display: none
     }
 
+  }
+
+  @media screen and (max-width: 330px) {
+    .description,.descriptionLigth {
+    font-size: 0.94em;
+    }
   }
  
 `;

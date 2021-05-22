@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { ProjectsContainer } from "./style";
 import Footer from "../footer";
 import { languages } from "./languages";
@@ -12,47 +12,79 @@ import pampa from "../../media/pampa.png";
 import quiz from "../../media/quiz-query.png";
 
 export default function Projects({ language, theme }) {
-  const handleLeftClick = () => {
-    let scrollPosition = document.getElementById("content")?.scrollLeft;
-    if (scrollPosition) {
-      scrollPosition =
-        scrollPosition -
-        document.getElementsByClassName("proyects")[0].scrollWidth;
-      document
-        .getElementById("content")
-        ?.scroll({ left: scrollPosition, behavior: "smooth" });
-    }
-  };
-  function handleRightClick() {
-    let scrollPosition = document.getElementById("content")?.scrollLeft;
-    if (scrollPosition || scrollPosition === 0) {
-      scrollPosition =
-        scrollPosition +
-        document.getElementsByClassName("proyects")[0].scrollWidth;
-      document
-        .getElementById("content")
-        ?.scroll({ left: scrollPosition, behavior: "smooth" });
-    }
+  // const handleLeftClick = () => {
+  //   let scrollPosition = document.getElementById("content")?.scrollLeft;
+  //   if (scrollPosition) {
+  //     scrollPosition =
+  //       scrollPosition -
+  //       document.getElementsByClassName("proyects")[0].scrollWidth;
+  //     document
+  //       .getElementById("content")
+  //       ?.scroll({ left: scrollPosition, behavior: "smooth" });
+  //   }
+  // };
+  // function handleRightClick() {
+  //   let scrollPosition = document.getElementById("content")?.scrollLeft;
+  //   if (scrollPosition || scrollPosition === 0) {
+  //     scrollPosition =
+  //       scrollPosition +
+  //       document.getElementsByClassName("proyects")[0].scrollWidth;
+  //     document
+  //       .getElementById("content")
+  //       ?.scroll({ left: scrollPosition, behavior: "smooth" });
+  //   }
+  // }
+
+  const horizontalScroll = useRef(document.getElementById("content"));
+  const FocusRef = () => {
+    horizontalScroll.current.focus()
   }
+ 
+  useEffect(() => {
+    console.log(horizontalScroll)
+  }, [horizontalScroll])
+
+
+  onmousedown = function(event) {
+    let shiftX = event.clientX - horizontalScroll.current.getBoundingClientRect().left;
+    moveAt(event.pageX);
+    function moveAt(pageX) {
+      horizontalScroll.current.style.left = pageX - shiftX + 'px';
+    }
+    function onMouseMove(event) {
+      moveAt(event.pageX);
+    }
+    document.addEventListener('mousemove', onMouseMove);
+  
+    onmouseup = function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      horizontalScroll.current.onmouseup = null;
+    };
+  
+    horizontalScroll.current.ondragstart = function() {
+      return false;
+    };
+  };
+  
 
   return (
     <ProjectsContainer id="proyectos">
       <div className="background">
         <h2 className="title">{languages[language]?.projects}</h2>
-        <div className="scrollCont">
-          <div className="left">
+        <div className="scrollCont" id="content" onClick={FocusRef} ref={horizontalScroll}>
+          {/* <div className="left">
             <IoMdArrowDropleftCircle
               className="leftArrow"
               onClick={handleLeftClick}
             />
-          </div>
-          <div className="container" id="content">
+          </div> */}
+          <div className="container">
             <div className="proyects" id="proyect1">
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>IntegrAr</h3>
-                  <p>{languages[language]?.integrAr.desc}</p>
-                  <p>{languages[language]?.dubsnip.stack}</p>
+                  <p className="pIntegrar">{languages[language]?.integrAr.desc}</p>
+                  <p className="pIntegrar">{languages[language]?.dubsnip.stack}</p>
                 </div>
                 <div className="imgs">
                   <img className="imgsIntegrar" src={student} />
@@ -65,12 +97,12 @@ export default function Projects({ language, theme }) {
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>DubsNip</h3>
-                  <p>{languages[language]?.dubsnip.desc}</p>
+                  <p className="pDubsnip">{languages[language]?.dubsnip.desc}</p>
                   {languages[language]?.dubsnip.list.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
-                  <p>{languages[language]?.dubsnip.stack}</p>
-                  <p>{languages[language]?.dubsnip.henry}</p>
+                  <p className="pDubsnip">{languages[language]?.dubsnip.stack}</p>
+                  {/* <p className="pDubsnip">{languages[language]?.dubsnip.henry}</p> */}
                 </div>
                 <div className="img">
                   <img className="imgsDubsnip" src={dubsnip} />
@@ -81,8 +113,8 @@ export default function Projects({ language, theme }) {
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>Pampa del Río</h3>
-                  <p>{languages[language]?.pampa.desc}</p>
-                  <p>{languages[language]?.pampa.stack}</p>
+                  <p className="pPampa">{languages[language]?.pampa.desc}</p>
+                  <p className="pPampa">{languages[language]?.pampa.stack}</p>
                 </div>
                 <div className="imgs">
                   <img className="imgsPampaQuiz" src={pampa} />
@@ -93,8 +125,8 @@ export default function Projects({ language, theme }) {
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>QuizQuery</h3>
-                  <p>{languages[language]?.quizQuery.desc}</p>
-                  <p>{languages[language]?.quizQuery.stack}</p>
+                  <p className="pQuiz">{languages[language]?.quizQuery.desc}</p>
+                  <p className="pQuiz">{languages[language]?.quizQuery.stack}</p>
                 </div>
                 <div className="imgs">
                   <img className="imgsPampaQuiz" src={quiz} />
@@ -102,12 +134,12 @@ export default function Projects({ language, theme }) {
               </div>
             </div>
           </div>
-          <div className="right">
+          {/* <div className="right">
             <IoMdArrowDroprightCircle
               className="rightArrow"
               onClick={handleRightClick}
             />
-          </div>
+          </div> */}
         </div>
         <div className="footer">
           <Footer
