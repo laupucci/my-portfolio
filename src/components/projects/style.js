@@ -233,7 +233,6 @@ export const ProjectsContainer = styled.section`
       grid-template-columns: 1fr 1fr 1fr;
       justify-items: center;
       align-content: space-between;
-      overflow: hidden;
     }
     .container {
   
@@ -261,10 +260,10 @@ export const ProjectsContainer = styled.section`
     }
     .integrarTxt {
       h3 {
-        font-size: 3em;
+        font-size: 2.5em;
       }
       p {
-        font-size: 1em;
+        font-size: 0.9em;
       }
     }
     #proyect2 {
