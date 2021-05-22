@@ -262,7 +262,7 @@ export const HomeContainer = styled.section`
   }
   @media screen and (max-width: 800px) {
   .description,.descriptionLigth {
-      font-size: 0.8em;
+      font-size: 1.1em;
   }
 }
   @media screen and (max-width: 500px) {

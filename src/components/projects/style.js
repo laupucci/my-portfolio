@@ -242,8 +242,6 @@ export const ProjectsContainer = styled.section`
     width: 75vw;
     height: 77vh;
     border: none;
-    margin:2px;
-    margin-left: -5%;
     overflow: hidden;
     white-space: nowrap;
   
@@ -257,16 +255,15 @@ export const ProjectsContainer = styled.section`
     }
 
     .proyectsMedia {
-      min-width: 93%;
-      margin: 6%;
+      min-width: 98%;
+      margin-right: 5%;
       display: inline-block;
     height: 95%;
     background-color: ${({ theme }) => theme.body};
     border: 1px solid ${({ theme }) => !theme.body};
     border-radius: 0 30px;
-    margin-right:0.5%
+ 
     }
-
     
     .integrar {
       padding: 2% 4%;
