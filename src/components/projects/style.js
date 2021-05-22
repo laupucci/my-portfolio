@@ -244,8 +244,8 @@ export const ProjectsContainer = styled.section`
     border: none;
     margin:2px;
     margin-left: -5%;
-    //overflow: hidden;
-    //white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
   
   }
     .background {
@@ -256,10 +256,18 @@ export const ProjectsContainer = styled.section`
      display: none
     }
 
-    .proyects {
-      min-width: 99%;
-      margin: 7%
+    .proyectsMedia {
+      min-width: 93%;
+      margin: 6%;
+      display: inline-block;
+    height: 95%;
+    background-color: ${({ theme }) => theme.body};
+    border: 1px solid ${({ theme }) => !theme.body};
+    border-radius: 0 30px;
+    margin-right:0.5%
     }
+
+    
     .integrar {
       padding: 2% 4%;
     }
@@ -268,16 +276,16 @@ export const ProjectsContainer = styled.section`
     }
     .right,
     .left {
-      width: 3em;
+      width: 1.5em;
       justify-content: center;
       align-items: center;
       .leftArrow,
       .rightArrow {
-        width: 2em;
-        height: 2em;
+        width: 1.5em;
+        height: 1.5em;
       }
       .rightArrow { 
-        margin-left: 1em;
+        
       }
     }
     .integrarTxt {
@@ -301,11 +309,11 @@ export const ProjectsContainer = styled.section`
     }
     .imgs{
       height: 8em;
-      width: 19em;
+      width: 18em;
     }
     .imgsIntegrar {
-      width: 4em;
-      height: 7em;
+      width: 3.4em;
+      height: 6.5em;
     }
     .imgsPampaQuiz {
       width: 60vw;

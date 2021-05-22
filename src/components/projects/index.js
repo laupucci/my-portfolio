@@ -13,26 +13,26 @@ import quiz from "../../media/quiz-query.png";
 
 export default function Projects({ language, theme }) {
   const handleLeftClick = () => {
-    let scrollPosition = document.getElementById("contentMedia")?.scrollLeft;
-    console.log(document.getElementsByClassName("contentMedia")[0].scrollWidth)
+    let scrollPosition = document.getElementById("containerMedia")?.scrollLeft;
+    console.log(document.getElementById("containerMedia"))
     if (scrollPosition) {
       scrollPosition =
-        scrollPosition -
-        document.getElementsByClassName("proyects")[0].scrollWidth;
+        scrollPosition - 
+         document.getElementsByClassName("proyectsMedia")[0].scrollWidth + 15;
       document
-        .getElementById("contentMedia")
+        .getElementById("containerMedia")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
     }
   };
   function handleRightClick() {
-    let scrollPosition = document.getElementById("contentMedia")?.scrollLeft;
-    console.log(scrollPosition)
+    let scrollPosition = document.getElementById("containerMedia")?.scrollLeft;
+    console.log(document.getElementsByClassName("proyectsMedia")[0].scrollWidth)
     if (scrollPosition || scrollPosition === 0) {
       scrollPosition =
         scrollPosition +
-        document.getElementsByClassName("proyects")[0].scrollWidth;
+        document.getElementsByClassName("proyectsMedia")[0].scrollWidth - 15;
       document
-        .getElementById("contentMedia")
+        .getElementById("containerMedia")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
     }
   }
@@ -150,8 +150,8 @@ export default function Projects({ language, theme }) {
               onClick={handleLeftClick}
             />
           </div>
-          <div className="containerMedia">
-            <div className="proyects" id="proyect1">
+          <div className="containerMedia" id="containerMedia">
+            <div className="proyectsMedia" id="proyect1">
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>IntegrAr</h3>
@@ -165,7 +165,7 @@ export default function Projects({ language, theme }) {
                 </div>
               </div>
             </div>
-            <div className="proyects" id="proyect2">
+            <div className="proyectsMedia" id="proyect2">
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>DubsNip</h3>
@@ -181,7 +181,7 @@ export default function Projects({ language, theme }) {
                 </div>
               </div>
             </div>
-            <div className="proyects" id="proyect3">
+            <div className="proyectsMedia" id="proyect3">
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>Pampa del Río</h3>
@@ -193,7 +193,7 @@ export default function Projects({ language, theme }) {
                 </div>
               </div>
             </div>
-            <div className="proyects" id="proyect4">
+            <div className="proyectsMedia" id="proyect4">
               <div className="integrar">
                 <div className="integrarTxt">
                   <h3>QuizQuery</h3>

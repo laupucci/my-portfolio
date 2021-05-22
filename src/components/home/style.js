@@ -260,6 +260,11 @@ export const HomeContainer = styled.section`
       font-size: 2.0vw;
     }
   }
+  @media screen and (max-width: 800px) {
+  .description,.descriptionLigth {
+      font-size: 0.8em;
+  }
+}
   @media screen and (max-width: 500px) {
     .background {
       display: flex;
@@ -298,7 +303,7 @@ export const HomeContainer = styled.section`
       height: 64vh;
     }
     .description,.descriptionLigth {
-      font-size: 1.1em;
+      font-size: 0.8em;
   }
 
     .footer{
