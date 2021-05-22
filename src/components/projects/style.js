@@ -35,6 +35,9 @@ export const ProjectsContainer = styled.section`
     top:220%;
     z-index: 1;
   }
+  .scrollContMedia{
+    display: none
+  }
   .container {
     display: flex;
     width: 60rem;
@@ -227,27 +230,35 @@ export const ProjectsContainer = styled.section`
   }
 
   @media (max-width: 500px) {
-    overflow: hidden;
+
+    .scrollContMedia{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+    }
+    .containerMedia {
+    display: flex;
+    width: 75vw;
+    height: 77vh;
+    border: none;
+    margin:2px;
+    margin-left: -5%;
+    //overflow: hidden;
+    //white-space: nowrap;
+  
+  }
     .background {
       justify-content: flex-start;
       overflow: hidden;
     }
     .scrollCont {
-      top: 215%;
-      height: 80vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-items: center;
-      align-content: space-between;
+     display: none
     }
-    .container {
-  
-      width: 87vw;
-      height: 79vh;
-      
-    }
+
     .proyects {
       min-width: 99%;
+      margin: 7%
     }
     .integrar {
       padding: 2% 4%;
@@ -257,11 +268,16 @@ export const ProjectsContainer = styled.section`
     }
     .right,
     .left {
-      width: 7vw;
+      width: 3em;
+      justify-content: center;
+      align-items: center;
       .leftArrow,
       .rightArrow {
-        width: 6.8vw;
-        height: 6.8vw;
+        width: 2em;
+        height: 2em;
+      }
+      .rightArrow { 
+        margin-left: 1em;
       }
     }
     .integrarTxt {
