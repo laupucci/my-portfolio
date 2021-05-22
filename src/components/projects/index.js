@@ -30,7 +30,7 @@ export default function Projects({ language, theme }) {
     if (scrollPosition || scrollPosition === 0) {
       scrollPosition =
         scrollPosition +
-        document.getElementsByClassName("proyectsMedia")[0].scrollWidth - 13,7;
+        document.getElementsByClassName("proyectsMedia")[0].scrollWidth - 13.7;
       document
         .getElementById("containerMedia")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
