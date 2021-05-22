@@ -18,7 +18,7 @@ export default function Projects({ language, theme }) {
     if (scrollPosition) {
       scrollPosition =
         scrollPosition - 
-         document.getElementsByClassName("proyectsMedia")[0].scrollWidth + 13.7;
+         document.getElementsByClassName("proyectsMedia")[0].scrollWidth + 13;
       document
         .getElementById("containerMedia")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
@@ -26,11 +26,11 @@ export default function Projects({ language, theme }) {
   };
   function handleRightClick() {
     let scrollPosition = document.getElementById("containerMedia")?.scrollLeft;
-    console.log(document.getElementsByClassName("proyectsMedia")[0].scrollWidth)
-    if (scrollPosition || scrollPosition === 0) {
+    console.log(scrollPosition)
+    if (scrollPosition && scrollPosition < 747 || scrollPosition === 0) {
       scrollPosition =
         scrollPosition +
-        document.getElementsByClassName("proyectsMedia")[0].scrollWidth - 13.7;
+        document.getElementsByClassName("proyectsMedia")[0].scrollWidth - 13;
       document
         .getElementById("containerMedia")
         ?.scroll({ left: scrollPosition, behavior: "smooth" });
