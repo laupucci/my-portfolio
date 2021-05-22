@@ -5,6 +5,7 @@ export const BackgroundCont = styled.section`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  white-space: nowrap;
   z-index: -1;
 
   img {
@@ -16,5 +17,7 @@ export const BackgroundCont = styled.section`
   @media (max-width: 500px) {
     min-height: 125%;
     width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
   }
 `;

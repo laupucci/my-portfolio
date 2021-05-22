@@ -71,6 +71,7 @@ export default function Projects({ language, theme }) {
     <ProjectsContainer id="proyectos">
       <div className="background">
         <h2 className="title">{languages[language]?.projects}</h2>
+        <div className="containerHide">
         <div className="scrollCont" id="content" onClick={FocusRef} ref={horizontalScroll}>
           {/* <div className="left">
             <IoMdArrowDropleftCircle
@@ -140,6 +141,7 @@ export default function Projects({ language, theme }) {
               onClick={handleRightClick}
             />
           </div> */}
+        </div>
         </div>
         <div className="footer">
           <Footer

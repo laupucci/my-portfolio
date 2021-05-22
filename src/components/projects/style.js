@@ -16,6 +16,13 @@ export const ProjectsContainer = styled.section`
    justify-content: space-between;
     align-items: center;
   }
+  .containerHide{
+    /* overflow-x: hidden;
+    white-space: nowrap; */
+    position: relative;
+    margin-left: 4%;
+    width: 100vw;
+  }
 
   .scrollCont {
     /* width: 90%; */
@@ -27,7 +34,6 @@ export const ProjectsContainer = styled.section`
     position: absolute;
     top:220%;
     z-index: 1;
-    animation: bannermove 10s linear infinite;
   }
   .container {
     display: flex;
@@ -260,10 +266,10 @@ export const ProjectsContainer = styled.section`
     }
     .integrarTxt {
       h3 {
-        font-size: 2.5em;
+        font-size: 2em;
       }
       p {
-        font-size: 0.9em;
+        font-size: 0.7em;
       }
     }
     #proyect2 {

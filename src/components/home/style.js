@@ -309,7 +309,7 @@ export const HomeContainer = styled.section`
 
   @media screen and (max-width: 330px) {
     .description,.descriptionLigth {
-    font-size: 0.94em;
+    font-size: 0.6em;
     }
   }
  
